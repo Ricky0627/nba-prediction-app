@@ -1,0 +1,11 @@
+# 忽略 Windows 執行檔 (雲端不需要)
+chromedriver.exe
+chromedriver-win64.zip
+
+# 忽略 Python 快取
+__pycache__/
+*.pyc
+
+# 忽略虛擬環境 (如果您有建立的話)
+venv/
+.env
