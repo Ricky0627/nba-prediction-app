@@ -5,9 +5,7 @@ import glob
 import re
 
 def find_latest_files():
-    """
-    自動尋找最新的預測檔，並嘗試找到對應的賠率檔
-    """
+    """自動尋找最新的預測檔和賠率檔"""
     pred_files = glob.glob("predictions_*.csv")
     valid_preds = []
     pattern = re.compile(r"predictions_(\d{4}-\d{2}-\d{2})\.csv")
@@ -30,38 +28,28 @@ def find_latest_files():
 
 def calculate_ev(row):
     """計算 EV"""
-    # 欄位名稱兼容
     hp = row.get('Home_Win_Prob', row.get('Predicted_Prob_Win (1)', 0.5))
     ap = 1.0 - hp
     
-    # 處理賠率可能的空值或錯誤格式
     try:
         ho = float(row.get('Odds_Home', np.nan))
-    except:
-        ho = np.nan
+    except: ho = np.nan
         
     try:
         ao = float(row.get('Odds_Away', np.nan))
-    except:
-        ao = np.nan
+    except: ao = np.nan
     
-    # 計算主隊 EV
-    if pd.notna(ho):
-        ev_home = (hp * ho) - 1
-    else:
-        ev_home = np.nan
+    if pd.notna(ho): ev_home = (hp * ho) - 1
+    else: ev_home = np.nan
         
-    # 計算客隊 EV
-    if pd.notna(ao):
-        ev_away = (ap * ao) - 1
-    else:
-        ev_away = np.nan
+    if pd.notna(ao): ev_away = (ap * ao) - 1
+    else: ev_away = np.nan
         
     return ev_home, ev_away
 
 def get_v800_signal(row):
     """
-    v800 核心邏輯：基於校準度分析的策略調整
+    【v800.2 策略核心 - 基於 v850 校準報告優化】
     """
     hp = row.get('Home_Win_Prob', row.get('Predicted_Prob_Win (1)'))
     eh = row['EV_Home']
@@ -71,31 +59,54 @@ def get_v800_signal(row):
 
     signal = []
     
-    # --- 策略 1: 避開 80-90% 的過度自信陷阱 ---
-    if 0.80 <= hp < 0.90:
-        return "PASS (Overconf. Risk)" # 強制跳過
+    # --- 策略 A: 主勝穩膽區 (0.7 - 0.9) ---
+    # 校準報告: 實際勝率 ~80%，偏差極小。這是最穩的區間。
+    if 0.70 <= hp < 0.90:
+        if eh > 0:
+            conf = "🔥" if eh > 0.1 else ""
+            signal.append(f"BET HOME (Solid) EV={eh:.2f}{conf}")
+        else:
+            # 即使沒 EV，但勝率極高，可作為串關配腳
+            signal.append(f"HOME (Parlay) Win={hp:.0%}")
 
-    # --- 策略 2: 鎖定甜蜜點 (70-80% 主勝) ---
-    if 0.70 <= hp < 0.80 and eh > 0:
-        conf = "🔥" if eh > 0.1 else ""
-        signal.append(f"BET HOME (Strong) EV={eh:.2f}{conf}")
+    # --- 策略 B: 客勝狙擊區 (0.2 - 0.3) ---
+    # 校準報告: 主勝率 ~17% (即客勝 ~83%)。模型在此區間表現優異。
+    elif 0.20 <= hp < 0.30:
+        if ea > 0:
+            conf = "🔥" if ea > 0.1 else ""
+            signal.append(f"BET AWAY (Sniper) EV={ea:.2f}{conf}")
+        else:
+            signal.append(f"AWAY (Parlay) Win={1-hp:.0%}")
 
-    # --- 策略 3: 鎖定客隊刺客 (20-30% 主勝 = 70-80% 客勝) ---
-    if 0.20 <= hp < 0.30 and ea > 0:
-        conf = "🔥" if ea > 0.1 else ""
-        signal.append(f"BET AWAY (Sniper) EV={ea:.2f}{conf}")
+    # --- 策略 C: 價值挖掘區 (0.5 - 0.6) ---
+    # 校準報告: 模型預測 ~55%，實際 ~63%。模型低估了主隊。
+    # 這裡我們給予主隊 EV 加權 (+8%) 再判斷
+    elif 0.50 <= hp < 0.60:
+        adjusted_hp = hp + 0.08 
+        adjusted_ev_h = (adjusted_hp * float(row.get('Odds_Home', 0))) - 1
+        
+        if adjusted_ev_h > 0:
+            star = "💎" # 鑽石標記：隱藏價值
+            signal.append(f"BET HOME (Value) AdjEV={adjusted_ev_h:.2f}{star}")
 
-    # --- 策略 4: 極端值穩膽 (<20% 或 >90%) ---
-    if hp >= 0.90:
-        signal.append(f"BET HOME (Lock) EV={eh:.2f}")
-    if hp < 0.20:
-        signal.append(f"BET AWAY (Lock) EV={ea:.2f}")
+    # --- 策略 D: 極端值警示 (0.1-0.2 & 0.9-1.0) ---
+    # 校準報告: 模型在此過度自信，建議保守。
+    elif hp >= 0.90:
+        if eh > 0.05: # 要求更高的 EV 門檻
+            signal.append(f"BET HOME (Lock) EV={eh:.2f}")
+        else:
+            signal.append(f"PASS (Too Low Odds)")
+            
+    elif hp < 0.20:
+        if ea > 0.05:
+            signal.append(f"BET AWAY (Lock) EV={ea:.2f}")
+        else:
+            signal.append(f"PASS (Too Low Odds)")
 
-    # --- 策略 5: 忽略中間地帶 (40-60%) 的微弱優勢 ---
-    # 如果 EV 非常高 (>0.15) 且不在上述區間，才勉強考慮，否則 PASS
-    if not signal:
-        if 0.40 <= hp < 0.60:
-            return "PASS (Noise Zone)"
+    # --- 其他區間 ---
+    else:
+        # 0.3-0.4, 0.4-0.5, 0.6-0.7: 模型準確，但勝負難料
+        # 只投高 EV
         if eh > 0.15: signal.append(f"主EV高={eh:.2f} (Risky)")
         if ea > 0.15: signal.append(f"客EV高={ea:.2f} (Risky)")
 
@@ -103,9 +114,8 @@ def get_v800_signal(row):
 
 def main():
     print("\n" + "="*60)
-    print(" 💰 NBA 價值分析器 (v800 - 策略優化版)")
-    print(" 🎯 目標：累積投資記錄 (Append Mode)")
-    print(" 🛠️  修正：避開 80-90% 陷阱，鎖定 70-80% & 20-30% 區間")
+    print(" 💰 NBA 價值分析器 (v800.2 - 校準優化版)")
+    print(" 🎯 依據 v850 報告調整策略權重")
     print("="*60)
     
     # 1. 載入檔案
@@ -140,70 +150,48 @@ def main():
         df_final['EV_Home'] = ev_results[0]
         df_final['EV_Away'] = ev_results[1]
         
-        # 產生訊號 (使用 v800 新邏輯)
+        # 產生訊號
         df_final['Bet_Signal'] = df_final.apply(get_v800_signal, axis=1)
         
-        # 清理多餘欄位
-        cols_to_drop = ['Home_Abbr', 'Away_Abbr'] 
+        # 清理欄位
+        cols_to_drop = ['Home_Abbr', 'Away_Abbr']
         df_final = df_final.drop(columns=[c for c in cols_to_drop if c in df_final.columns])
         
     else:
         df_final = df_pred
-        df_final['Odds_Home'] = np.nan
-        df_final['Odds_Away'] = np.nan
-        df_final['EV_Home'] = np.nan
-        df_final['EV_Away'] = np.nan
+        df_final['Odds_Home'] = np.nan; df_final['Odds_Away'] = np.nan
+        df_final['EV_Home'] = np.nan; df_final['EV_Away'] = np.nan
         df_final['Bet_Signal'] = "無賠率"
 
-    # --- 輸出檔名變更為 v800 ---
+    # 儲存與顯示
     output_file = "final_analysis_report_v800.csv"
     
+    # 追加邏輯 (與 v600 相同)
     if os.path.exists(output_file):
-        print(f"\n正在讀取現有報告 '{output_file}' 以便追加...")
         try:
             df_history = pd.read_csv(output_file)
-            
-            # 為了去重，我們需要一個唯一鍵
             home_col = 'Home' if 'Home' in df_final.columns else 'Team_Abbr'
-            
-            # 標記新數據的 Key
             df_final['unique_key'] = df_final['Date'].astype(str) + "_" + df_final[home_col]
             
             if home_col in df_history.columns:
                 df_history['unique_key'] = df_history['Date'].astype(str) + "_" + df_history[home_col]
-                
-                # 移除舊數據中與新數據 Key 相同的行 (覆蓋舊數據)
                 df_history = df_history[~df_history['unique_key'].isin(df_final['unique_key'])]
-                
-                # 合併
                 df_combined = pd.concat([df_history, df_final], ignore_index=True)
-                
-                # 移除臨時 Key
                 df_combined = df_combined.drop(columns=['unique_key'])
-                
-                # 重新排序 (按日期)
                 df_combined = df_combined.sort_values(by='Date', ascending=False)
-                
             else:
-                print("警告：新舊檔案格式不符，將直接覆蓋。")
                 df_combined = df_final
                 if 'unique_key' in df_combined.columns: df_combined = df_combined.drop(columns=['unique_key'])
-
-        except Exception as e:
-            print(f"讀取舊檔失敗 ({e})，將建立新檔。")
+        except:
             df_combined = df_final
-            if 'unique_key' in df_combined.columns: df_combined = df_combined.drop(columns=['unique_key'])
     else:
-        print(f"\n建立新報告 '{output_file}'...")
         df_combined = df_final
-        if 'unique_key' in df_combined.columns: df_combined = df_combined.drop(columns=['unique_key'])
 
-    # 5. 顯示與儲存
+    # 顯示
     print("\n" + "-"*100)
-    print(f"{'日期':<12} | {'對戰':<10} | {'主勝率':<6} | {'賠率':<10} | {'訊號'}")
+    print(f"{'日期':<12} | {'對戰':<10} | {'主勝率':<6} | {'賠率':<10} | {'訊號 (v800.2)'}")
     print("-" * 100)
     
-    # 只顯示最新的幾筆 (本次新增的)
     for _, row in df_final.iterrows():
         if 'Home' in row: home, away = row['Home'], row['Away']
         else: home, away = row['Team_Abbr'], row['Opp_Abbr']
@@ -211,17 +199,14 @@ def main():
         prob = row.get('Home_Win_Prob', row.get('Predicted_Prob_Win (1)'))
         odds = f"{row['Odds_Home']}/{row['Odds_Away']}" if pd.notna(row['Odds_Home']) else "-/-"
         
-        # 標記高亮
-        is_bet = "BET" in row['Bet_Signal']
+        is_bet = "BET" in str(row['Bet_Signal'])
         prefix = ">> " if is_bet else "   "
         
         print(f"{prefix}{row['Date']:<12} | {home}v{away:<4} | {prob:.1%}    | {odds:<10} | {row['Bet_Signal']}")
 
-    # 存檔
     df_combined.to_csv(output_file, index=False, encoding='utf-8-sig')
     print("\n" + "="*60)
-    print(f" 已將 {len(df_final)} 筆新記錄追加至: {output_file}")
-    print(f" 目前總記錄數: {len(df_combined)}")
+    print(f" 策略分析完成！已儲存至: {output_file}")
     print("="*60)
 
 if __name__ == "__main__":
