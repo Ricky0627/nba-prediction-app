@@ -21,7 +21,6 @@ def get_schedule_for_date(target_date):
     season = year + 1 if target_date.month >= 10 else year
     
     url = f"https://www.basketball-reference.com/leagues/NBA_{season}_games-{month_name}.html"
-    # 為了避免洗版，我們把這裡的 print 註解掉，改由主程式控制顯示
     # print(f"正在抓取 {target_date.strftime('%Y-%m-%d')} 的賽程...")
     
     headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36' }
@@ -104,7 +103,7 @@ def calculate_team_injury_impact(team_abbr, injuries_df, player_gmsc_map):
 # --- 3. 主程式 ---
 def main():
     print("\n" + "="*60)
-    print(" 🏀 NBA 每日賽事預測匯出工具 (v500 - 智慧搜尋版)")
+    print(" 🏀 NBA 每日賽事預測匯出工具 (v500 - 修正版)")
     print("="*60)
     
     # 1. 檔案路徑
@@ -147,7 +146,7 @@ def main():
         df_injuries = pd.read_csv(injury_file)
         print(f"已載入傷病名單 ({len(df_injuries)} 人)。")
 
-    # 4. 【核心修正】智慧搜尋下一個比賽日
+    # 4. 智慧搜尋下一個比賽日
     last_data_date = df['date_dt'].max()
     start_search_date = last_data_date + timedelta(days=1)
     
@@ -157,7 +156,6 @@ def main():
     target_date = None
     todays_games = []
     
-    # 迴圈檢查未來 7 天
     for i in range(7):
         check_date = start_search_date + timedelta(days=i)
         check_date_str = check_date.strftime('%Y-%m-%d')
@@ -172,10 +170,10 @@ def main():
             break
         else:
             print("❌ 無比賽")
-            time.sleep(1) # 禮貌性延遲
+            time.sleep(1)
 
     if not target_date:
-        print("\n[警告] 未來 7 天內找不到任何比賽，或是 BBR 賽程表結構改變。")
+        print("\n[警告] 未來 7 天內找不到任何比賽。")
         return
 
     target_date_str = target_date.strftime('%Y-%m-%d')
@@ -201,7 +199,8 @@ def main():
             
             stats['Win_Pct_Last_5'] = last_game.get(f'{prefix}Win_Pct_Last_5', 0)
             stats['Win_Pct_Last_10'] = last_game.get(f'{prefix}Win_Pct_Last_10', 0)
-            stats['Avg_Margin_Last_5'] = last_game.get(f'{prefix}Avg_Margin_Last_5', 0)
+            # 【修正】統一使用 Margin_L5
+            stats['Margin_L5'] = last_game.get(f'{prefix}Avg_Margin_Last_5', 0)
             stats['Streak'] = last_game.get(f'{prefix}Streak', 0)
             
             if prefix == "Before_Game_":
@@ -217,12 +216,10 @@ def main():
             stats['TOV'] = last_game.get(f'{prefix}Avg_TOV_Rate', 0)
             stats['ORB'] = last_game.get(f'{prefix}Avg_ORB_Pct', 0)
             
-            # 更新 Streak
             is_win = (last_game['Win'] == 1) if prefix == "Before_Game_" else (last_game['Win'] == 0)
             if is_win: stats['Streak'] = stats['Streak'] + 1 if stats['Streak'] > 0 else 1
             else: stats['Streak'] = stats['Streak'] - 1 if stats['Streak'] < 0 else -1
             
-            # 獲取上一場日期
             stats['Last_Date'] = last_game['date_dt']
             return stats
 
@@ -233,7 +230,6 @@ def main():
             print(f"跳過 {home} vs {away} (數據不足)")
             continue
 
-        # 計算 Diff
         diff_rest = (target_date - h_stats['Last_Date']).days - (target_date - a_stats['Last_Date']).days
         
         h_impact, h_inj_names = calculate_team_injury_impact(home, df_injuries, player_gmsc_map)
@@ -244,6 +240,7 @@ def main():
             diff_rest,
             h_stats['Streak'] - a_stats['Streak'],
             h_stats['Win_Pct_Last_5'] - a_stats['Win_Pct_Last_5'],
+            # 【使用修正後的 Margin_L5】
             h_stats['Margin_L5'] - a_stats['Margin_L5'],
             h_stats['Win_Pct_Last_10'] - a_stats['Win_Pct_Last_10'],
             h_stats['CS_Win_L5'] - a_stats['CS_Win_L5'],
@@ -259,7 +256,6 @@ def main():
         X_new = scaler.transform(pd.DataFrame([features], columns=feature_columns))
         prob = model.predict_proba(X_new)[0][1]
         
-        # 輸出格式整理
         confidence = "⚪"
         if prob >= 0.65: confidence = "🟢 High (Home)"
         elif prob <= 0.35: confidence = "🔴 High (Away)"
@@ -280,7 +276,6 @@ def main():
         
         print(f"{home:<5} vs {away:<5} | {prob:.1%}    | {confidence}")
 
-    # 儲存 CSV
     if export_data:
         output_csv = f"predictions_{target_date_str}.csv"
         pd.DataFrame(export_data).to_csv(output_csv, index=False, encoding='utf-8-sig')
