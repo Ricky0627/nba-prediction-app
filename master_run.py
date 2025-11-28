@@ -37,7 +37,7 @@ def run_step(script_name):
 
 def save_html_report():
     """
-    將分析結果轉換為現代化儀表板網頁 (index.html)
+    將分析結果轉換為現代化儀表板網頁 (index.html) - v2.1 (修復字體擠壓)
     """
     print("\n" + "="*60)
     print(" 🌐 正在生成現代化網頁報告 (index.html)...")
@@ -70,7 +70,7 @@ def save_html_report():
         if 'Home_Win_Prob' in df.columns:
             df['Home_Win_Prob'] = (df['Home_Win_Prob'] * 100).fillna(0).astype(int).astype(str) + '%'
 
-        # 小數點位數格式化 (EV, NetRtg 等)
+        # 小數點位數格式化
         for col in ['Diff_NetRtg', 'EV_Home', 'EV_Away']:
             if col in df.columns:
                 df[col] = df[col].round(2)
@@ -102,7 +102,7 @@ def save_html_report():
                 
                 body {{ 
                     background-color: var(--bg-color); 
-                    font-family: 'Segoe UI', "Microsoft JhengHei", sans-serif;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
                     color: #333;
                 }}
 
@@ -146,16 +146,43 @@ def save_html_report():
                     color: #2c3e50;
                     font-weight: 700;
                     border-bottom: 2px solid #dee2e6;
+                    white-space: nowrap; /* 防止表頭換行 */
                 }}
 
-                /* 標籤樣式 */
-                .badge-bet-home {{ background-color: var(--success-color); color: white; padding: 8px 12px; border-radius: 50px; box-shadow: 0 2px 5px rgba(46,204,113,0.4); }}
-                .badge-bet-away {{ background-color: var(--accent-color); color: white; padding: 8px 12px; border-radius: 50px; }}
-                .badge-watch {{ background-color: #95a5a6; color: white; padding: 5px 10px; border-radius: 4px; font-size: 0.85em; }}
+                /* --- 修復綠色文字擠壓的關鍵 CSS --- */
+                .badge-bet-home {{ 
+                    background-color: var(--success-color); 
+                    color: white; 
+                    padding: 10px 15px; /* 增加內距 */
+                    border-radius: 50px; 
+                    box-shadow: 0 4px 6px rgba(46,204,113,0.3);
+                    white-space: nowrap; /* 強制不換行 */
+                    display: inline-block;
+                    font-weight: 600;
+                    letter-spacing: 0.5px; /* 增加字距 */
+                }}
+                .badge-bet-away {{ 
+                    background-color: var(--accent-color); 
+                    color: white; 
+                    padding: 10px 15px; 
+                    border-radius: 50px; 
+                    white-space: nowrap;
+                    display: inline-block;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }}
+                .badge-watch {{ 
+                    background-color: #bdc3c7; color: white; 
+                    padding: 6px 12px; border-radius: 4px; 
+                    font-size: 0.85em; white-space: nowrap; display: inline-block;
+                }}
                 
                 /* 強弱指標 */
-                .prob-high {{ color: var(--success-color); font-weight: bold; }}
+                .prob-high {{ color: var(--success-color); font-weight: bold; font-size: 1.1em; }}
                 .prob-low {{ color: var(--danger-color); }}
+                
+                /* 強制所有表格內容垂直置中 */
+                table.dataTable tbody td {{ vertical-align: middle; }}
                 
                 /* 隊伍名稱加粗 */
                 td:nth-child(2), td:nth-child(3) {{
@@ -226,6 +253,7 @@ def save_html_report():
                     "order": [[ 0, "desc" ]], // 預設依日期排序
                     "pageLength": 25,
                     "language": {{ "url": "//cdn.datatables.net/plug-ins/1.13.4/i18n/zh-Hant.json" }},
+                    "autoWidth": false, // 關閉自動寬度，避免擠壓
                     
                     // --- 關鍵：這裡控制每一行的樣式 ---
                     "createdRow": function( row, data, dataIndex ) {{

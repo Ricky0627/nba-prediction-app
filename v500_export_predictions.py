@@ -8,18 +8,21 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler
 import re
 import warnings
+import time
 
 # 忽略警告
 warnings.filterwarnings("ignore")
 
 # --- 1. 賽程抓取模組 ---
 def get_schedule_for_date(target_date):
+    """從 BBR 抓取指定日期的賽程"""
     year = target_date.year
     month_name = target_date.strftime("%B").lower()
     season = year + 1 if target_date.month >= 10 else year
     
     url = f"https://www.basketball-reference.com/leagues/NBA_{season}_games-{month_name}.html"
-    print(f"正在抓取 {target_date.strftime('%Y-%m-%d')} 的賽程...")
+    # 為了避免洗版，我們把這裡的 print 註解掉，改由主程式控制顯示
+    # print(f"正在抓取 {target_date.strftime('%Y-%m-%d')} 的賽程...")
     
     headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36' }
     
@@ -44,6 +47,7 @@ def get_schedule_for_date(target_date):
             if game_date_str == target_str_padded or game_date_str == target_str_no_pad:
                 v_cell = row.find('td', {'data-stat': 'visitor_team_name'})
                 h_cell = row.find('td', {'data-stat': 'home_team_name'})
+                
                 if v_cell and h_cell:
                     v_abbr = None; h_abbr = None
                     if v_cell.find('a'):
@@ -62,23 +66,13 @@ def get_player_gmsc_dict(gmsc_file):
     if not os.path.exists(gmsc_file): return {}
     try:
         df = pd.read_csv(gmsc_file)
-        # 我們嘗試讀取單場數據來計算更準確的平均值
-        # 這裡假設您有 nba_player_single_game_gmsc_v52.csv
+        # 嘗試讀取單場數據來計算更準確的平均值
         if os.path.exists("nba_player_single_game_gmsc_v52.csv"):
             df_raw = pd.read_csv("nba_player_single_game_gmsc_v52.csv")
-            # 只取 2026 賽季
             df_2026 = df_raw[df_raw['Season_Year'] == 2026]
-            if df_2026.empty: 
-                # 如果 2026 還沒開始，用 2025 的
-                df_2026 = df_raw[df_raw['Season_Year'] == 2025]
-            
+            if df_2026.empty: df_2026 = df_raw[df_raw['Season_Year'] == 2025]
             avg_map = df_2026.groupby('Player_ID')['Single_Game_GmSc'].mean().to_dict()
             return avg_map
-            
-        # 如果沒有單場數據，回退到使用累積數據的最後一筆 (雖然不精確)
-        df = df[df['Season_Year'] == 2026].copy()
-        latest = df.groupby('Player_ID').last()
-        # 這裡只能隨便給個值，因為累積值無法直接轉平均
         return {}
     except: return {}
 
@@ -98,9 +92,7 @@ def calculate_team_injury_impact(team_abbr, injuries_df, player_gmsc_map):
         if pd.notna(p_id) and p_id in player_gmsc_map:
             gmsc = player_gmsc_map[p_id]
         
-        # 如果字典裡沒有 (例如新秀或沒打過的)，給一個預設值
-        # 或者如果名字有在名單上，給一個基礎值
-        if gmsc == 0.0: gmsc = 5.0 # 假設受傷的是普通輪替球員
+        if gmsc == 0.0: gmsc = 5.0 # 預設值
             
         if gmsc > 0:
             missing_gmsc_sum += gmsc
@@ -112,20 +104,20 @@ def calculate_team_injury_impact(team_abbr, injuries_df, player_gmsc_map):
 # --- 3. 主程式 ---
 def main():
     print("\n" + "="*60)
-    print(" 🏀 NBA 每日賽事預測匯出工具 (v500)")
+    print(" 🏀 NBA 每日賽事預測匯出工具 (v500 - 智慧搜尋版)")
     print("="*60)
     
     # 1. 檔案路徑
     data_file = "FINAL_MASTER_DATASET_v109_FIXED.csv"
     injury_file = "current_injuries.csv"
-    gmsc_file = "nba_player_cumulative_gmsc_v108.csv" # 這裡只是為了觸發 get_player_gmsc_dict
+    gmsc_file = "nba_player_cumulative_gmsc_v108.csv"
 
     if not os.path.exists(data_file):
         print(f"錯誤: 找不到 '{data_file}'")
         return
 
     # 2. 訓練模型
-    print("正在訓練模型...")
+    print("正在訓練模型 (v114)...")
     df = pd.read_csv(data_file)
     df['date_dt'] = pd.to_datetime(df['date'])
     
@@ -153,24 +145,48 @@ def main():
     df_injuries = pd.DataFrame()
     if os.path.exists(injury_file):
         df_injuries = pd.read_csv(injury_file)
+        print(f"已載入傷病名單 ({len(df_injuries)} 人)。")
 
-    # 4. 決定日期與賽程
+    # 4. 【核心修正】智慧搜尋下一個比賽日
     last_data_date = df['date_dt'].max()
-    target_date = last_data_date + timedelta(days=1)
-    target_date_str = target_date.strftime('%Y-%m-%d')
+    start_search_date = last_data_date + timedelta(days=1)
     
-    print(f"預測日期: {target_date_str}")
+    print(f"\n數據庫最後日期: {last_data_date.strftime('%Y-%m-%d')}")
+    print("正在搜尋最近的比賽日 (最多往後 7 天)...")
     
-    todays_games = get_schedule_for_date(target_date)
+    target_date = None
+    todays_games = []
     
-    if not todays_games:
-        print("本日無比賽或無法抓取賽程。")
+    # 迴圈檢查未來 7 天
+    for i in range(7):
+        check_date = start_search_date + timedelta(days=i)
+        check_date_str = check_date.strftime('%Y-%m-%d')
+        
+        print(f"  檢查 {check_date_str} ...", end=" ", flush=True)
+        games = get_schedule_for_date(check_date)
+        
+        if games:
+            print(f"✅ 發現 {len(games)} 場比賽！")
+            target_date = check_date
+            todays_games = games
+            break
+        else:
+            print("❌ 無比賽")
+            time.sleep(1) # 禮貌性延遲
+
+    if not target_date:
+        print("\n[警告] 未來 7 天內找不到任何比賽，或是 BBR 賽程表結構改變。")
         return
 
-    print(f"發現 {len(todays_games)} 場比賽，正在計算與預測...\n")
+    target_date_str = target_date.strftime('%Y-%m-%d')
+    print(f"\n鎖定預測日期: {target_date_str}")
+    print("-" * 55)
 
     # 5. 批量預測與儲存
     export_data = []
+    
+    print(f"{'主隊':<5} vs {'客隊':<5} | {'主勝率':<8} | {'信心等級'}")
+    print("-" * 55)
 
     for home, away in todays_games:
         # 獲取數據
@@ -183,16 +199,18 @@ def main():
             stats = {}
             prefix = "Before_Game_" if last_game['Team_Abbr'] == team_abbr else "Opp_Before_Game_"
             
-            stats['Win_Pct_L5'] = last_game.get(f'{prefix}Win_Pct_Last_5', 0)
-            stats['Win_Pct_L10'] = last_game.get(f'{prefix}Win_Pct_Last_10', 0)
-            stats['Margin_L5'] = last_game.get(f'{prefix}Avg_Margin_Last_5', 0)
+            stats['Win_Pct_Last_5'] = last_game.get(f'{prefix}Win_Pct_Last_5', 0)
+            stats['Win_Pct_Last_10'] = last_game.get(f'{prefix}Win_Pct_Last_10', 0)
+            stats['Avg_Margin_Last_5'] = last_game.get(f'{prefix}Avg_Margin_Last_5', 0)
             stats['Streak'] = last_game.get(f'{prefix}Streak', 0)
+            
             if prefix == "Before_Game_":
                 stats['CS_Win_L5'] = last_game.get('CS_Win_Pct_L5', 0)
                 stats['CS_Margin_L5'] = last_game.get('CS_Avg_Margin_L5', 0)
             else:
                 stats['CS_Win_L5'] = last_game.get('Opp_CS_Win_Pct_L5', 0)
                 stats['CS_Margin_L5'] = last_game.get('Opp_CS_Avg_Margin_L5', 0)
+            
             stats['H2H_Win'] = last_game.get(f'{prefix}H2H_Win_Pct_L5', 0.5)
             stats['H2H_Margin'] = last_game.get(f'{prefix}H2H_Avg_Margin_L5', 0)
             stats['NetRtg'] = last_game.get(f'{prefix}Avg_NetRtg', 0)
@@ -204,7 +222,7 @@ def main():
             if is_win: stats['Streak'] = stats['Streak'] + 1 if stats['Streak'] > 0 else 1
             else: stats['Streak'] = stats['Streak'] - 1 if stats['Streak'] < 0 else -1
             
-            # 獲取上一場日期 (算休息天數)
+            # 獲取上一場日期
             stats['Last_Date'] = last_game['date_dt']
             return stats
 
@@ -225,9 +243,9 @@ def main():
         features = [
             diff_rest,
             h_stats['Streak'] - a_stats['Streak'],
-            h_stats['Win_Pct_L5'] - a_stats['Win_Pct_L5'],
+            h_stats['Win_Pct_Last_5'] - a_stats['Win_Pct_Last_5'],
             h_stats['Margin_L5'] - a_stats['Margin_L5'],
-            h_stats['Win_Pct_L10'] - a_stats['Win_Pct_L10'],
+            h_stats['Win_Pct_Last_10'] - a_stats['Win_Pct_Last_10'],
             h_stats['CS_Win_L5'] - a_stats['CS_Win_L5'],
             h_stats['CS_Margin_L5'] - a_stats['CS_Margin_L5'],
             h_stats['H2H_Win'] - a_stats['H2H_Win'],
@@ -243,15 +261,15 @@ def main():
         
         # 輸出格式整理
         confidence = "⚪"
-        if prob >= 0.65: confidence = "High (Home)"
-        elif prob <= 0.35: confidence = "High (Away)"
+        if prob >= 0.65: confidence = "🟢 High (Home)"
+        elif prob <= 0.35: confidence = "🔴 High (Away)"
         else: confidence = "Toss-up"
 
         export_data.append({
             'Date': target_date_str,
             'Home': home,
             'Away': away,
-            'Home_Win_Prob': round(prob, 3), # 修改欄位名以符合習慣
+            'Home_Win_Prob': round(prob, 3),
             'Confidence': confidence,
             'Diff_NetRtg': round(h_stats['NetRtg'] - a_stats['NetRtg'], 2),
             'Diff_Injury': round(diff_inj, 2),
@@ -260,7 +278,7 @@ def main():
             'Away_Injuries': "; ".join(a_inj_names)
         })
         
-        print(f"{home} vs {away}: {prob:.1%} ({confidence})")
+        print(f"{home:<5} vs {away:<5} | {prob:.1%}    | {confidence}")
 
     # 儲存 CSV
     if export_data:
@@ -268,6 +286,5 @@ def main():
         pd.DataFrame(export_data).to_csv(output_csv, index=False, encoding='utf-8-sig')
         print(f"\n成功匯出預測結果至: {output_csv}")
 
-# 【!! 修正 !!】
 if __name__ == "__main__":
     main()
