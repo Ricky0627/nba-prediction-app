@@ -4,34 +4,25 @@ import time
 import os
 import pandas as pd
 import base64
-import numpy as np
 
 def run_step(script_name):
-    """
-    執行外部 Python 腳本的函式
-    """
+    """執行外部 Python 腳本的函式"""
     print(f"\n" + "="*60)
     print(f" ▶ 正在執行: {script_name}")
     print("="*60)
     
-    # 檢查檔案是否存在
     if not os.path.exists(script_name):
         print(f" [X] 錯誤：找不到檔案 '{script_name}'")
-        print("     請確認該檔案是否在同一個資料夾中。")
         return False
 
     start_time = time.time()
     try:
-        # 呼叫系統的 python 來執行該腳本
         result = subprocess.run([sys.executable, script_name], check=True)
-        
         elapsed = time.time() - start_time
         print(f"\n [V] {script_name} 執行成功！ (耗時: {elapsed:.1f} 秒)")
         return True
-        
     except subprocess.CalledProcessError as e:
         print(f"\n [X] {script_name} 執行失敗！ (錯誤碼: {e.returncode})")
-        print("     請檢查上方的錯誤訊息。流程已中止。")
         return False
     except Exception as e:
         print(f"\n [X] 發生未預期錯誤: {e}")
@@ -52,67 +43,48 @@ def save_html_report():
     print(" 🌐 正在生成現代化網頁報告 (index.html)...")
     print("="*60)
 
-    # --- 1. 讀取 v800 報告 ---
-    # 優先讀取結算後的檔案 (_graded)，如果沒有才讀原始檔
-    file_v800 = 'final_analysis_report_v800_graded.csv'
-    if not os.path.exists(file_v800):
-        file_v800 = 'final_analysis_report_v800.csv'
-
+    # --- 1. 讀取 v800 報告 (原始邏輯) ---
+    file_v800 = 'final_analysis_report_v800.csv'
     table_v800_html = ""
     if os.path.exists(file_v800):
         df8 = pd.read_csv(file_v800)
         if 'Home_Win_Prob' in df8.columns:
-            if pd.api.types.is_numeric_dtype(df8['Home_Win_Prob']):
-                df8['Home_Win_Prob'] = (df8['Home_Win_Prob'] * 100).fillna(0).astype(int).astype(str) + '%'
+            df8['Home_Win_Prob'] = (df8['Home_Win_Prob'] * 100).fillna(0).astype(int).astype(str) + '%'
         for col in ['Diff_NetRtg', 'EV_Home', 'EV_Away']:
             if col in df8.columns: df8[col] = df8[col].round(2)
-            
-        # 處理比分顯示
-        for col in ['Home_Score', 'Away_Score']:
-            if col in df8.columns:
-                df8[col] = df8[col].apply(lambda x: f"{int(x)}" if pd.notna(x) else "-")
-                
         table_v800_html = df8.to_html(classes='table table-hover align-middle', index=False, table_id='tableV800', border=0)
 
-    # --- 2. 讀取 標準版 報告 (已修正：讀取 graded 並篩選欄位) ---
-    file_std = 'final_analysis_report_graded.csv'
+    # --- 2. 讀取 標準版 報告 (已修改為讀取 graded 檔案並篩選欄位) ---
+    # 修改目標：換成 final_analysis_report_v800_graded.csv 並只留特定欄位
+    file_std = 'final_analysis_report_v800_graded.csv'  # <--- 修改檔案來源
     table_std_html = ""
     
+    # 指定要保留的欄位
+    target_columns = [
+        'Date', 'Home', 'Away', 'Home_Win_Prob', 'Confidence', 
+        'Odds_Home', 'Odds_Away', 'EV_Home', 'EV_Away', 'Bet_Signal', 
+        'Home_Score', 'Away_Score', 'Winner', 'Outcome'
+    ]
+
     if os.path.exists(file_std):
-        try:
-            df_std = pd.read_csv(file_std)
-            
-            # 指定保留的欄位 (User Requested)
-            target_cols = [
-                'Date', 'Home', 'Away', 'Home_Win_Prob', 'Confidence', 
-                'Odds_Home', 'Odds_Away', 'EV_Home', 'EV_Away', 
-                'Bet_Signal', 'Home_Score', 'Away_Score', 'Winner', 'Outcome'
-            ]
-            
-            # 只保留存在的欄位
-            valid_cols = [c for c in target_cols if c in df_std.columns]
-            df_std = df_std[valid_cols]
+        df_std = pd.read_csv(file_std)
+        
+        # 篩選欄位 (只保留存在的欄位，避免報錯)
+        existing_cols = [c for c in target_columns if c in df_std.columns]
+        df_std = df_std[existing_cols]
 
-            # 格式化勝率
-            if 'Home_Win_Prob' in df_std.columns:
-                if pd.api.types.is_numeric_dtype(df_std['Home_Win_Prob']):
-                    df_std['Home_Win_Prob'] = (df_std['Home_Win_Prob'] * 100).fillna(0).astype(int).astype(str) + '%'
+        # 格式化數據
+        if 'Home_Win_Prob' in df_std.columns:
+            # 判斷是否已經是百分比字串，如果不是才轉換
+            if pd.api.types.is_numeric_dtype(df_std['Home_Win_Prob']):
+                df_std['Home_Win_Prob'] = (df_std['Home_Win_Prob'] * 100).fillna(0).astype(int).astype(str) + '%'
+        
+        for col in ['EV_Home', 'EV_Away']:
+            if col in df_std.columns: df_std[col] = df_std[col].round(2)
             
-            # 格式化小數
-            for col in ['EV_Home', 'EV_Away']:
-                if col in df_std.columns: df_std[col] = df_std[col].round(2)
-                
-            # 格式化比分 (去小數點)
-            for col in ['Home_Score', 'Away_Score']:
-                if col in df_std.columns:
-                    df_std[col] = df_std[col].apply(lambda x: f"{int(x)}" if pd.notna(x) else "-")
-
-            table_std_html = df_std.to_html(classes='table table-hover align-middle', index=False, table_id='tableStd', border=0)
-        except Exception as e:
-            print(f" [!] 處理標準版報告時發生錯誤: {e}")
-            table_std_html = f'<div class="alert alert-danger">無法讀取報告: {e}</div>'
+        table_std_html = df_std.to_html(classes='table table-hover align-middle', index=False, table_id='tableStd', border=0)
     else:
-        table_std_html = '<div class="alert alert-warning">找不到結算報告 (final_analysis_report_graded.csv)</div>'
+        print(f" [!] 警告：找不到標準報表檔案 '{file_std}'")
 
     # --- 3. 讀取圖片 ---
     img_accuracy = get_image_base64('accuracy_chart.png')
@@ -146,10 +118,6 @@ def save_html_report():
             .badge-bet-away {{ background-color: #3498db; color: white; padding: 8px 12px; border-radius: 50px; font-weight: 600; display: inline-block; }}
             .prob-high {{ color: #2ecc71; font-weight: bold; font-size: 1.1em; }}
             .prob-low {{ color: #e74c3c; font-weight: bold; font-size: 1.1em; }}
-            
-            /* 結果樣式 */
-            .outcome-win {{ color: #2ecc71; font-weight: bold; }}
-            .outcome-loss {{ color: #e74c3c; font-weight: bold; }}
         </style>
     </head>
     <body>
@@ -168,7 +136,7 @@ def save_html_report():
                 <button class="nav-link active" id="v800-tab" data-bs-toggle="tab" data-bs-target="#v800" type="button">🚀 v800 策略推薦</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="std-tab" data-bs-toggle="tab" data-bs-target="#std" type="button">📊 標準版報表</button>
+                <button class="nav-link" id="std-tab" data-bs-toggle="tab" data-bs-target="#std" type="button">📊 標準版報表 (Graded)</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart" type="button">📈 模型準確率</button>
@@ -188,7 +156,7 @@ def save_html_report():
 
             <div class="tab-pane fade" id="std" role="tabpanel">
                 <div class="content-box">
-                    <h4 class="mb-3 text-secondary"><i class="fas fa-table me-2"></i>完整分析報表 (標準版)</h4>
+                    <h4 class="mb-3 text-secondary"><i class="fas fa-table me-2"></i>完整分析報表 (含回測結果)</h4>
                     <div class="table-responsive">
                         {table_std_html if table_std_html else '<p class="text-muted">無數據</p>'}
                     </div>
@@ -215,39 +183,34 @@ def save_html_report():
     
     <script>
         $(document).ready(function () {{
+            // 設定 DataTables 共用函式
             function initTable(id) {{
                 $(id).DataTable({{
                     "order": [[ 0, "desc" ]],
                     "pageLength": 25,
                     "language": {{ "url": "//cdn.datatables.net/plug-ins/1.13.4/i18n/zh-Hant.json" }},
                     "createdRow": function( row, data, dataIndex ) {{
-                        
-                        $('td', row).each(function(i) {{
-                            var content = $(this).text();
-                            var cell = $(this);
-                            
-                            // 1. 處理 Bet_Signal
-                            if (content.includes('BET') || content.includes('HOME') || (content.includes('主') && content.includes('EV'))) {{
-                                if (content.includes('主') || content.includes('HOME')) cell.html('<span class="badge-bet-home">' + content + '</span>');
-                            }} 
-                            else if (content.includes('AWAY') || (content.includes('客') && content.includes('EV'))) {{
-                                if (content.includes('客') || content.includes('AWAY')) cell.html('<span class="badge-bet-away">' + content + '</span>');
-                            }}
-                            
-                            // 2. 處理勝率 (xx%)
-                            if (content.includes('%') && content.length < 6) {{
-                                var val = parseInt(content.replace('%', ''));
-                                if (!isNaN(val)) {{
-                                    if (val >= 65) cell.addClass('prob-high');
-                                    if (val <= 35) cell.addClass('prob-low');
+                        // 嘗試尋找 Bet_Signal 欄位並上色 (假設在倒數幾欄，這裡改用遍歷尋找較穩妥，或維持原邏輯)
+                        // 因為欄位變動，這裡簡單做一個文字內容檢測
+                        $('td', row).each(function() {{
+                            var txt = $(this).text();
+                            if (txt.includes('BET') || txt.includes('HOME') && txt.length < 20) {{ 
+                                // length < 20 是為了避免誤判長字串
+                                if (!txt.includes('Score') && !txt.includes('Prob')) {{
+                                    $(this).html('<span class="badge-bet-home">' + txt + '</span>');
                                 }}
+                            }} else if (txt.includes('AWAY') && txt.length < 20) {{
+                                $(this).html('<span class="badge-bet-away">' + txt + '</span>');
                             }}
-
-                            // 3. 處理 Outcome (WIN/LOSS)
-                            if (content.includes('WIN') || content.includes('✅')) {{
-                                cell.addClass('outcome-win');
-                            }} else if (content.includes('LOSS') || content.includes('❌')) {{
-                                cell.addClass('outcome-loss');
+                        }});
+                        
+                        // 勝率高亮
+                        $('td', row).each(function(i) {{
+                            var txt = $(this).text();
+                            if (txt.includes('%')) {{
+                                var val = parseInt(txt);
+                                if (val >= 65) $(this).addClass('prob-high');
+                                if (val <= 35) $(this).addClass('prob-low');
                             }}
                         }});
                     }}
@@ -269,8 +232,7 @@ def save_html_report():
 
 def main():
     print("\n" + "#"*60)
-    print(" 🏀 NBA 全自動投資系統 (Master Controller v3.1)")
-    print(" 🎯 任務：更新數據 -> 預測 -> 賠率 -> 價值分析 -> 成績結算 -> 網頁發布")
+    print(" 🏀 NBA 全自動投資系統 (Master Controller v3)")
     print("#"*60)
     
     pipeline = [
@@ -288,7 +250,7 @@ def main():
         "v200_merge_final.py",
         "fix_columns.py",
         
-        # --- 階段 4: 回測與繪圖 ---
+        # --- 階段 4: 回測與繪圖 (新增) ---
         "predictions_2026_full_report.py",
         "plot_accuracy.py",
 
@@ -303,25 +265,18 @@ def main():
     ]
 
     total_steps = len(pipeline)
-    
     for i, script in enumerate(pipeline):
         print(f"\n [進度] 步驟 {i+1}/{total_steps}...")
-        
-        success = run_step(script)
-        
-        if not success:
-            print("\n" + "!"*60)
-            print(f" 系統在執行 '{script}' 時發生錯誤，流程已停止。")
-            print("!"*60)
-            break
-    else:
-        print("\n" + "#"*60)
-        print(" 🎉 恭喜！所有分析步驟執行完畢。")
-        print(" 📊 正在生成網頁報告...")
-        
-        save_html_report()
-        
-        print("#"*60)
+        if not run_step(script):
+            print(f"警告：'{script}' 執行失敗或找不到，將嘗試繼續執行下一步...")
+            continue
+
+    print("\n" + "#"*60)
+    print(" 🎉 恭喜！所有步驟執行完畢。")
+    
+    # --- 生成網頁 ---
+    save_html_report()
+    print("#"*60)
 
 if __name__ == "__main__":
     main()
