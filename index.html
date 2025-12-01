@@ -1,158 +1,58 @@
 
-        <!DOCTYPE html>
-        <html lang="zh-Hant">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>NBA AI 投資戰情室</title>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-            <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <!DOCTYPE html>
+    <html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NBA AI 投資戰情室 (v3.0)</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+        <style>
+            body { background-color: #f4f7f6; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+            .navbar { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+            .navbar-brand { color: white !important; font-weight: bold; letter-spacing: 1px; }
+            .content-box { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
+            .nav-tabs .nav-link { color: #495057; font-weight: 600; }
+            .nav-tabs .nav-link.active { color: #1e3c72; border-top: 3px solid #1e3c72; }
             
-            <style>
-                :root {
-                    --primary-color: #1a252f;
-                    --accent-color: #3498db;
-                    --success-color: #2ecc71;
-                    --warning-color: #f1c40f;
-                    --danger-color: #e74c3c;
-                    --bg-color: #f4f7f6;
-                }
-                
-                body { 
-                    background-color: var(--bg-color); 
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-                    color: #333;
-                }
+            /* 標籤樣式 */
+            .badge-bet-home { background-color: #2ecc71; color: white; padding: 8px 12px; border-radius: 50px; font-weight: 600; display: inline-block; }
+            .badge-bet-away { background-color: #3498db; color: white; padding: 8px 12px; border-radius: 50px; font-weight: 600; display: inline-block; }
+            .prob-high { color: #2ecc71; font-weight: bold; font-size: 1.1em; }
+            .prob-low { color: #e74c3c; font-weight: bold; font-size: 1.1em; }
+        </style>
+    </head>
+    <body>
 
-                /* 頂部導航 */
-                .navbar {
-                    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-                }
-                .navbar-brand {
-                    color: white !important;
-                    font-weight: bold;
-                    letter-spacing: 1px;
-                }
-
-                /* 儀表板卡片 */
-                .stat-card {
-                    background: white;
-                    border-radius: 12px;
-                    padding: 20px;
-                    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-                    transition: transform 0.2s;
-                    border-left: 5px solid var(--accent-color);
-                }
-                .stat-card:hover { transform: translateY(-3px); }
-                .stat-title { color: #7f8c8d; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-                .stat-value { font-size: 2rem; font-weight: bold; color: var(--primary-color); }
-                .stat-icon { font-size: 2.5rem; opacity: 0.2; position: absolute; right: 20px; top: 20px; }
-
-                /* 表格區域 */
-                .table-container {
-                    background: white;
-                    border-radius: 15px;
-                    padding: 25px;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-                    margin-top: 30px;
-                    border-top: 5px solid #2c3e50;
-                }
-                
-                table.dataTable thead th {
-                    background-color: #f8f9fa;
-                    color: #2c3e50;
-                    font-weight: 700;
-                    border-bottom: 2px solid #dee2e6;
-                    white-space: nowrap; /* 防止表頭換行 */
-                }
-
-                /* --- 修復綠色文字擠壓的關鍵 CSS --- */
-                .badge-bet-home { 
-                    background-color: var(--success-color); 
-                    color: white; 
-                    padding: 10px 15px; /* 增加內距 */
-                    border-radius: 50px; 
-                    box-shadow: 0 4px 6px rgba(46,204,113,0.3);
-                    white-space: nowrap; /* 強制不換行 */
-                    display: inline-block;
-                    font-weight: 600;
-                    letter-spacing: 0.5px; /* 增加字距 */
-                }
-                .badge-bet-away { 
-                    background-color: var(--accent-color); 
-                    color: white; 
-                    padding: 10px 15px; 
-                    border-radius: 50px; 
-                    white-space: nowrap;
-                    display: inline-block;
-                    font-weight: 600;
-                    letter-spacing: 0.5px;
-                }
-                .badge-watch { 
-                    background-color: #bdc3c7; color: white; 
-                    padding: 6px 12px; border-radius: 4px; 
-                    font-size: 0.85em; white-space: nowrap; display: inline-block;
-                }
-                
-                /* 強弱指標 */
-                .prob-high { color: var(--success-color); font-weight: bold; font-size: 1.1em; }
-                .prob-low { color: var(--danger-color); }
-                
-                /* 強制所有表格內容垂直置中 */
-                table.dataTable tbody td { vertical-align: middle; }
-                
-                /* 隊伍名稱加粗 */
-                td:nth-child(2), td:nth-child(3) {
-                    font-weight: 600;
-                    color: #2c3e50;
-                }
-            </style>
-        </head>
-        <body>
-
-        <nav class="navbar navbar-dark mb-4">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <i class="fas fa-basketball-ball me-2"></i>NBA AI 投資戰情室
-                </a>
-                <span class="text-white-50" style="font-size: 0.9em;">
-                    最後更新: 2025-11-30 12:17
-                </span>
-            </div>
-        </nav>
-
+    <nav class="navbar navbar-dark mb-4">
         <div class="container">
-            
-            <div class="row g-4 mb-4">
-                <div class="col-md-4">
-                    <div class="stat-card" style="border-left-color: #3498db;">
-                        <div class="stat-title">今日賽事</div>
-                        <div class="stat-value">49 <span style="font-size:1rem; color:#999;">場</span></div>
-                        <i class="fas fa-calendar-day stat-icon text-primary"></i>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="stat-card" style="border-left-color: #2ecc71;">
-                        <div class="stat-title">AI 推薦注單</div>
-                        <div class="stat-value">7 <span style="font-size:1rem; color:#999;">單</span></div>
-                        <i class="fas fa-check-circle stat-icon text-success"></i>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="stat-card" style="border-left-color: #f1c40f;">
-                        <div class="stat-title">最高期望值 (EV)</div>
-                        <div class="stat-value">+0.98</div>
-                        <i class="fas fa-chart-line stat-icon text-warning"></i>
-                    </div>
-                </div>
-            </div>
+            <a class="navbar-brand" href="#"><i class="fas fa-basketball-ball me-2"></i>NBA AI 投資戰情室</a>
+            <span class="text-white-50">Updated: 2025-12-01 05:29</span>
+        </div>
+    </nav>
 
-            <div class="table-container">
-                <h4 class="mb-4"><i class="fas fa-list me-2"></i>賽事分析詳情</h4>
-                <div class="table-responsive">
-                    <table class="dataframe table table-hover align-middle" id="predictionTable">
+    <div class="container">
+        
+        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="v800-tab" data-bs-toggle="tab" data-bs-target="#v800" type="button">🚀 v800 策略推薦</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="std-tab" data-bs-toggle="tab" data-bs-target="#std" type="button">📊 標準版報表</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart" type="button">📈 模型準確率</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            
+            <div class="tab-pane fade show active" id="v800" role="tabpanel">
+                <div class="content-box">
+                    <h4 class="mb-3 text-primary"><i class="fas fa-robot me-2"></i>v800 策略分析結果</h4>
+                    <div class="table-responsive">
+                        <table class="dataframe table table-hover align-middle" id="tableV800">
   <thead>
     <tr style="text-align: right;">
       <th>Date</th>
@@ -201,10 +101,10 @@
       <td>-4</td>
       <td>Domantas Sabonis(14.9); Dennis Schröder(9.8)</td>
       <td>Brandon Clarke(5.0); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
-      <td>1.96</td>
-      <td>1.50</td>
-      <td>-0.16</td>
-      <td>-0.14</td>
+      <td>1.93</td>
+      <td>1.53</td>
+      <td>-0.17</td>
+      <td>-0.13</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -218,10 +118,10 @@
       <td>-1</td>
       <td>NaN</td>
       <td>Stephon Castle(14.7); Jordan McLaughlin(3.4); Victor Wembanyama(22.6)</td>
-      <td>1.48</td>
-      <td>2.00</td>
-      <td>-0.02</td>
-      <td>-0.32</td>
+      <td>1.45</td>
+      <td>2.07</td>
+      <td>-0.04</td>
+      <td>-0.30</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -252,11 +152,11 @@
       <td>0</td>
       <td>Andre Drummond(9.6); VJ Edgecombe(11.6); Joel Embiid(14.7); Kelly Oubre Jr.(12.3); Trendon Watford(8.0)</td>
       <td>N'Faly Dante(1.1); Nikola Djurisic(5.0); Kristaps Porziņģis(15.8); Trae Young(13.8)</td>
-      <td>1.68</td>
-      <td>1.75</td>
-      <td>-0.50</td>
-      <td>0.22</td>
-      <td>客EV高=0.22 (Risky)</td>
+      <td>1.62</td>
+      <td>1.82</td>
+      <td>-0.51</td>
+      <td>0.27</td>
+      <td>客EV高=0.27 (Risky)</td>
     </tr>
     <tr>
       <td>2025-11-30</td>
@@ -269,10 +169,10 @@
       <td>4</td>
       <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
       <td>RJ Barrett(14.7)</td>
-      <td>1.23</td>
-      <td>2.80</td>
+      <td>1.22</td>
+      <td>2.85</td>
       <td>-0.19</td>
-      <td>-0.05</td>
+      <td>-0.03</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -286,10 +186,10 @@
       <td>-1</td>
       <td>Jarrett Allen(13.4); Lonzo Ball(5.9); Sam Merrill(10.1); Larry Nance Jr.(2.5); Craig Porter Jr.(6.9); Max Strus(5.0)</td>
       <td>Jayson Tatum(5.0)</td>
-      <td>1.22</td>
-      <td>2.85</td>
-      <td>-0.35</td>
-      <td>0.34</td>
+      <td>1.26</td>
+      <td>2.60</td>
+      <td>-0.33</td>
+      <td>0.22</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -311,23 +211,6 @@
     </tr>
     <tr>
       <td>2025-11-29</td>
-      <td>PHO</td>
-      <td>DEN</td>
-      <td>39%</td>
-      <td>Toss-up</td>
-      <td>-5.79</td>
-      <td>0.12</td>
-      <td>0</td>
-      <td>Grayson Allen(14.7); Ryan Dunn(8.0); Jalen Green(11.2); Isaiah Livers(2.3)</td>
-      <td>Christian Braun(9.6); Aaron Gordon(14.8); Julian Strawther(1.9)</td>
-      <td>2.10</td>
-      <td>1.43</td>
-      <td>-0.18</td>
-      <td>-0.13</td>
-      <td>觀望</td>
-    </tr>
-    <tr>
-      <td>2025-11-29</td>
       <td>LAC</td>
       <td>DAL</td>
       <td>69%</td>
@@ -341,6 +224,23 @@
       <td>2.60</td>
       <td>-0.13</td>
       <td>-0.19</td>
+      <td>觀望</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>PHO</td>
+      <td>DEN</td>
+      <td>39%</td>
+      <td>Toss-up</td>
+      <td>-5.79</td>
+      <td>0.12</td>
+      <td>0</td>
+      <td>Grayson Allen(14.7); Ryan Dunn(8.0); Jalen Green(11.2); Isaiah Livers(2.3)</td>
+      <td>Christian Braun(9.6); Aaron Gordon(14.8); Julian Strawther(1.9)</td>
+      <td>2.10</td>
+      <td>1.43</td>
+      <td>-0.18</td>
+      <td>-0.13</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -362,19 +262,53 @@
     </tr>
     <tr>
       <td>2025-11-29</td>
-      <td>MIN</td>
-      <td>BOS</td>
-      <td>59%</td>
-      <td>Toss-up</td>
-      <td>0.13</td>
-      <td>-0.59</td>
-      <td>-5</td>
-      <td>NaN</td>
-      <td>Jaylen Brown(18.5); Neemias Queta(10.4); Jayson Tatum(5.0); Derrick White(13.2)</td>
-      <td>1.26</td>
-      <td>2.60</td>
+      <td>MIL</td>
+      <td>BRK</td>
+      <td>73%</td>
+      <td>🟢 High (Home)</td>
+      <td>7.51</td>
       <td>-0.26</td>
-      <td>0.07</td>
+      <td>-4</td>
+      <td>Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
+      <td>Haywood Highsmith(5.0); Michael Porter Jr.(17.5); Cam Thomas(12.4)</td>
+      <td>1.12</td>
+      <td>3.50</td>
+      <td>-0.18</td>
+      <td>-0.05</td>
+      <td>HOME (Parlay) Win=73%</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>MIA</td>
+      <td>DET</td>
+      <td>49%</td>
+      <td>Toss-up</td>
+      <td>-1.01</td>
+      <td>0.46</td>
+      <td>8</td>
+      <td>Jaime Jaquez Jr.(13.8); Norman Powell(17.7); Andrew Wiggins(11.8)</td>
+      <td>Bobi Klintman(1.1); Marcus Sasser(5.0)</td>
+      <td>1.46</td>
+      <td>2.05</td>
+      <td>-0.28</td>
+      <td>0.05</td>
+      <td>觀望</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>IND</td>
+      <td>CHI</td>
+      <td>40%</td>
+      <td>Toss-up</td>
+      <td>-8.71</td>
+      <td>0.51</td>
+      <td>3</td>
+      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Andrew Nembhard(12.3); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
+      <td>Zach Collins(5.0); Isaac Okoro(5.7); Dalen Terry(2.4)</td>
+      <td>2.10</td>
+      <td>1.43</td>
+      <td>-0.16</td>
+      <td>-0.14</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -396,87 +330,19 @@
     </tr>
     <tr>
       <td>2025-11-29</td>
-      <td>IND</td>
-      <td>CHI</td>
-      <td>40%</td>
-      <td>Toss-up</td>
-      <td>-8.71</td>
-      <td>0.51</td>
-      <td>3</td>
-      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Andrew Nembhard(12.3); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
-      <td>Zach Collins(5.0); Isaac Okoro(5.7); Dalen Terry(2.4)</td>
-      <td>2.10</td>
-      <td>1.43</td>
-      <td>-0.16</td>
-      <td>-0.14</td>
-      <td>觀望</td>
-    </tr>
-    <tr>
-      <td>2025-11-29</td>
-      <td>MIA</td>
-      <td>DET</td>
-      <td>49%</td>
-      <td>Toss-up</td>
-      <td>-1.01</td>
-      <td>0.46</td>
-      <td>8</td>
-      <td>Jaime Jaquez Jr.(13.8); Norman Powell(17.7); Andrew Wiggins(11.8)</td>
-      <td>Bobi Klintman(1.1); Marcus Sasser(5.0)</td>
-      <td>1.46</td>
-      <td>2.05</td>
-      <td>-0.28</td>
-      <td>0.05</td>
-      <td>觀望</td>
-    </tr>
-    <tr>
-      <td>2025-11-29</td>
-      <td>MIL</td>
-      <td>BRK</td>
-      <td>73%</td>
-      <td>🟢 High (Home)</td>
-      <td>7.51</td>
-      <td>-0.26</td>
-      <td>-4</td>
-      <td>Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
-      <td>Haywood Highsmith(5.0); Michael Porter Jr.(17.5); Cam Thomas(12.4)</td>
-      <td>1.12</td>
-      <td>3.50</td>
-      <td>-0.18</td>
-      <td>-0.05</td>
-      <td>HOME (Parlay) Win=73%</td>
-    </tr>
-    <tr>
-      <td>2025-11-28</td>
-      <td>ATL</td>
-      <td>CLE</td>
-      <td>56%</td>
-      <td>Toss-up</td>
-      <td>-1.46</td>
-      <td>-0.34</td>
-      <td>0</td>
-      <td>Trae Young(13.8)</td>
-      <td>Jarrett Allen(13.8); Sam Merrill(10.1); Craig Porter Jr.(6.9); Max Strus(5.0); Dean Wade(5.3)</td>
-      <td>2.40</td>
-      <td>1.32</td>
-      <td>0.37</td>
-      <td>-0.43</td>
-      <td>BET HOME (Value) AdjEV=0.56💎</td>
-    </tr>
-    <tr>
-      <td>2025-11-28</td>
-      <td>LAC</td>
-      <td>MEM</td>
+      <td>MIN</td>
+      <td>BOS</td>
       <td>59%</td>
       <td>Toss-up</td>
-      <td>-1.18</td>
-      <td>-0.05</td>
-      <td>-3</td>
-      <td>Bradley Beal(3.2); Bogdan Bogdanović(6.4); Derrick Jones Jr.(8.7); Jordan Miller(7.5)</td>
-      <td>Brandon Clarke(5.0); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
-      <td>1.30</td>
-      <td>2.50</td>
-      <td>-0.23</td>
-      <td>0.03</td>
+      <td>0.13</td>
+      <td>-0.59</td>
+      <td>-5</td>
+      <td>NaN</td>
+      <td>Jaylen Brown(18.5); Neemias Queta(10.4); Jayson Tatum(5.0); Derrick White(13.2)</td>
+      <td>1.26</td>
+      <td>2.60</td>
+      <td>-0.26</td>
+      <td>0.07</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -498,6 +364,40 @@
     </tr>
     <tr>
       <td>2025-11-28</td>
+      <td>LAC</td>
+      <td>MEM</td>
+      <td>59%</td>
+      <td>Toss-up</td>
+      <td>-1.18</td>
+      <td>-0.05</td>
+      <td>-3</td>
+      <td>Bradley Beal(3.2); Bogdan Bogdanović(6.4); Derrick Jones Jr.(8.7); Jordan Miller(7.5)</td>
+      <td>Brandon Clarke(5.0); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
+      <td>1.30</td>
+      <td>2.50</td>
+      <td>-0.23</td>
+      <td>0.03</td>
+      <td>觀望</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>CHO</td>
+      <td>CHI</td>
+      <td>61%</td>
+      <td>Toss-up</td>
+      <td>-2.20</td>
+      <td>-0.58</td>
+      <td>-6</td>
+      <td>Pat Connaughton(3.8); Josh Green(5.0); Grant Williams(5.0)</td>
+      <td>Zach Collins(5.0); Kevin Huerter(9.8); Isaac Okoro(5.7); Dalen Terry(2.4); Nikola Vučević(14.3); Coby White(17.4); Patrick Williams(5.7)</td>
+      <td>1.88</td>
+      <td>1.56</td>
+      <td>0.15</td>
+      <td>-0.39</td>
+      <td>觀望</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
       <td>DEN</td>
       <td>SAS</td>
       <td>73%</td>
@@ -515,70 +415,19 @@
     </tr>
     <tr>
       <td>2025-11-28</td>
-      <td>LAL</td>
-      <td>DAL</td>
-      <td>86%</td>
+      <td>UTA</td>
+      <td>SAC</td>
+      <td>68%</td>
       <td>🟢 High (Home)</td>
-      <td>8.50</td>
-      <td>-0.17</td>
-      <td>7</td>
-      <td>Deandre Ayton(12.8); Marcus Smart(7.2)</td>
-      <td>Anthony Davis(17.9); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7)</td>
-      <td>1.13</td>
-      <td>3.40</td>
-      <td>-0.03</td>
-      <td>-0.52</td>
-      <td>HOME (Parlay) Win=86%</td>
-    </tr>
-    <tr>
-      <td>2025-11-28</td>
-      <td>DET</td>
-      <td>ORL</td>
-      <td>63%</td>
-      <td>Toss-up</td>
-      <td>3.70</td>
-      <td>-0.11</td>
-      <td>-2</td>
-      <td>Jaden Ivey(6.7); Bobi Klintman(1.1); Marcus Sasser(5.0)</td>
-      <td>Paolo Banchero(16.7); Moritz Wagner(5.0)</td>
-      <td>1.45</td>
-      <td>2.07</td>
-      <td>-0.09</td>
-      <td>-0.23</td>
-      <td>觀望</td>
-    </tr>
-    <tr>
-      <td>2025-11-28</td>
-      <td>BRK</td>
-      <td>PHI</td>
-      <td>44%</td>
-      <td>Toss-up</td>
-      <td>-11.71</td>
-      <td>-0.30</td>
-      <td>0</td>
-      <td>Haywood Highsmith(5.0); Michael Porter Jr.(17.5); Ben Saraf(1.6); Cam Thomas(12.4)</td>
-      <td>Adem Bona(3.1); VJ Edgecombe(11.6); Joel Embiid(14.7); Paul George(10.6); Kelly Oubre Jr.(12.3); Trendon Watford(8.0)</td>
-      <td>2.60</td>
-      <td>1.26</td>
-      <td>0.14</td>
-      <td>-0.29</td>
-      <td>觀望</td>
-    </tr>
-    <tr>
-      <td>2025-11-28</td>
-      <td>IND</td>
-      <td>WAS</td>
-      <td>56%</td>
-      <td>Toss-up</td>
-      <td>3.67</td>
-      <td>0.35</td>
-      <td>-4</td>
-      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Andrew Nembhard(12.3); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
-      <td>Kyshawn George(12.2); Tre Johnson(6.8); Corey Kispert(7.3)</td>
-      <td>1.28</td>
-      <td>2.55</td>
-      <td>-0.27</td>
-      <td>0.10</td>
+      <td>4.35</td>
+      <td>-0.05</td>
+      <td>-3</td>
+      <td>Walker Kessler(15.7); Georges Niang(5.0)</td>
+      <td>Domantas Sabonis(14.9); Dennis Schröder(9.8)</td>
+      <td>1.60</td>
+      <td>1.85</td>
+      <td>0.09</td>
+      <td>-0.41</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -600,36 +449,121 @@
     </tr>
     <tr>
       <td>2025-11-28</td>
-      <td>UTA</td>
-      <td>SAC</td>
-      <td>68%</td>
-      <td>🟢 High (Home)</td>
-      <td>4.35</td>
-      <td>-0.05</td>
-      <td>-3</td>
-      <td>Walker Kessler(15.7); Georges Niang(5.0)</td>
-      <td>Domantas Sabonis(14.9); Dennis Schröder(9.8)</td>
-      <td>1.60</td>
-      <td>1.85</td>
-      <td>0.09</td>
-      <td>-0.41</td>
+      <td>IND</td>
+      <td>WAS</td>
+      <td>56%</td>
+      <td>Toss-up</td>
+      <td>3.67</td>
+      <td>0.35</td>
+      <td>-4</td>
+      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Andrew Nembhard(12.3); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
+      <td>Kyshawn George(12.2); Tre Johnson(6.8); Corey Kispert(7.3)</td>
+      <td>1.28</td>
+      <td>2.55</td>
+      <td>-0.27</td>
+      <td>0.10</td>
       <td>觀望</td>
     </tr>
     <tr>
       <td>2025-11-28</td>
-      <td>CHO</td>
-      <td>CHI</td>
-      <td>61%</td>
+      <td>BRK</td>
+      <td>PHI</td>
+      <td>44%</td>
       <td>Toss-up</td>
-      <td>-2.20</td>
-      <td>-0.58</td>
-      <td>-6</td>
+      <td>-11.71</td>
+      <td>-0.30</td>
+      <td>0</td>
+      <td>Haywood Highsmith(5.0); Michael Porter Jr.(17.5); Ben Saraf(1.6); Cam Thomas(12.4)</td>
+      <td>Adem Bona(3.1); VJ Edgecombe(11.6); Joel Embiid(14.7); Paul George(10.6); Kelly Oubre Jr.(12.3); Trendon Watford(8.0)</td>
+      <td>2.60</td>
+      <td>1.26</td>
+      <td>0.14</td>
+      <td>-0.29</td>
+      <td>觀望</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>DET</td>
+      <td>ORL</td>
+      <td>63%</td>
+      <td>Toss-up</td>
+      <td>3.70</td>
+      <td>-0.11</td>
+      <td>-2</td>
+      <td>Jaden Ivey(6.7); Bobi Klintman(1.1); Marcus Sasser(5.0)</td>
+      <td>Paolo Banchero(16.7); Moritz Wagner(5.0)</td>
+      <td>1.45</td>
+      <td>2.07</td>
+      <td>-0.09</td>
+      <td>-0.23</td>
+      <td>觀望</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>LAL</td>
+      <td>DAL</td>
+      <td>86%</td>
+      <td>🟢 High (Home)</td>
+      <td>8.50</td>
+      <td>-0.17</td>
+      <td>7</td>
+      <td>Deandre Ayton(12.8); Marcus Smart(7.2)</td>
+      <td>Anthony Davis(17.9); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7)</td>
+      <td>1.13</td>
+      <td>3.40</td>
+      <td>-0.03</td>
+      <td>-0.52</td>
+      <td>HOME (Parlay) Win=86%</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>ATL</td>
+      <td>CLE</td>
+      <td>56%</td>
+      <td>Toss-up</td>
+      <td>-1.46</td>
+      <td>-0.34</td>
+      <td>0</td>
+      <td>Trae Young(13.8)</td>
+      <td>Jarrett Allen(13.8); Sam Merrill(10.1); Craig Porter Jr.(6.9); Max Strus(5.0); Dean Wade(5.3)</td>
+      <td>2.40</td>
+      <td>1.32</td>
+      <td>0.37</td>
+      <td>-0.43</td>
+      <td>BET HOME (Value) AdjEV=0.56💎</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>NOP</td>
+      <td>MEM</td>
+      <td>52%</td>
+      <td>Toss-up</td>
+      <td>-8.60</td>
+      <td>-0.19</td>
+      <td>2</td>
+      <td>Herbert Jones(6.2); Karlo Matković(4.8); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
+      <td>Brandon Clarke(5.0); Zach Edey(11.1); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
+      <td>1.96</td>
+      <td>1.50</td>
+      <td>0.02</td>
+      <td>-0.28</td>
+      <td>BET HOME (Value) AdjEV=0.18💎</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>CHO</td>
+      <td>NYK</td>
+      <td>30%</td>
+      <td>High (Away)</td>
+      <td>-8.93</td>
+      <td>-0.08</td>
+      <td>-7</td>
       <td>Pat Connaughton(3.8); Josh Green(5.0); Grant Williams(5.0)</td>
-      <td>Zach Collins(5.0); Kevin Huerter(9.8); Isaac Okoro(5.7); Dalen Terry(2.4); Nikola Vučević(14.3); Coby White(17.4); Patrick Williams(5.7)</td>
-      <td>1.88</td>
-      <td>1.56</td>
-      <td>0.15</td>
-      <td>-0.39</td>
+      <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
+      <td>2.85</td>
+      <td>1.22</td>
+      <td>-0.14</td>
+      <td>-0.15</td>
       <td>觀望</td>
     </tr>
     <tr>
@@ -719,23 +653,6 @@
     </tr>
     <tr>
       <td>2025-11-26</td>
-      <td>NOP</td>
-      <td>MEM</td>
-      <td>52%</td>
-      <td>Toss-up</td>
-      <td>-8.60</td>
-      <td>-0.19</td>
-      <td>2</td>
-      <td>Herbert Jones(6.2); Karlo Matković(4.8); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
-      <td>Brandon Clarke(5.0); Zach Edey(11.1); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
-      <td>1.96</td>
-      <td>1.50</td>
-      <td>0.02</td>
-      <td>-0.28</td>
-      <td>BET HOME (Value) AdjEV=0.18💎</td>
-    </tr>
-    <tr>
-      <td>2025-11-26</td>
       <td>TOR</td>
       <td>IND</td>
       <td>85%</td>
@@ -767,23 +684,6 @@
       <td>-0.08</td>
       <td>-0.29</td>
       <td>HOME (Parlay) Win=75%</td>
-    </tr>
-    <tr>
-      <td>2025-11-26</td>
-      <td>CHO</td>
-      <td>NYK</td>
-      <td>30%</td>
-      <td>High (Away)</td>
-      <td>-8.93</td>
-      <td>-0.08</td>
-      <td>-7</td>
-      <td>Pat Connaughton(3.8); Josh Green(5.0); Grant Williams(5.0)</td>
-      <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
-      <td>2.85</td>
-      <td>1.22</td>
-      <td>-0.14</td>
-      <td>-0.15</td>
-      <td>觀望</td>
     </tr>
     <tr>
       <td>2025-11-25</td>
@@ -838,108 +738,6 @@
     </tr>
     <tr>
       <td>2025-11-24</td>
-      <td>MIA</td>
-      <td>DAL</td>
-      <td>82%</td>
-      <td>High (Home)</td>
-      <td>10.95</td>
-      <td>-0.25</td>
-      <td>5</td>
-      <td>Tyler Herro(5.0); Nikola Jović(6.4); Andrew Wiggins(12.1)</td>
-      <td>Anthony Davis(17.9); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7); Ryan Nembhard(1.5); Brandon Williams(8.3)</td>
-      <td>1.22</td>
-      <td>2.85</td>
-      <td>0.00</td>
-      <td>-0.49</td>
-      <td>PASS (Overconf. Risk)</td>
-    </tr>
-    <tr>
-      <td>2025-11-24</td>
-      <td>MIL</td>
-      <td>POR</td>
-      <td>53%</td>
-      <td>Toss-up</td>
-      <td>-0.55</td>
-      <td>-0.18</td>
-      <td>-3</td>
-      <td>Giannis Antetokounmpo(27.8); Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
-      <td>Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Shaedon Sharpe(13.8); Matisse Thybulle(6.2); Blake Wesley(5.4); Robert Williams(6.0)</td>
-      <td>1.62</td>
-      <td>1.82</td>
-      <td>-0.14</td>
-      <td>-0.14</td>
-      <td>PASS (Noise Zone)</td>
-    </tr>
-    <tr>
-      <td>2025-11-24</td>
-      <td>MEM</td>
-      <td>DEN</td>
-      <td>37%</td>
-      <td>Toss-up</td>
-      <td>-15.67</td>
-      <td>0.18</td>
-      <td>3</td>
-      <td>Brandon Clarke(5.0); Jaren Jackson Jr.(11.2); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
-      <td>Christian Braun(9.6); Aaron Gordon(14.8); Julian Strawther(1.9)</td>
-      <td>2.85</td>
-      <td>1.22</td>
-      <td>0.05</td>
-      <td>-0.23</td>
-      <td>觀望</td>
-    </tr>
-    <tr>
-      <td>2025-11-24</td>
-      <td>NOP</td>
-      <td>CHI</td>
-      <td>61%</td>
-      <td>Toss-up</td>
-      <td>-10.20</td>
-      <td>-0.07</td>
-      <td>-10</td>
-      <td>Herbert Jones(6.2); Kevon Looney(2.9); Karlo Matković(4.8); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
-      <td>Zach Collins(5.0); Trentyn Flowers(5.0); Kevin Huerter(9.8); Isaac Okoro(5.7); Dalen Terry(2.4); Patrick Williams(6.0)</td>
-      <td>2.40</td>
-      <td>1.32</td>
-      <td>0.46</td>
-      <td>-0.49</td>
-      <td>主EV高=0.46 (Risky)</td>
-    </tr>
-    <tr>
-      <td>2025-11-24</td>
-      <td>IND</td>
-      <td>DET</td>
-      <td>17%</td>
-      <td>High (Away)</td>
-      <td>-18.98</td>
-      <td>0.26</td>
-      <td>-13</td>
-      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
-      <td>Jaden Ivey(8.3); Bobi Klintman(1.1); Caris LeVert(6.9); Marcus Sasser(5.0)</td>
-      <td>3.20</td>
-      <td>1.16</td>
-      <td>-0.46</td>
-      <td>-0.04</td>
-      <td>BET AWAY (Lock) EV=-0.04</td>
-    </tr>
-    <tr>
-      <td>2025-11-24</td>
-      <td>SAC</td>
-      <td>MIN</td>
-      <td>23%</td>
-      <td>High (Away)</td>
-      <td>-18.68</td>
-      <td>0.16</td>
-      <td>2</td>
-      <td>Domantas Sabonis(14.9)</td>
-      <td>Terrence Shannon Jr.(2.2)</td>
-      <td>3.20</td>
-      <td>1.16</td>
-      <td>-0.26</td>
-      <td>-0.11</td>
-      <td>觀望</td>
-    </tr>
-    <tr>
-      <td>2025-11-24</td>
       <td>PHO</td>
       <td>HOU</td>
       <td>50%</td>
@@ -954,23 +752,6 @@
       <td>0.25</td>
       <td>-0.35</td>
       <td>PASS (Noise Zone)</td>
-    </tr>
-    <tr>
-      <td>2025-11-24</td>
-      <td>BRK</td>
-      <td>NYK</td>
-      <td>12%</td>
-      <td>High (Away)</td>
-      <td>-16.21</td>
-      <td>-0.01</td>
-      <td>0</td>
-      <td>Haywood Highsmith(5.0); Ben Saraf(1.6); Cam Thomas(12.4)</td>
-      <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>無賠率</td>
     </tr>
     <tr>
       <td>2025-11-24</td>
@@ -1006,58 +787,1434 @@
       <td>NaN</td>
       <td>無賠率</td>
     </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>SAC</td>
+      <td>MIN</td>
+      <td>23%</td>
+      <td>High (Away)</td>
+      <td>-18.68</td>
+      <td>0.16</td>
+      <td>2</td>
+      <td>Domantas Sabonis(14.9)</td>
+      <td>Terrence Shannon Jr.(2.2)</td>
+      <td>3.20</td>
+      <td>1.16</td>
+      <td>-0.26</td>
+      <td>-0.11</td>
+      <td>觀望</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>IND</td>
+      <td>DET</td>
+      <td>17%</td>
+      <td>High (Away)</td>
+      <td>-18.98</td>
+      <td>0.26</td>
+      <td>-13</td>
+      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
+      <td>Jaden Ivey(8.3); Bobi Klintman(1.1); Caris LeVert(6.9); Marcus Sasser(5.0)</td>
+      <td>3.20</td>
+      <td>1.16</td>
+      <td>-0.46</td>
+      <td>-0.04</td>
+      <td>BET AWAY (Lock) EV=-0.04</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>NOP</td>
+      <td>CHI</td>
+      <td>61%</td>
+      <td>Toss-up</td>
+      <td>-10.20</td>
+      <td>-0.07</td>
+      <td>-10</td>
+      <td>Herbert Jones(6.2); Kevon Looney(2.9); Karlo Matković(4.8); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
+      <td>Zach Collins(5.0); Trentyn Flowers(5.0); Kevin Huerter(9.8); Isaac Okoro(5.7); Dalen Terry(2.4); Patrick Williams(6.0)</td>
+      <td>2.40</td>
+      <td>1.32</td>
+      <td>0.46</td>
+      <td>-0.49</td>
+      <td>主EV高=0.46 (Risky)</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>MEM</td>
+      <td>DEN</td>
+      <td>37%</td>
+      <td>Toss-up</td>
+      <td>-15.67</td>
+      <td>0.18</td>
+      <td>3</td>
+      <td>Brandon Clarke(5.0); Jaren Jackson Jr.(11.2); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
+      <td>Christian Braun(9.6); Aaron Gordon(14.8); Julian Strawther(1.9)</td>
+      <td>2.85</td>
+      <td>1.22</td>
+      <td>0.05</td>
+      <td>-0.23</td>
+      <td>觀望</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>MIL</td>
+      <td>POR</td>
+      <td>53%</td>
+      <td>Toss-up</td>
+      <td>-0.55</td>
+      <td>-0.18</td>
+      <td>-3</td>
+      <td>Giannis Antetokounmpo(27.8); Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
+      <td>Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Shaedon Sharpe(13.8); Matisse Thybulle(6.2); Blake Wesley(5.4); Robert Williams(6.0)</td>
+      <td>1.62</td>
+      <td>1.82</td>
+      <td>-0.14</td>
+      <td>-0.14</td>
+      <td>PASS (Noise Zone)</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>MIA</td>
+      <td>DAL</td>
+      <td>82%</td>
+      <td>High (Home)</td>
+      <td>10.95</td>
+      <td>-0.25</td>
+      <td>5</td>
+      <td>Tyler Herro(5.0); Nikola Jović(6.4); Andrew Wiggins(12.1)</td>
+      <td>Anthony Davis(17.9); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7); Ryan Nembhard(1.5); Brandon Williams(8.3)</td>
+      <td>1.22</td>
+      <td>2.85</td>
+      <td>0.00</td>
+      <td>-0.49</td>
+      <td>PASS (Overconf. Risk)</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>BRK</td>
+      <td>NYK</td>
+      <td>12%</td>
+      <td>High (Away)</td>
+      <td>-16.21</td>
+      <td>-0.01</td>
+      <td>0</td>
+      <td>Haywood Highsmith(5.0); Ben Saraf(1.6); Cam Thomas(12.4)</td>
+      <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>無賠率</td>
+    </tr>
   </tbody>
 </table>
+                    </div>
                 </div>
             </div>
 
-            <footer class="text-center mt-5 mb-4 text-muted">
-                <small>Designed by AI • Powered by GitHub Actions</small>
-            </footer>
+            <div class="tab-pane fade" id="std" role="tabpanel">
+                <div class="content-box">
+                    <h4 class="mb-3 text-secondary"><i class="fas fa-table me-2"></i>完整分析報表 (標準版)</h4>
+                    <div class="table-responsive">
+                        <table class="dataframe table table-hover align-middle" id="tableStd">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>Home</th>
+      <th>Away</th>
+      <th>Home_Win_Prob</th>
+      <th>Confidence</th>
+      <th>Diff_NetRtg</th>
+      <th>Diff_Injury</th>
+      <th>Diff_Streak</th>
+      <th>Home_Injuries</th>
+      <th>Away_Injuries</th>
+      <th>Odds_Home</th>
+      <th>Odds_Away</th>
+      <th>EV_Home</th>
+      <th>EV_Away</th>
+      <th>Bet_Signal</th>
+      <th>Kelly_Home</th>
+      <th>Kelly_Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025-11-30</td>
+      <td>LAL</td>
+      <td>NOP</td>
+      <td>88%</td>
+      <td>🟢 High (Home)</td>
+      <td>14.52</td>
+      <td>-0.27</td>
+      <td>8</td>
+      <td>LeBron James(15.2); Marcus Smart(7.2)</td>
+      <td>Jordan Hawkins(2.8); Herbert Jones(6.2); Karlo Matković(4.8); Trey Murphy III(15.6); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>無賠率</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-30</td>
+      <td>SAC</td>
+      <td>MEM</td>
+      <td>43%</td>
+      <td>Toss-up</td>
+      <td>-6.91</td>
+      <td>-0.07</td>
+      <td>-4</td>
+      <td>Domantas Sabonis(14.9); Dennis Schröder(9.8)</td>
+      <td>Brandon Clarke(5.0); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
+      <td>1.93</td>
+      <td>1.53</td>
+      <td>-0.17</td>
+      <td>-0.13</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-30</td>
+      <td>MIN</td>
+      <td>SAS</td>
+      <td>66%</td>
+      <td>🟢 High (Home)</td>
+      <td>-2.18</td>
+      <td>-0.51</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>Stephon Castle(14.7); Jordan McLaughlin(3.4); Victor Wembanyama(22.6)</td>
+      <td>1.45</td>
+      <td>2.07</td>
+      <td>-0.04</td>
+      <td>-0.30</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-30</td>
+      <td>POR</td>
+      <td>OKC</td>
+      <td>18%</td>
+      <td>🔴 High (Away)</td>
+      <td>-18.09</td>
+      <td>0.31</td>
+      <td>-12</td>
+      <td>Donovan Clingan(12.1); Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Matisse Thybulle(6.2); Blake Wesley(5.4)</td>
+      <td>Isaiah Hartenstein(14.0); Thomas Sorber(5.0); Nikola Topić(5.0)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>無賠率</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-30</td>
+      <td>PHI</td>
+      <td>ATL</td>
+      <td>30%</td>
+      <td>🔴 High (Away)</td>
+      <td>-2.77</td>
+      <td>0.26</td>
+      <td>0</td>
+      <td>Andre Drummond(9.6); VJ Edgecombe(11.6); Joel Embiid(14.7); Kelly Oubre Jr.(12.3); Trendon Watford(8.0)</td>
+      <td>N'Faly Dante(1.1); Nikola Djurisic(5.0); Kristaps Porziņģis(15.8); Trae Young(13.8)</td>
+      <td>1.62</td>
+      <td>1.82</td>
+      <td>-0.51</td>
+      <td>0.27</td>
+      <td>客EV=0.27★🔥</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-30</td>
+      <td>NYK</td>
+      <td>TOR</td>
+      <td>66%</td>
+      <td>🟢 High (Home)</td>
+      <td>0.07</td>
+      <td>0.07</td>
+      <td>4</td>
+      <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
+      <td>RJ Barrett(14.7)</td>
+      <td>1.22</td>
+      <td>2.85</td>
+      <td>-0.19</td>
+      <td>-0.03</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-30</td>
+      <td>CLE</td>
+      <td>BOS</td>
+      <td>53%</td>
+      <td>Toss-up</td>
+      <td>-1.10</td>
+      <td>0.48</td>
+      <td>-1</td>
+      <td>Jarrett Allen(13.4); Lonzo Ball(5.9); Sam Merrill(10.1); Larry Nance Jr.(2.5); Craig Porter Jr.(6.9); Max Strus(5.0)</td>
+      <td>Jayson Tatum(5.0)</td>
+      <td>1.26</td>
+      <td>2.60</td>
+      <td>-0.33</td>
+      <td>0.22</td>
+      <td>客EV=0.22★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-30</td>
+      <td>UTA</td>
+      <td>HOU</td>
+      <td>19%</td>
+      <td>🔴 High (Away)</td>
+      <td>-18.18</td>
+      <td>0.21</td>
+      <td>-1</td>
+      <td>Keyonte George(18.1); Walker Kessler(15.7); Kevin Love(5.3); Georges Niang(5.0)</td>
+      <td>Steven Adams(8.6); Tari Eason(9.1); Dorian Finney-Smith(5.0); Fred VanVleet(5.0)</td>
+      <td>3.50</td>
+      <td>1.12</td>
+      <td>-0.33</td>
+      <td>-0.09</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>LAC</td>
+      <td>DAL</td>
+      <td>69%</td>
+      <td>🟢 High (Home)</td>
+      <td>-0.54</td>
+      <td>0.13</td>
+      <td>0</td>
+      <td>Bradley Beal(3.2); Bogdan Bogdanović(6.4); Derrick Jones Jr.(8.7); Jordan Miller(7.5)</td>
+      <td>Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7)</td>
+      <td>1.26</td>
+      <td>2.60</td>
+      <td>-0.13</td>
+      <td>-0.19</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>PHO</td>
+      <td>DEN</td>
+      <td>39%</td>
+      <td>Toss-up</td>
+      <td>-5.79</td>
+      <td>0.12</td>
+      <td>0</td>
+      <td>Grayson Allen(14.7); Ryan Dunn(8.0); Jalen Green(11.2); Isaiah Livers(2.3)</td>
+      <td>Christian Braun(9.6); Aaron Gordon(14.8); Julian Strawther(1.9)</td>
+      <td>2.10</td>
+      <td>1.43</td>
+      <td>-0.18</td>
+      <td>-0.13</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>GSW</td>
+      <td>NOP</td>
+      <td>83%</td>
+      <td>🟢 High (Home)</td>
+      <td>12.26</td>
+      <td>-0.01</td>
+      <td>0</td>
+      <td>Stephen Curry(19.5); Al Horford(5.2); Jonathan Kuminga(9.9); De'Anthony Melton(5.0); Gary Payton II(3.6)</td>
+      <td>Jordan Hawkins(2.8); Herbert Jones(6.2); Karlo Matković(4.8); Trey Murphy III(15.6); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
+      <td>1.22</td>
+      <td>2.85</td>
+      <td>0.01</td>
+      <td>-0.52</td>
+      <td>主EV=0.01🔥</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>MIL</td>
+      <td>BRK</td>
+      <td>73%</td>
+      <td>🟢 High (Home)</td>
+      <td>7.51</td>
+      <td>-0.26</td>
+      <td>-4</td>
+      <td>Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
+      <td>Haywood Highsmith(5.0); Michael Porter Jr.(17.5); Cam Thomas(12.4)</td>
+      <td>1.12</td>
+      <td>3.50</td>
+      <td>-0.18</td>
+      <td>-0.05</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>MIA</td>
+      <td>DET</td>
+      <td>49%</td>
+      <td>Toss-up</td>
+      <td>-1.01</td>
+      <td>0.46</td>
+      <td>8</td>
+      <td>Jaime Jaquez Jr.(13.8); Norman Powell(17.7); Andrew Wiggins(11.8)</td>
+      <td>Bobi Klintman(1.1); Marcus Sasser(5.0)</td>
+      <td>1.46</td>
+      <td>2.05</td>
+      <td>-0.28</td>
+      <td>0.05</td>
+      <td>客EV=0.05</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>IND</td>
+      <td>CHI</td>
+      <td>40%</td>
+      <td>Toss-up</td>
+      <td>-8.71</td>
+      <td>0.51</td>
+      <td>3</td>
+      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Andrew Nembhard(12.3); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
+      <td>Zach Collins(5.0); Isaac Okoro(5.7); Dalen Terry(2.4)</td>
+      <td>2.10</td>
+      <td>1.43</td>
+      <td>-0.16</td>
+      <td>-0.14</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>CHO</td>
+      <td>TOR</td>
+      <td>23%</td>
+      <td>🔴 High (Away)</td>
+      <td>-12.17</td>
+      <td>-0.01</td>
+      <td>-8</td>
+      <td>Pat Connaughton(3.8); Josh Green(5.0); Grant Williams(5.0)</td>
+      <td>RJ Barrett(14.7)</td>
+      <td>2.95</td>
+      <td>1.20</td>
+      <td>-0.32</td>
+      <td>-0.08</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-29</td>
+      <td>MIN</td>
+      <td>BOS</td>
+      <td>59%</td>
+      <td>Toss-up</td>
+      <td>0.13</td>
+      <td>-0.59</td>
+      <td>-5</td>
+      <td>NaN</td>
+      <td>Jaylen Brown(18.5); Neemias Queta(10.4); Jayson Tatum(5.0); Derrick White(13.2)</td>
+      <td>1.26</td>
+      <td>2.60</td>
+      <td>-0.26</td>
+      <td>0.07</td>
+      <td>客EV=0.07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>LAC</td>
+      <td>MEM</td>
+      <td>59%</td>
+      <td>Toss-up</td>
+      <td>-1.18</td>
+      <td>-0.05</td>
+      <td>-3</td>
+      <td>Bradley Beal(3.2); Bogdan Bogdanović(6.4); Derrick Jones Jr.(8.7); Jordan Miller(7.5)</td>
+      <td>Brandon Clarke(5.0); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
+      <td>1.30</td>
+      <td>2.50</td>
+      <td>-0.23</td>
+      <td>0.03</td>
+      <td>客EV=0.03</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>OKC</td>
+      <td>PHO</td>
+      <td>74%</td>
+      <td>🟢 High (Home)</td>
+      <td>12.83</td>
+      <td>-0.17</td>
+      <td>9</td>
+      <td>Thomas Sorber(5.0); Nikola Topić(5.0); Aaron Wiggins(10.4)</td>
+      <td>Grayson Allen(14.7); Ryan Dunn(8.0); Jalen Green(11.2)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>無賠率</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>LAL</td>
+      <td>DAL</td>
+      <td>86%</td>
+      <td>🟢 High (Home)</td>
+      <td>8.50</td>
+      <td>-0.17</td>
+      <td>7</td>
+      <td>Deandre Ayton(12.8); Marcus Smart(7.2)</td>
+      <td>Anthony Davis(17.9); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7)</td>
+      <td>1.13</td>
+      <td>3.40</td>
+      <td>-0.03</td>
+      <td>-0.52</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>ATL</td>
+      <td>CLE</td>
+      <td>56%</td>
+      <td>Toss-up</td>
+      <td>-1.46</td>
+      <td>-0.34</td>
+      <td>0</td>
+      <td>Trae Young(13.8)</td>
+      <td>Jarrett Allen(13.8); Sam Merrill(10.1); Craig Porter Jr.(6.9); Max Strus(5.0); Dean Wade(5.3)</td>
+      <td>2.40</td>
+      <td>1.32</td>
+      <td>0.37</td>
+      <td>-0.43</td>
+      <td>主EV=0.37★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>NYK</td>
+      <td>MIL</td>
+      <td>79%</td>
+      <td>🟢 High (Home)</td>
+      <td>8.27</td>
+      <td>-0.28</td>
+      <td>8</td>
+      <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
+      <td>Giannis Antetokounmpo(27.8); Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
+      <td>1.22</td>
+      <td>2.85</td>
+      <td>-0.04</td>
+      <td>-0.40</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>IND</td>
+      <td>WAS</td>
+      <td>56%</td>
+      <td>Toss-up</td>
+      <td>3.67</td>
+      <td>0.35</td>
+      <td>-4</td>
+      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Andrew Nembhard(12.3); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
+      <td>Kyshawn George(12.2); Tre Johnson(6.8); Corey Kispert(7.3)</td>
+      <td>1.28</td>
+      <td>2.55</td>
+      <td>-0.27</td>
+      <td>0.10</td>
+      <td>客EV=0.10</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>DEN</td>
+      <td>SAS</td>
+      <td>73%</td>
+      <td>🟢 High (Home)</td>
+      <td>3.94</td>
+      <td>-0.18</td>
+      <td>0</td>
+      <td>Christian Braun(9.6); Aaron Gordon(14.8); Julian Strawther(1.9)</td>
+      <td>Stephon Castle(14.7); Jordan McLaughlin(3.4); Victor Wembanyama(22.6)</td>
+      <td>1.22</td>
+      <td>2.85</td>
+      <td>-0.11</td>
+      <td>-0.23</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>BRK</td>
+      <td>PHI</td>
+      <td>44%</td>
+      <td>Toss-up</td>
+      <td>-11.71</td>
+      <td>-0.30</td>
+      <td>0</td>
+      <td>Haywood Highsmith(5.0); Michael Porter Jr.(17.5); Ben Saraf(1.6); Cam Thomas(12.4)</td>
+      <td>Adem Bona(3.1); VJ Edgecombe(11.6); Joel Embiid(14.7); Paul George(10.6); Kelly Oubre Jr.(12.3); Trendon Watford(8.0)</td>
+      <td>2.60</td>
+      <td>1.26</td>
+      <td>0.14</td>
+      <td>-0.29</td>
+      <td>主EV=0.14★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>DET</td>
+      <td>ORL</td>
+      <td>63%</td>
+      <td>Toss-up</td>
+      <td>3.70</td>
+      <td>-0.11</td>
+      <td>-2</td>
+      <td>Jaden Ivey(6.7); Bobi Klintman(1.1); Marcus Sasser(5.0)</td>
+      <td>Paolo Banchero(16.7); Moritz Wagner(5.0)</td>
+      <td>1.45</td>
+      <td>2.07</td>
+      <td>-0.09</td>
+      <td>-0.23</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>CHO</td>
+      <td>CHI</td>
+      <td>61%</td>
+      <td>Toss-up</td>
+      <td>-2.20</td>
+      <td>-0.58</td>
+      <td>-6</td>
+      <td>Pat Connaughton(3.8); Josh Green(5.0); Grant Williams(5.0)</td>
+      <td>Zach Collins(5.0); Kevin Huerter(9.8); Isaac Okoro(5.7); Dalen Terry(2.4); Nikola Vučević(14.3); Coby White(17.4); Patrick Williams(5.7)</td>
+      <td>1.88</td>
+      <td>1.56</td>
+      <td>0.15</td>
+      <td>-0.39</td>
+      <td>主EV=0.15★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-28</td>
+      <td>UTA</td>
+      <td>SAC</td>
+      <td>68%</td>
+      <td>🟢 High (Home)</td>
+      <td>4.35</td>
+      <td>-0.05</td>
+      <td>-3</td>
+      <td>Walker Kessler(15.7); Georges Niang(5.0)</td>
+      <td>Domantas Sabonis(14.9); Dennis Schröder(9.8)</td>
+      <td>1.60</td>
+      <td>1.85</td>
+      <td>0.09</td>
+      <td>-0.41</td>
+      <td>主EV=0.09🔥</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>NOP</td>
+      <td>MEM</td>
+      <td>52%</td>
+      <td>Toss-up</td>
+      <td>-8.60</td>
+      <td>-0.19</td>
+      <td>2</td>
+      <td>Herbert Jones(6.2); Karlo Matković(4.8); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
+      <td>Brandon Clarke(5.0); Zach Edey(11.1); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
+      <td>1.96</td>
+      <td>1.50</td>
+      <td>0.02</td>
+      <td>-0.28</td>
+      <td>主EV=0.02</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>POR</td>
+      <td>SAS</td>
+      <td>36%</td>
+      <td>Toss-up</td>
+      <td>-9.83</td>
+      <td>-0.00</td>
+      <td>2</td>
+      <td>Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Shaedon Sharpe(13.8); Matisse Thybulle(6.2); Blake Wesley(5.4)</td>
+      <td>Stephon Castle(14.7); Dylan Harper(10.3); Jordan McLaughlin(3.4); Victor Wembanyama(22.6)</td>
+      <td>1.70</td>
+      <td>1.73</td>
+      <td>-0.39</td>
+      <td>0.11</td>
+      <td>客EV=0.11★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>SAC</td>
+      <td>PHO</td>
+      <td>45%</td>
+      <td>Toss-up</td>
+      <td>-16.97</td>
+      <td>-0.12</td>
+      <td>3</td>
+      <td>Domantas Sabonis(14.9); Dennis Schröder(9.8)</td>
+      <td>Grayson Allen(14.7); Ryan Dunn(8.0); Jalen Green(11.2)</td>
+      <td>2.15</td>
+      <td>1.42</td>
+      <td>-0.03</td>
+      <td>-0.22</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>CHO</td>
+      <td>NYK</td>
+      <td>30%</td>
+      <td>High (Away)</td>
+      <td>-8.93</td>
+      <td>-0.08</td>
+      <td>-7</td>
+      <td>Pat Connaughton(3.8); Josh Green(5.0); Grant Williams(5.0)</td>
+      <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
+      <td>2.85</td>
+      <td>1.22</td>
+      <td>-0.14</td>
+      <td>-0.15</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>GSW</td>
+      <td>HOU</td>
+      <td>50%</td>
+      <td>Toss-up</td>
+      <td>-10.27</td>
+      <td>-0.22</td>
+      <td>0</td>
+      <td>Draymond Green(6.7); Al Horford(5.2); Jonathan Kuminga(9.9); De'Anthony Melton(5.0)</td>
+      <td>Steven Adams(8.6); Kevin Durant(16.8); Tari Eason(9.1); Dorian Finney-Smith(5.0); Fred VanVleet(5.0)</td>
+      <td>1.53</td>
+      <td>1.93</td>
+      <td>-0.24</td>
+      <td>-0.04</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>BOS</td>
+      <td>DET</td>
+      <td>53%</td>
+      <td>Toss-up</td>
+      <td>-2.51</td>
+      <td>0.12</td>
+      <td>-12</td>
+      <td>Neemias Queta(10.4); Jayson Tatum(5.0)</td>
+      <td>Bobi Klintman(1.1); Marcus Sasser(5.0)</td>
+      <td>1.96</td>
+      <td>1.50</td>
+      <td>0.04</td>
+      <td>-0.30</td>
+      <td>主EV=0.04</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>OKC</td>
+      <td>MIN</td>
+      <td>38%</td>
+      <td>Toss-up</td>
+      <td>10.43</td>
+      <td>0.67</td>
+      <td>11</td>
+      <td>Shai Gilgeous-Alexander(28.1); Thomas Sorber(5.0); Nikola Topić(5.0); Aaron Wiggins(10.4); Jalen Williams(5.0)</td>
+      <td>NaN</td>
+      <td>1.16</td>
+      <td>3.20</td>
+      <td>-0.56</td>
+      <td>0.98</td>
+      <td>客EV=0.98★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>TOR</td>
+      <td>IND</td>
+      <td>85%</td>
+      <td>High (Home)</td>
+      <td>18.72</td>
+      <td>-0.34</td>
+      <td>10</td>
+      <td>RJ Barrett(14.7)</td>
+      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
+      <td>1.13</td>
+      <td>3.40</td>
+      <td>-0.04</td>
+      <td>-0.49</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-26</td>
+      <td>MIA</td>
+      <td>MIL</td>
+      <td>75%</td>
+      <td>High (Home)</td>
+      <td>7.92</td>
+      <td>0.20</td>
+      <td>10</td>
+      <td>Jaime Jaquez Jr.(14.1); Nikola Jović(6.4); Norman Powell(18.5); Dru Smith(6.7); Andrew Wiggins(12.1)</td>
+      <td>Giannis Antetokounmpo(27.8); Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
+      <td>1.22</td>
+      <td>2.85</td>
+      <td>-0.08</td>
+      <td>-0.29</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-25</td>
+      <td>WAS</td>
+      <td>ATL</td>
+      <td>15%</td>
+      <td>High (Away)</td>
+      <td>-19.38</td>
+      <td>0.07</td>
+      <td>-16</td>
+      <td>Marvin Bagley III(7.5); Kyshawn George(12.2); Tre Johnson(6.8)</td>
+      <td>Luke Kennard(6.9); Trae Young(13.8)</td>
+      <td>3.40</td>
+      <td>1.13</td>
+      <td>-0.49</td>
+      <td>-0.04</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-25</td>
+      <td>PHI</td>
+      <td>ORL</td>
+      <td>33%</td>
+      <td>High (Away)</td>
+      <td>-1.84</td>
+      <td>0.71</td>
+      <td>0</td>
+      <td>Adem Bona(3.1); VJ Edgecombe(11.6); Joel Embiid(14.7); Paul George(10.6); Tyrese Maxey(26.1); Kelly Oubre Jr.(12.3)</td>
+      <td>Paolo Banchero(16.7); Moritz Wagner(5.0)</td>
+      <td>2.25</td>
+      <td>1.38</td>
+      <td>-0.26</td>
+      <td>-0.08</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-25</td>
+      <td>LAL</td>
+      <td>LAC</td>
+      <td>85%</td>
+      <td>High (Home)</td>
+      <td>7.74</td>
+      <td>-0.16</td>
+      <td>5</td>
+      <td>Deandre Ayton(12.8)</td>
+      <td>Bradley Beal(3.2); Bogdan Bogdanović(6.4); Derrick Jones Jr.(8.7); Jordan Miller(7.5)</td>
+      <td>1.22</td>
+      <td>2.85</td>
+      <td>0.04</td>
+      <td>-0.57</td>
+      <td>主EV=0.04🔥</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>SAC</td>
+      <td>MIN</td>
+      <td>23%</td>
+      <td>High (Away)</td>
+      <td>-18.68</td>
+      <td>0.16</td>
+      <td>2</td>
+      <td>Domantas Sabonis(14.9)</td>
+      <td>Terrence Shannon Jr.(2.2)</td>
+      <td>3.20</td>
+      <td>1.16</td>
+      <td>-0.26</td>
+      <td>-0.11</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>NOP</td>
+      <td>CHI</td>
+      <td>61%</td>
+      <td>Toss-up</td>
+      <td>-10.20</td>
+      <td>-0.07</td>
+      <td>-10</td>
+      <td>Herbert Jones(6.2); Kevon Looney(2.9); Karlo Matković(4.8); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
+      <td>Zach Collins(5.0); Trentyn Flowers(5.0); Kevin Huerter(9.8); Isaac Okoro(5.7); Dalen Terry(2.4); Patrick Williams(6.0)</td>
+      <td>2.40</td>
+      <td>1.32</td>
+      <td>0.46</td>
+      <td>-0.49</td>
+      <td>主EV=0.46★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>TOR</td>
+      <td>CLE</td>
+      <td>70%</td>
+      <td>High (Home)</td>
+      <td>2.49</td>
+      <td>-0.38</td>
+      <td>5</td>
+      <td>Jakob Poeltl(11.3)</td>
+      <td>Jarrett Allen(13.8); Lonzo Ball(6.0); Sam Merrill(10.1); Craig Porter Jr.(6.9); Max Strus(5.0)</td>
+      <td>1.85</td>
+      <td>1.60</td>
+      <td>0.29</td>
+      <td>-0.52</td>
+      <td>主EV=0.29★🔥</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>PHO</td>
+      <td>HOU</td>
+      <td>50%</td>
+      <td>Toss-up</td>
+      <td>-6.38</td>
+      <td>-0.01</td>
+      <td>4</td>
+      <td>Grayson Allen(14.7); Ryan Dunn(8.0); Rasheer Fleming(1.2); Jalen Green(11.2)</td>
+      <td>Kevin Durant(16.8); Tari Eason(9.1); Dorian Finney-Smith(5.0); Fred VanVleet(5.0)</td>
+      <td>2.50</td>
+      <td>1.30</td>
+      <td>0.25</td>
+      <td>-0.35</td>
+      <td>主EV=0.25★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>MEM</td>
+      <td>DEN</td>
+      <td>37%</td>
+      <td>Toss-up</td>
+      <td>-15.67</td>
+      <td>0.18</td>
+      <td>3</td>
+      <td>Brandon Clarke(5.0); Jaren Jackson Jr.(11.2); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
+      <td>Christian Braun(9.6); Aaron Gordon(14.8); Julian Strawther(1.9)</td>
+      <td>2.85</td>
+      <td>1.22</td>
+      <td>0.05</td>
+      <td>-0.23</td>
+      <td>主EV=0.05</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>MIL</td>
+      <td>POR</td>
+      <td>53%</td>
+      <td>Toss-up</td>
+      <td>-0.55</td>
+      <td>-0.18</td>
+      <td>-3</td>
+      <td>Giannis Antetokounmpo(27.8); Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
+      <td>Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Shaedon Sharpe(13.8); Matisse Thybulle(6.2); Blake Wesley(5.4); Robert Williams(6.0)</td>
+      <td>1.62</td>
+      <td>1.82</td>
+      <td>-0.14</td>
+      <td>-0.14</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>BRK</td>
+      <td>NYK</td>
+      <td>12%</td>
+      <td>High (Away)</td>
+      <td>-16.21</td>
+      <td>-0.01</td>
+      <td>0</td>
+      <td>Haywood Highsmith(5.0); Ben Saraf(1.6); Cam Thomas(12.4)</td>
+      <td>OG Anunoby(12.8); Landry Shamet(7.1)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>無賠率</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>MIA</td>
+      <td>DAL</td>
+      <td>82%</td>
+      <td>High (Home)</td>
+      <td>10.95</td>
+      <td>-0.25</td>
+      <td>5</td>
+      <td>Tyler Herro(5.0); Nikola Jović(6.4); Andrew Wiggins(12.1)</td>
+      <td>Anthony Davis(17.9); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7); Ryan Nembhard(1.5); Brandon Williams(8.3)</td>
+      <td>1.22</td>
+      <td>2.85</td>
+      <td>0.00</td>
+      <td>-0.49</td>
+      <td>主EV=0.00🔥</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>IND</td>
+      <td>DET</td>
+      <td>17%</td>
+      <td>High (Away)</td>
+      <td>-18.98</td>
+      <td>0.26</td>
+      <td>-13</td>
+      <td>Johnny Furphy(1.5); Tyrese Haliburton(5.0); Quenton Jackson(10.9); Kam Jones(5.0); Aaron Nesmith(10.1); Obi Toppin(9.2)</td>
+      <td>Jaden Ivey(8.3); Bobi Klintman(1.1); Caris LeVert(6.9); Marcus Sasser(5.0)</td>
+      <td>3.20</td>
+      <td>1.16</td>
+      <td>-0.46</td>
+      <td>-0.04</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-24</td>
+      <td>GSW</td>
+      <td>UTA</td>
+      <td>84%</td>
+      <td>High (Home)</td>
+      <td>7.09</td>
+      <td>-0.07</td>
+      <td>0</td>
+      <td>Jonathan Kuminga(9.9); De'Anthony Melton(5.0)</td>
+      <td>Walker Kessler(15.7); Georges Niang(5.0)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>無賠率</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-23</td>
+      <td>PHI</td>
+      <td>MIA</td>
+      <td>53%</td>
+      <td>Toss-up</td>
+      <td>-1.76</td>
+      <td>-0.14</td>
+      <td>-2</td>
+      <td>Adem Bona(3.1); Joel Embiid(14.7); Kelly Oubre Jr.(12.3)</td>
+      <td>Tyler Herro(5.0); Nikola Jović(6.4); Norman Powell(18.0); Andrew Wiggins(12.1)</td>
+      <td>1.68</td>
+      <td>1.75</td>
+      <td>-0.11</td>
+      <td>-0.18</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-23</td>
+      <td>BOS</td>
+      <td>ORL</td>
+      <td>63%</td>
+      <td>Toss-up</td>
+      <td>1.95</td>
+      <td>-0.21</td>
+      <td>-4</td>
+      <td>Jayson Tatum(5.0)</td>
+      <td>Paolo Banchero(16.7); Moritz Wagner(5.0)</td>
+      <td>1.43</td>
+      <td>2.10</td>
+      <td>-0.10</td>
+      <td>-0.22</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-23</td>
+      <td>OKC</td>
+      <td>POR</td>
+      <td>89%</td>
+      <td>High (Home)</td>
+      <td>16.69</td>
+      <td>-0.48</td>
+      <td>7</td>
+      <td>Thomas Sorber(5.0); Nikola Topić(5.0); Aaron Wiggins(10.4); Jalen Williams(5.0); Kenrich Williams(5.0)</td>
+      <td>Donovan Clingan(12.2); Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Shaedon Sharpe(13.8); Matisse Thybulle(6.2); Blake Wesley(5.4); Robert Williams(6.0)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>無賠率</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-23</td>
+      <td>CLE</td>
+      <td>LAC</td>
+      <td>79%</td>
+      <td>High (Home)</td>
+      <td>9.65</td>
+      <td>-0.06</td>
+      <td>0</td>
+      <td>Jarrett Allen(13.8); Lonzo Ball(6.0); Sam Merrill(10.1); Craig Porter Jr.(6.9); Max Strus(5.0)</td>
+      <td>Bradley Beal(3.2); Bogdan Bogdanović(6.4); Derrick Jones Jr.(8.7); Kawhi Leonard(20.7); Jordan Miller(7.5)</td>
+      <td>1.16</td>
+      <td>3.20</td>
+      <td>-0.08</td>
+      <td>-0.33</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-23</td>
+      <td>TOR</td>
+      <td>BRK</td>
+      <td>96%</td>
+      <td>High (Home)</td>
+      <td>16.43</td>
+      <td>-0.28</td>
+      <td>5</td>
+      <td>Collin Murray-Boyles(6.7); Jakob Poeltl(11.3)</td>
+      <td>Nic Claxton(15.2); Egor Demin(6.3); Haywood Highsmith(5.0); Ben Saraf(1.6); Cam Thomas(12.4)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>無賠率</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-23</td>
+      <td>UTA</td>
+      <td>LAL</td>
+      <td>28%</td>
+      <td>High (Away)</td>
+      <td>-7.09</td>
+      <td>0.26</td>
+      <td>-5</td>
+      <td>Walker Kessler(15.7); Georges Niang(5.0)</td>
+      <td>NaN</td>
+      <td>3.20</td>
+      <td>1.16</td>
+      <td>-0.07</td>
+      <td>-0.18</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-23</td>
+      <td>PHO</td>
+      <td>SAS</td>
+      <td>59%</td>
+      <td>Toss-up</td>
+      <td>-1.60</td>
+      <td>-0.20</td>
+      <td>-1</td>
+      <td>Grayson Allen(14.7); Ryan Dunn(8.0); Rasheer Fleming(1.2); Jalen Green(11.2)</td>
+      <td>Stephon Castle(14.7); Dylan Harper(10.3); Jordan McLaughlin(3.4); Victor Wembanyama(22.6)</td>
+      <td>1.52</td>
+      <td>1.94</td>
+      <td>-0.10</td>
+      <td>-0.20</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-23</td>
+      <td>ATL</td>
+      <td>CHO</td>
+      <td>79%</td>
+      <td>High (Home)</td>
+      <td>5.54</td>
+      <td>0.02</td>
+      <td>6</td>
+      <td>Onyeka Okongwu(13.5); Keaton Wallace(4.6); Trae Young(13.8)</td>
+      <td>Pat Connaughton(3.8); Josh Green(5.0); Ryan Kalkbrenner(10.9); Tre Mann(5.7); Grant Williams(5.0)</td>
+      <td>1.25</td>
+      <td>2.70</td>
+      <td>-0.01</td>
+      <td>-0.43</td>
+      <td>觀望</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-22</td>
+      <td>NOP</td>
+      <td>ATL</td>
+      <td>36%</td>
+      <td>Toss-up</td>
+      <td>-15.75</td>
+      <td>-0.17</td>
+      <td>-6</td>
+      <td>Karlo Matković(4.8); Dejounte Murray(5.0); Jordan Poole(9.7)</td>
+      <td>N'Faly Dante(1.1); Nikola Djurisic(5.0); Onyeka Okongwu(13.5); Trae Young(13.8)</td>
+      <td>3.30</td>
+      <td>1.15</td>
+      <td>0.19</td>
+      <td>-0.26</td>
+      <td>主 (NOP) EV=0.19 ★</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-22</td>
+      <td>CHO</td>
+      <td>LAC</td>
+      <td>71%</td>
+      <td>High (Home)</td>
+      <td>1.76</td>
+      <td>-0.24</td>
+      <td>-1</td>
+      <td>Josh Green(5.0); Sion James(5.7); Tre Mann(5.7); Grant Williams(5.0)</td>
+      <td>Bradley Beal(3.2); Derrick Jones Jr.(8.7); Kawhi Leonard(20.7); Jordan Miller(7.5)</td>
+      <td>1.78</td>
+      <td>1.65</td>
+      <td>0.26</td>
+      <td>-0.52</td>
+      <td>主 (CHO) EV=0.26 ★🔥</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-22</td>
+      <td>CHI</td>
+      <td>WAS</td>
+      <td>87%</td>
+      <td>High (Home)</td>
+      <td>15.52</td>
+      <td>0.04</td>
+      <td>12</td>
+      <td>Zach Collins(5.0); Coby White(21.2)</td>
+      <td>Marvin Bagley III(7.5); Alex Sarr(15.7)</td>
+      <td>1.13</td>
+      <td>3.40</td>
+      <td>-0.02</td>
+      <td>-0.56</td>
+      <td>觀望 (莊家賠率精準)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-22</td>
+      <td>ORL</td>
+      <td>NYK</td>
+      <td>53%</td>
+      <td>Toss-up</td>
+      <td>-4.27</td>
+      <td>-0.14</td>
+      <td>1</td>
+      <td>Paolo Banchero(16.7); Moritz Wagner(5.0)</td>
+      <td>OG Anunoby(12.8); Jalen Brunson(19.8)</td>
+      <td>1.62</td>
+      <td>1.82</td>
+      <td>-0.14</td>
+      <td>-0.14</td>
+      <td>觀望 (莊家賠率精準)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-22</td>
+      <td>MIL</td>
+      <td>DET</td>
+      <td>35%</td>
+      <td>High (Away)</td>
+      <td>-7.96</td>
+      <td>0.27</td>
+      <td>-14</td>
+      <td>Giannis Antetokounmpo(27.8); Kevin Porter Jr.(10.1); Taurean Prince(4.1)</td>
+      <td>Tobias Harris(9.6); Jaden Ivey(5.0); Bobi Klintman(1.1); Marcus Sasser(5.0)</td>
+      <td>2.95</td>
+      <td>1.20</td>
+      <td>0.03</td>
+      <td>-0.22</td>
+      <td>主 (MIL) EV=0.03</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-22</td>
+      <td>DEN</td>
+      <td>SAC</td>
+      <td>87%</td>
+      <td>High (Home)</td>
+      <td>22.44</td>
+      <td>-0.04</td>
+      <td>10</td>
+      <td>Christian Braun(9.6); Julian Strawther(1.9)</td>
+      <td>Domantas Sabonis(14.9)</td>
+      <td>1.09</td>
+      <td>3.80</td>
+      <td>-0.05</td>
+      <td>-0.51</td>
+      <td>觀望 (莊家賠率精準)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-11-22</td>
+      <td>DAL</td>
+      <td>MEM</td>
+      <td>68%</td>
+      <td>High (Home)</td>
+      <td>1.38</td>
+      <td>-0.04</td>
+      <td>0</td>
+      <td>Anthony Davis(17.9); Dante Exum(5.0); Kyrie Irving(5.0); Ryan Nembhard(1.5); D'Angelo Russell(8.4)</td>
+      <td>Brandon Clarke(5.0); Jaren Jackson Jr.(11.2); Ty Jerome(5.0); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2)</td>
+      <td>1.72</td>
+      <td>1.72</td>
+      <td>0.17</td>
+      <td>-0.45</td>
+      <td>主 (DAL) EV=0.17 ★🔥</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="chart" role="tabpanel">
+                <div class="content-box text-center">
+                    <h4 class="mb-4 text-info"><i class="fas fa-chart-line me-2"></i>模型準確率回測 (2026 賽季)</h4>
+                    <img src="data:image/png;base64,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T2qAnwmE7tNPP11isZi85S1vUeLu888/Lz/72c/k//2//yePP/64Ek3T+ehHPypPPPGEKrsDDzxQDj/8cNm1a5cSFPC7b7nlFvnXv/4lBxxwQNZj/v3vf6/E2FAoJPvuu68SxoPBoKxfv16JYxCYlixZkncZXH/99XLxxRerAV1nZ6cce+yxqgwgNKNsIYBD8IPgTaYPzguEfNDV1aXO9w033KAG0RjAvvWtb5VqB6IIrhGIFqUQSCrFrbfemvr/3//+d3XtQBQhxgNt+j333KMmrubNmzfh+UAgIOecc45qZ8Hs2bPV5B8Et76+Pnn22Wflsccek6uuukruuusudR+sRSC6Pvroo/Kf//ynIAH2E5/4xIR93d3d8sADD+R8HpOXhYD7Fe5jEOMzJ6uMymuvvSbvfOc71b0B9RJCKvoImEiAWAsBF2JrOs8995x6D/oPEF/f9a53SX9/vzon6ENg4vrKK68s+FiGhobk5JNPVvUck8dHHHGEmuTAsb300ksyPDws559//rj34Lyhn7TPPvvIYYcdpiaFITT/97//VX+nMzo6qt6P/suXv/zlnMfxhS98QfWl8Ij+BybfCSGElBiNEEJITbBw4UKEsmper1c9/vznP8/6ure//e3q+V//+tfj9uNv7MfnZOPHP/6xet5isWivvPLKpMeyfPly9drOzk71+PnPf35av2ndunXacccdp/3zn//UYrHYuOceeeQRzefzqc+/8sorJ7y3q6srVRa/+MUvUvvxOR//+MfV/re85S1aIpEY975TTz1V+8lPfqL19fWN29/T06O97W1vU+9btmzZhOMB//73vzWr1arNnj1be+yxxyY8v3HjRm379u15//7//e9/6vPwnTimzO+Mx+Pao48+qn3nO9/J+zPJ+POBssWG/6eD83TAAQeo5xYvXqxFo1Gt0hxzzDHqeP7zn/9MONY33nhDGxwcLEp55GoDAL4D31VIPa4kwWBQa2pqGtce/ehHP6r0YZEc7LPPPprb7Z7Q/oJIJKIdddRR6hzOmTNH++tf/zrhNbhO7777bm3p0qWqzaxVcrUV0wGfobeTxUD/PBxjqfpBme35TOju7tba29s1u92u+lWZfYaBgQHt9ddfn9DuzJ8/Xx3LaaedpgUCgdRzzz77rNbS0qKe+9e//lXQseC79X7IZz/7WW1kZGTc8+FwWHvu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e+e2tw9vediSHJ9X/F7O5gIAAMB5VBECSDb2Q4g3Al4AHWK3VqjY2GqhPS0aaM8AAAAAAADQPqQqADokx+cRr8cjZe2u4I0ywRoAAAAAAEA7EfAC6PClJdqmoSLczh68oSj9dwEAAIAU9thjj5nj/sWLF9cu22effcxHqhg0aJCcfvrpyd4MAEgKUhUAHZaX5TGtFtoqalkmGKZFAwAAABCfENb+yMnJkX79+smYMWPkzjvvlNLSUklFkUhEOnfuLH/84x8b3Hb77beb3+W0005rcNtVV11lbvvpp58c2a5rrrmmznhmZWWZEPnCCy+UoqKidt3nb7/9Zu7366+/jvv2Ashs/mRvAAD30wre9cFIm79Pw139z56oDQAAAEDHXHvttTJ48GAJhUKycuVK+fDDD+Xiiy+W2267TV577TXZYYcd2nyfp556qpxwwgmSnZ0d9+31+Xyyyy67yIwZMxrc9tlnn4nf7zefG7utV69essUWW5iv58+fL15v/N9X3HvvvVJQUCDl5eXy/vvvy1133SVz5syRTz/9tF0B76RJk0xQPHz48LhvK4DMRcALoMM0oF1WFmrz99lVv1TwAgAAwM0sy5I1VRGpilhmjoqeOT5T9ZkMBx98sIwaNar268svv1ymT58uhx56qBx++OHyww8/SG5ubptDWP1wyh577CHvvvuu2batt966Toh73HHHybRp00xY3adPH7M8HA7LF198IQceeGDtuk6Ez+qYY46RHj16mH+fc845Juh+7rnnZNasWTJ69GhHfiYAtBWpCoAO04C2OmpJdaRtfXgrwlHxiEdymWQNAAAALqWFDq8vLpX//Foq/11S81m/bk8BhFP2228/+cc//iG//vqrPPXUU7XLv/32W9O3dsiQIaalgwaoZ5xxhqxbt67FHryxysrKJD8/Xy666KIGty1btsyEwzfeeGOzAa+KrdRduHChCXUvuOACs22xt2mLA62otb+vsR689jbr911yySXSs2dPs41HHnmkrFmzRtprzz33NJ8XLFhQu2z9+vXyl7/8RbbffntT7astJzRo/+abb2rX0UrqnXbayfx73Lhxta0fdDttGlofdNBB0qVLF8nLy5O999670eplAKiPgBdAh9ktFjSwbYvycNSEu74kVTcAAAAAHaEh7vTl5bKyMiLZXo90DnjNZ/1al6dSyKttFtQ777xTu0yrZjVI1cBRWw9odeqzzz4rhxxyiKlKbi0NNTU41cpW7akb65lnnjH3dfLJJzf5/dqiQVsxxLY90GBTA1kNRbUiOTbotP8dG/A2ZcKECSZovfrqq+W8886T119/3YTG7WWH3F27dq1dpmP473//21RJayuMv/71rzJ37lwT0GpbBqWVydo+Q5199tny5JNPmo+99trLLNMqa/13SUmJ2dYbbrjB9PrVcF6rhQGgObRoABCXSdZUWSgqhdm+NrVooP8uAAAA3EhDyzlrKk1bhsJATTWmCvhEtANZUbUlc9ZWSf98f9LaNcTaZJNNTGVobOXp+eefL5deemmDsPXEE080YatdrdoaY8eOlaefftqExlqFatOKYQ0uN9100ya/V6tVd9xxxwYBr7ZA0OB3t912kw8++KD2Nl1Pv2fEiBEtblf37t1NqG3/DaLRqJl0rri42IxHS7Q6V2nFsIawU6dONdXAdjCrtHJXJ3uL7QGsgfpWW20lDz/8sKme7t27t6nq1cnhdt11VznllFPqPJbOPfdc2XfffeWtt96q3VZtCbHtttvKxIkT6wTzAFAfyQqADtMqBb/XYypy26I8bEke/XcBAACQZOGoJRuCkTZ9LCgJyarKsGT7PBK2PKLTS9gf+rUuX1URMuu15X51W5yilbalpaW1X8f24q2qqpK1a9eagFfpRGJtccABB0i/fv1MyGubN2+eaQMRG2Y2RatxNXzWtgx2wKvBrtp9993lq6++koqKitrbdt55ZxP+tkSrZWMDdg2ttcpY21W0xpZbbmkCXW0Boe0rNttsMxPCasAc2//XDnf1vrXFhY61fm9rxlFbTvz8889y0kknme/Vv4N+aKi8//77y8cff2yCaQBoChW8ADpMD5i0ErfNLRpCUemd69xkDQAAAEBrlIai8t6ysjZ9T2U4KiWhqPh1XolGKnS1KjNsicxYWS65bbhq7YBNCqRrG66KawvtldurV6861amTJk0ybRlWr15dZ12tcG0LDTi1DcO9995rglgNQDXs1f65xx57bKsC3ttvv92Etxpqfvfdd3LLLbeY2zTo1YnVtFXBwIEDZcWKFXLmmWe2arvqVw7brRU2bNjQqu9/6aWXTE9d7durlb+LFi1qMEmdhq933HGH3HPPPeb22DYVWkHcEg131WmnndbkOvr3iG0LAQCxCHgBxEWe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1xpIvvvuuw2Wb7311q0KeI855hg54ogjxCl77LGH+fzpp5/KkUceWSeUnDdvnvj9fvnss89k3333rb1t6dKl5uOEE04wX++1115SWVkpgUAgrts2fPhwufTSS82/V6xYYQLU0047zVRlnnXWWe0KeKdOnepIyHvHHXeYUDp2nNTChQvlgAMOkCVLlsixxx4rZ599thmnb7/9Vh5++GETrP/000+SrgGvPoYuvvjiOssHDhxoHi9ZWVmO/eycnBzzWLnttttkwoQJ5iQBkCgEvADiym69oG0aChppw1ARqplgjRc7AAAAID5OOeWUOl9//vnnJuCtvzxV9OvXzwSTGvDGmjlzppmUWUPJ+rfZX9vhsNfrNYFavPXv37/OuGlV5pAhQ+T2229vV8DrlFAoJE8//bSce+65dZaHw2E56qijZNWqVaZi2x4v2/XXXy8333yzZBp9/+nE46W+4447Tm655RZTgb7ffvs5/vMAGy0aAMSVtl7Q/yqamGhNK3i1Ty8AAADgdvPvuEN+uuuuRm/T5Xp7qigvLzeVqQMGDJDs7GzZcsst5dZbbzWBamwIpus9/vjjtW0KNOBUv/76q+n3qt+nl/t3797dBLHt7ZOqweNXX31lqiptWrW77bbbysEHH2xC6mg0Wuc23Z7dd9+9yR68++yzj2lD8P3335uq1ry8PBPYauDWXj179pStttpKFixYUGf5J598Yn5/bRuh46nj+uc//7nO76Njp9W7Krb1g01/P20noL+zho+9e/eWc845RzZs2NDidmngvXbtWlOpG+ull16Sb775Rq688soG4a7q3LmzCXltgwYNqv0bx9Kx1A+bPd7aXkNbP+i4durUyVR7FxcXmwpnrZrt1auXaQkxbty4Or1om+uBq8tbqnB+9dVX5f/+7//MyQEd76FDh8rkyZMlEonU2eY33njDPFbtsdbfr7Gfr499/VrXre/yyy83Fc+xf4cvvvhCDjroIOnSpYt5XO29997mMVnfyJEjpVu3bmZ7gUSighdAXHk9Hsn1e2p77TY2yVrfPF/CtwsAAACoz4pGpboVYVpTIsGgLLj/fglXVsrQ8eNrly94+GGzfOg550hw3bo232+ga1fxeONXFKEh7uGHH26qCsePH2/aEPz3v/+Vv/71r7J8+XJTnaq0pcOZZ55p+s7qZf1KgzT15ZdfyowZM0yL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iBEydepU0++0Ne0ZnKJVohowPvjgg3WqVWPHQ/+tVb716Xiq+mN63HHHmbGbPHlyg+/RvrUtBedaRa0/U3vIxtKJ8LR38PXXX296F9enIb890Z4dYGrlanV1de2y//znP6YCOJ40INXqaO1ZG0snSWtJY+Ot29vY9+p4t6Vlw9FHH23uX0Nxbc+g1dr238w+0aBjpO06tHVGfTrJXH1aWRz7WAYSgQpeAHGX6/OI1+ORilDdA0ANfO3wFwAAAHA7Kxo1Ye4WEybUWW5/rbenAq1I3HfffU2wt3jxYhk2bJiZTOzVV181VbN2laIdaGll6W233WYuYR88eLDpS6vBl044ptWi22yzjQkPdT1tFdBe2td2p512kk8++cQEuvqzY2lIZlcMJzPg1QB8u+22M2Pypz/9yVTP6pj95S9/McG0hpcvvfRSoy0T7N9JJ7jTlg8aJmpbC60K1orgG2+80UzkdeCBB5rJy7TnqwaNGhZrWNsUHQ8de/0b7LfffrXL9T600lWrTbXaVYNkrRLW5drHdtq0aaaaVgNgdeaZZ5rq7IMOOsisqxOOafVv7GMiXvRn3XTTTeazhvsa9moldEv0caDbrBXkOo56UkIfi4213dDx1kpcbaehjy1tnxBbkVuftsnQ54b+bTX81oreWNqjV3vt6mNg2223NRPu9e/f3/zddSI8/dtrmxGbBu7ausOepA1IFJIWAHGnL7g60VpZ/QrecJQJ1gAAAJA2trzoogbhrk2X6+2pQEOq1157zYS5Wp2pn7///nvTV1SDrVj6tYZkEydOlBNPPFHuvfdes1wDR21HoNW2l156qaxYscKEi/X7j7aVHdzaLRliaTCptK2EhtLJpGGuVrXq769hqYZ62pNVA9pJkybJ5ptvLk888USD7zvqqKNM/2KdtO3UU081Y2q777775IEHHjATqmkPWG2pMH36dDN5mP27NxeOn3zyySYMrk8nqtPQWO9T20loL2MNRt9//30Trn700Ue162rorCG6Bq36uNDgXh8jOlldvOkkfePHjzeB8mWXXWYqmN96660Wv0+DbN2mvn37mselVtNqD+RbbrmlwbrabuGkk04y/aL1s459SzTUtduXNNYKZJ999jHjoqG0VsHrfT722GPSp08f+fOf/1xnXf176ER0saE7kAgeq7WdxoEUUlJSYs4c66UX9uyWbqPN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tizZm5GWvv/+e6mqqkr2ZqQtTlI644033kj2JqStm2++WUaNGmVCXo5x46ukpCTZm5C21qxZYz7zmAWSj3fvQJy9++67cv3110txcbF5oSPkjZ/KykrZbrvtZNddd5XPP/+8TqUDOubFF1+U3r17y8UXXyw//vijrFu3LtmblDb+/e9/y9577y2nnHKK3HXXXbJ8+XKznPCh41599VU55JBD5LTTTpPbbrutdmzZ73bcSy+9JH379pUrr7xSwuFwsjcn7R6322+/vRx77LHm9ey+++4zy9kndNzbb78tf/zjH82+QE9SMqbx9Yc//EEOO+wwef75583XjG/89rd9+vSRSZMmyYIFC+TLL79M9ial1THYzjvvLEcffbR5Pfv222/Nch678Rnb3XffXY455hg588wz5ZNPPjHLOQYDkoeAF4gTDcTOOeccGTNmjDz88MPy1ltvmeWczYwPPVhYuXKlVFdXmzG+6aabzHKfz5fsTXO1H374QXbaaScZP3683HLLLTJt2jRTrZefn5/sTUsL//rXv2TcuHGyzz77SPfu3eWOO+4wYaSerNDwgYPg9leLnHjiiXL22WfLyJEjzeP1nnvukcmTJ5tqXva77bdkyRLZZZddzD7hL3/5i6xYsUIGDRqU7M1KG3oiQo8Vzj//fHPCZ6+99pJLL71UysvLuWqiA/Skuj5edb/w0UcfmdczxZjGh57k0UCsU6dOJtDRsdYT7Ixvx8yfP1923HFHs7/VcFcfu126dOGqlDh58MEH5YwzzpAjjzxSdtttN/nvf/9rgl49huCx2356XKBjqq9lhx9+uPn3okWLTIETx2BAcrFnA+JEK0r1QO3xxx+XzTffXF5//XX59ddfzW2EOB2nBwv6ZqJnz56mguSXX34xYaSiird95s2bJyeccIKpJFu8eLEJHjXI0dBc32SgY0pLS+W1116TK664wrxx0yo9DSH1wPjcc89N9ua5lr55ePbZZ02g8/7775tQV9/E6ZjqCQs9EYT2e+GFF2TWrFkyY8YMEzxqsPPNN9+Yx62N17T2KSoqMhVPuk8477zzZL/99pPjjjtOtthiC/N4RvtpuPDVV1/Jrbfeah63GuTMnDnT3MYxQsf5/X7zmqbHuRri6NdXX321uY39QfsLQ2644QZzZZo+fjUs0xPu+ho3Z84csw5j235aEKLvxfQk+9///ndzHPb000+bAF2Pd9kvtI8+JvVqVf2sxwl/+9vfzNV/++67r3ns6gePWyB5CHiBOBk9erSpaDj11FPN2WINGvSNnOJMZnzom7Utt9zSXAa0ww47mOonpYEkB2ptp28q9E2w9tjs2rWrWZabmytZWVmmmgwdo2+A9c2wXnZp0wPgf/zjH/Lkk0+aXtK0cWk7fXxqJZnuB7bZZpva9gFadapjqrej7ezHoVZFDxkyRB577DF54IEHave5W2+9tVx22WXm0ncet21jj1UgEJDvvvuuzm2vvPKK9OrVyxwzrF69Oklb6H7Dhw83QYNWQmqF3mabbWb6mSqu9IkPu5pf97V6Qu2f//xnbbUe/U3bvj/Qq3ruvvtuczxgH4OtX79ett12W/n555/N6xzvH9pP97fajmGTTTapXaavZzrm7733nmlNhrbTx+T+++9vTvTosYJNr/7T/fDatWtre8tznAAkHgEv0A5a3aQHBnPnzpWysjKzrFu3bnLooYeafx9//PGmIkfDs9mzZ5tl9Hpq/9jal6rpZdhaQdK5c2cZO3asGVPta6qXBmnPMrR+bHUclfbdjTVs2DATkGl1r+Jx2zqffvqpaRuik88sXLjQLNOwRt+o6XjbJyB0bLXFyMEHH2zCMsUbuOZ9+OGHcs0118ibb75ZO7YaOB511FHmEksN0u3WAlqNrtU5aPvY2lec6CXY1157ramE1KrziRMnytSpU014putfcMEFZj0et20fW92fnnXWWabaScdx8ODBpqIsLy9PJkyYYFq56NUpaJ72J7VPQuqY2iHCgQceaD7riR+9bFhPsHGlT8fGNpbua/XxqROG/vnPf5YRI0aYx+yee+5prlZB68bWviLN3t/G0vcS2dnZsmrVKnpIt7EARK/k+eyzz8zY2VdM6MkIXWafCNZ9hS7TYhy9+gdtG1v7Cil976DHt/pY1vcWegL4mWeekY8//tgc4+p7NMVxApAEFoBWW7FihXXIIYdYPXv2tHbddVere/fu1oQJE+qsEwqFzOdPP/3UGjFihHXllVfWLkPHxvbPf/6zdeGFF5p/f/vtt9bgwYMtn89nnXLKKWZZJBJJyranw9jaKioqrGOOOcY69thjrXA4nPBtdZvly5ebse3WrZt10EEHWQMHDrR23nnn2tvPOOMM64ADDrC++uqr2mX6OJ02bZp5/H799ddJ2vLUFo1GzWPx9NNPtwoKCqw//OEPVv/+/a2tttrK+vXXX2vXi33OX3XVVdapp55a+/3o2NhOmjTJeuONN+p87xNPPGH16dPHmjFjRhK2PH3G9qOPPrLOO+8867DDDrPWr19fe4yg615xxRW194W61q5da40dO9byeDzmc2Ov+/br1pIlS6zTTjvNvObp30Qxph0b26eeeso67rjjzL8XLlxo7bjjjpbX67WOPvpoxraDYxu77LbbbrM23XRTKxgMJnxb3WblypXWoYceavXo0cPad999rV69epljstjXsT322MN66623zNf241RfwwoLC82+GO0bW3ssn3/+eeu6666zVq9ebT6mT59uHuu6PHY9AIlBBS/QSt9//73pV6pn2/Vs5X/+8x9T2aRnNO1WDMquJtNJKLSyQc9maq8iRWVOx8ZWK/O0Mvqiiy4yEyv179/fVJAUFBSY25kwof1ja9MWDVo9ohW+elkr1SNN0ypnrVTQSyu//vprefXVV+Xee+81l7Fq3zd14YUXyk8//WTG3a6a1sdp3759TWU6lw43Tqs+9NJKfZzqrMzvvPOOfPDBB+ZxfNJJJ5nL2es/519++WXTv9D+fi4Zbt/Y6j5DXXLJJXLIIYeYf9sVktpfXv9tX12B9o2tzuiuFb46IZjuP+zqsj322MMcM9j3hd/pZb9XXnml/Pbbb6baWfep2nNX9wGx1bn2PnXAgAFyxBFHmEuFdbJLpe0x9BJ4tG1s7ee/VporrT7XS931GOyAAw4wFeo8Xjv2uI19PdPjML1ijfcMzdMrerSXro6XVkfr2N5///2mn7HOd6D0+FePY1966SXzt7Afp7pP1n0vr2VtH1v9rOz9wrHHHmse4zpHin7olVR6FYUeFyv2DUBikYYAraR9B7X32FVXXWU+62VU2uetsrKyQY8hOxTTcEfphEDar0wvYXnrrbeSsv3pMLb65kwPkPVyIT3YmD59unmDrMGOvpFGxx639psN7a2lYTCzujdv0003Na0CdJIUDRO031u/fv1MCKa9du2WF3rwq5ev2pcKKw0dtF2DfXICDem+Ut/k6ngq/az9SvWya70U0A7MlQa++ljXx7bSyVS0T7eGbGjb2OrrlY5tY49NfdOnLXL0RBvaN7Y6mZo9YajdciQnJ8dcVqxvnrXtEBrq0aOH6feorW302Eovs9Y2Aar+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" class="img-fluid shadow rounded" alt="Accuracy Chart">
+                    <p class="mt-3 text-muted">此圖表顯示模型在 2026 賽季的每日準確率 (藍線) 與累積準確率 (紅線) 變化。</p>
+                </div>
+            </div>
+            
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-        
-        <script>
-            $(document).ready(function () {
-                // 初始化 DataTables
-                var table = $('#predictionTable').DataTable({
-                    "order": [[ 0, "desc" ]], // 預設依日期排序
+        <footer class="text-center mt-5 mb-4 text-muted"><small>Powered by Python & GitHub Actions</small></footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            // 設定 DataTables 共用函式
+            function initTable(id) {
+                $(id).DataTable({
+                    "order": [[ 0, "desc" ]],
                     "pageLength": 25,
                     "language": { "url": "//cdn.datatables.net/plug-ins/1.13.4/i18n/zh-Hant.json" },
-                    "autoWidth": false, // 關閉自動寬度，避免擠壓
-                    
-                    // --- 關鍵：這裡控制每一行的樣式 ---
                     "createdRow": function( row, data, dataIndex ) {
-                        // 1. 抓取 Bet_Signal (假設在最後一欄)
                         var lastColIndex = data.length - 1; 
                         var signal = data[lastColIndex];
                         var cell = $('td', row).eq(lastColIndex);
 
-                        // 2. 根據內容加上標籤樣式
                         if (signal.includes('BET') || signal.includes('HOME')) {
-                            cell.html('<span class="badge-bet-home"><i class="fas fa-home me-1"></i>' + signal + '</span>');
+                            cell.html('<span class="badge-bet-home">' + signal + '</span>');
                         } else if (signal.includes('AWAY')) {
-                            cell.html('<span class="badge-bet-away"><i class="fas fa-plane me-1"></i>' + signal + '</span>');
-                        } else if (signal.includes('觀望') || signal.includes('PASS')) {
-                            cell.html('<span class="badge-watch">' + signal + '</span>');
+                            cell.html('<span class="badge-bet-away">' + signal + '</span>');
                         }
-
-                        // 3. 處理勝率 (Home_Win_Prob) 假設在第 4 欄 (index 3)
-                        var winProbCell = $('td', row).eq(3);
-                        var winProbText = winProbCell.text();
-                        var winProbVal = parseInt(winProbText.replace('%', ''));
                         
-                        if (winProbVal >= 60) {
-                            winProbCell.addClass('prob-high');
-                            winProbCell.html(winProbText + ' <i class="fas fa-fire text-danger" style="font-size:0.8em;"></i>');
-                        }
+                        // 勝率高亮 (假設勝率在 index 3, 視實際欄位而定，這裡做個簡單判斷)
+                        $('td', row).each(function(i) {
+                            var txt = $(this).text();
+                            if (txt.includes('%')) {
+                                var val = parseInt(txt);
+                                if (val >= 65) $(this).addClass('prob-high');
+                                if (val <= 35) $(this).addClass('prob-low');
+                            }
+                        });
                     }
                 });
-            });
-        </script>
-        </body>
-        </html>
-        
+            }
+
+            initTable('#tableV800');
+            initTable('#tableStd');
+        });
+    </script>
+    </body>
+    </html>
+    
