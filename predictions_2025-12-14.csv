@@ -1,0 +1,9 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2025-12-14,IND,WAS,0.67,🟢 High (Home),8.06,-0.01,3,Tony Bradley(4.0); Tyrese Haliburton(5.0); Andrew Nembhard(13.6); Aaron Nesmith(10.1); Ben Sheppard(4.9); Obi Toppin(9.2),Malaki Branham(2.9); Bilal Coulibaly(6.9); Tre Johnson(6.3); Corey Kispert(7.3); Khris Middleton(8.1); Alex Sarr(16.1)
+2025-12-14,CLE,CHO,0.74,🟢 High (Home),6.96,0.01,3,Jarrett Allen(13.4); Sam Merrill(10.1); Evan Mobley(16.8); Larry Nance Jr.(2.5); Max Strus(5.0),LaMelo Ball(14.7); Pat Connaughton(3.8); Josh Green(1.9); Tre Mann(4.7); Tidjane Salaün(5.6); Collin Sexton(11.3); Grant Williams(5.0)
+2025-12-14,ATL,PHI,0.75,🟢 High (Home),0.58,-0.16,-2,Nickeil Alexander-Walker(14.8); N'Faly Dante(1.1); Kristaps Porziņģis(16.1); Jacob Toppin(1.3); Trae Young(13.8),Joel Embiid(14.3); Tyrese Maxey(24.7); Kelly Oubre Jr.(12.3); Hunter Sallis(0.4); Trendon Watford(8.0)
+2025-12-14,BRK,MIL,0.45,Toss-up,-4.87,-0.22,-2,Haywood Highsmith(5.0); Ben Saraf(3.5); Cam Thomas(12.4),Giannis Antetokounmpo(25.7); A.J. Green(8.5); Taurean Prince(4.1)
+2025-12-14,CHI,NOP,0.66,🟢 High (Home),5.58,0.2,0,Ayo Dosunmu(11.7); Kevin Huerter(9.0); Dalen Terry(3.1); Coby White(14.3),Dejounte Murray(5.0); Zion Williamson(17.1)
+2025-12-14,MIN,SAC,0.73,🟢 High (Home),14.61,-0.05,3,Mike Conley(5.1); Anthony Edwards(20.9); Bones Hyland(3.3),Keon Ellis(4.1); Drew Eubanks(4.3); Domantas Sabonis(14.9); Dennis Schröder(9.8)
+2025-12-14,PHO,LAL,0.55,Toss-up,0.18,0.25,0,Devin Booker(18.0); Dillon Brooks(12.4); Jalen Green(11.2); Isaiah Livers(2.3),Maxi Kleber(1.7); Austin Reaves(22.5)
+2025-12-14,POR,GSW,0.34,🔴 High (Away),-4.92,0.65,-2,Donovan Clingan(11.7); Yang Hansen(1.2); Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Matisse Thybulle(6.2); Blake Wesley(5.4); Robert Williams(7.6),Al Horford(5.1)
