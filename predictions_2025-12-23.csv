@@ -1,0 +1,15 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2025-12-23,CHO,WAS,0.75,🟢 High (Home),8.96,0.09,-1,Ryan Kalkbrenner(10.1); Mason Plumlee(2.8); Collin Sexton(11.3); Grant Williams(5.0),Marvin Bagley III(9.5); Bilal Coulibaly(6.3); Cam Whitmore(6.2)
+2025-12-23,PHI,BRK,0.66,🟢 High (Home),7.36,0.42,1,Dominick Barlow(9.1); Joel Embiid(14.5); Quentin Grimes(11.7); Kelly Oubre Jr.(12.3); Trendon Watford(8.0),Haywood Highsmith(5.0); Drake Powell(4.8); Cam Thomas(12.4)
+2025-12-23,ATL,CHI,0.33,🔴 High (Away),2.89,0.41,-6,Dyson Daniels(11.7); Mouhamed Gueye(4.8); Kristaps Porziņģis(16.1),
+2025-12-23,CLE,NOP,0.53,Toss-up,8.77,0.15,-4,Evan Mobley(16.8); Larry Nance Jr.(2.5); Max Strus(5.0),Herbert Jones(7.4); Dejounte Murray(5.0)
+2025-12-23,IND,MIL,0.39,Toss-up,-3.95,0.2,-2,Tyrese Haliburton(5.0); Isaiah Jackson(7.1); T.J. McConnell(9.4); Aaron Nesmith(10.1); Ben Sheppard(4.9); Obi Toppin(9.2),Giannis Antetokounmpo(25.7); Taurean Prince(4.1)
+2025-12-23,MIA,TOR,0.64,Toss-up,0.83,0.06,0,Tyler Herro(17.7); Nikola Jović(4.8); Pelle Larsson(7.1),RJ Barrett(14.7); Jakob Poeltl(10.0)
+2025-12-23,DAL,DEN,0.26,🔴 High (Away),-12.25,-0.0,-3,Max Christie(8.7); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7),Christian Braun(9.6); Aaron Gordon(14.8)
+2025-12-23,MIN,NYK,0.55,Toss-up,-3.35,-0.5,1,Joe Ingles(0.4); Jaden McDaniels(11.3),OG Anunoby(12.4); Jalen Brunson(21.1); Miles McBride(8.9); Landry Shamet(7.1); Guerschon Yabusele(2.0)
+2025-12-23,SAS,OKC,0.58,Toss-up,-10.31,-0.65,2,Victor Wembanyama(20.8),Alex Caruso(6.5); Ousmane Dieng(3.3); Isaiah Hartenstein(13.1); Chet Holmgren(15.3); Ajay Mitchell(11.5); Thomas Sorber(5.0); Nikola Topić(5.0); Aaron Wiggins(8.2); Jaylin Williams(5.2)
+2025-12-23,PHO,LAL,0.6,Toss-up,-1.49,-0.48,0,Grayson Allen(12.3); Jalen Green(11.2),Luka Dončić(27.2); Rui Hachimura(9.6); Austin Reaves(22.5); Gabe Vincent(2.8)
+2025-12-23,UTA,MEM,0.54,Toss-up,-5.68,-0.31,-1,Walker Kessler(15.7); Kevin Love(6.5); Georges Niang(5.0),Brandon Clarke(3.1); Zach Edey(13.3); Ty Jerome(5.0); John Konchar(4.1); Ja Morant(11.7); Scotty Pippen Jr.(5.0); Javon Small(3.2); Vince Williams Jr.(6.2)
+2025-12-23,POR,ORL,0.4,Toss-up,-5.97,0.1,0,Jerami Grant(13.7); Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Matisse Thybulle(6.2); Blake Wesley(5.4),Tristan Da Silva(7.1); Jalen Suggs(12.5); Franz Wagner(17.9); Moritz Wagner(5.0)
+2025-12-23,SAC,DET,0.27,🔴 High (Away),-17.0,0.37,-1,Devin Carter(2.7); Drew Eubanks(4.3); Zach LaVine(12.9); Doug McDermott(1.1); Domantas Sabonis(14.9),Ron Holland(6.1)
+2025-12-23,LAC,HOU,0.32,🔴 High (Away),-15.38,0.21,2,Bradley Beal(3.2); Derrick Jones Jr.(8.7); Ivica Zubac(14.8),Dorian Finney-Smith(5.0); Fred VanVleet(5.0)
