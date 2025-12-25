@@ -1,6 +1,6 @@
 ﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
-2025-12-25,NYK,CLE,0.63,Toss-up,6.22,0.26,-3,OG Anunoby(12.4); Jalen Brunson(21.1); Miles McBride(8.9); Landry Shamet(7.1); Guerschon Yabusele(2.0),Lonzo Ball(6.3); Evan Mobley(16.8); Larry Nance Jr.(2.5); Max Strus(5.0)
-2025-12-25,OKC,SAS,0.38,Toss-up,10.12,0.56,-5,Ousmane Dieng(3.3); Chet Holmgren(14.8); Ajay Mitchell(11.5); Thomas Sorber(5.0); Nikola Topić(5.0); Jaylin Williams(5.2),
-2025-12-25,GSW,DAL,0.73,🟢 High (Home),5.03,-0.41,1,Seth Curry(7.3); Al Horford(5.1),Max Christie(8.7); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7); Dwight Powell(3.1); Klay Thompson(6.2); P.J. Washington(11.5)
-2025-12-25,LAL,HOU,0.35,🔴 High (Away),-7.64,0.45,0,Luka Dončić(27.2); Rui Hachimura(9.6); Jaxson Hayes(6.3); Gabe Vincent(2.8),Dorian Finney-Smith(5.0); Fred VanVleet(5.0)
-2025-12-25,DEN,MIN,0.62,Toss-up,4.53,0.27,-4,Christian Braun(9.6); Aaron Gordon(14.8); Cameron Johnson(9.0),Joe Ingles(0.4); Jaden McDaniels(11.3)
+2025-12-25,NYK,CLE,0.76,🟢 High (Home),6.22,-0.08,-3,Miles McBride(8.9); Landry Shamet(7.1); Guerschon Yabusele(2.0),Evan Mobley(16.8); Larry Nance Jr.(2.5); Max Strus(5.0)
+2025-12-25,OKC,SAS,0.53,Toss-up,10.12,0.37,-5,Ousmane Dieng(3.3); Ajay Mitchell(11.5); Thomas Sorber(5.0); Nikola Topić(5.0); Jaylin Williams(5.2),
+2025-12-25,GSW,DAL,0.73,🟢 High (Home),5.03,-0.51,1,Seth Curry(7.3); Al Horford(5.1),Max Christie(8.7); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7); Dwight Powell(3.1); Klay Thompson(6.2); P.J. Washington(11.5); Brandon Williams(8.0)
+2025-12-25,LAL,HOU,0.32,🔴 High (Away),-7.64,0.17,0,Luka Dončić(27.2); Rui Hachimura(9.6); Jaxson Hayes(6.3); Gabe Vincent(2.8),Dorian Finney-Smith(5.0); Alperen Şengün(19.9); Jae'Sean Tate(2.5); Fred VanVleet(5.0)
+2025-12-25,DEN,MIN,0.62,Toss-up,4.53,0.34,-4,Tamar Bates(5.0); Christian Braun(9.6); Aaron Gordon(14.8); Cameron Johnson(9.0),Jaden McDaniels(11.3)
