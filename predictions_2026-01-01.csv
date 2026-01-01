@@ -1,0 +1,6 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-01-01,BRK,HOU,0.48,Toss-up,-12.59,-0.1,-4,Egor Dёmin(7.0); Haywood Highsmith(5.0); Terance Mann(7.5); Michael Porter Jr.(19.1),Steven Adams(7.9); Clint Capela(4.8); Tari Eason(9.5); Alperen Şengün(19.7); Fred VanVleet(5.0)
+2026-01-01,DET,MIA,0.62,Toss-up,3.42,-0.18,-2,Tobias Harris(10.3); Caris LeVert(6.6),Simone Fontecchio(5.9); Tyler Herro(17.7); Pelle Larsson(7.8)
+2026-01-01,DAL,PHI,0.6,Toss-up,-3.97,-0.26,-4,Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7),Joel Embiid(16.3); Kelly Oubre Jr.(12.3); Trendon Watford(8.0)
+2026-01-01,SAC,BOS,0.26,🔴 High (Away),-16.08,0.26,-3,Zach LaVine(12.9); Domantas Sabonis(14.9),Chris Boucher(2.0); Jayson Tatum(5.0)
+2026-01-01,LAC,UTA,0.68,🟢 High (Home),3.13,-0.76,6,Bradley Beal(3.2); Bogdan Bogdanović(5.1); Ivica Zubac(14.8),Ace Bailey(6.7); Keyonte George(18.6); Walker Kessler(15.7); Kevin Love(6.7); Lauri Markkanen(21.0); Georges Niang(5.0); Jusuf Nurkić(10.1)
