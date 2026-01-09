@@ -1,0 +1,11 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-01-09,BOS,TOR,0.7,🟢 High (Home),5.5,-0.39,-4,Josh Minott(6.3); Jayson Tatum(5.0),Scottie Barnes(17.2); Brandon Ingram(15.1); Jakob Poeltl(10.0)
+2026-01-09,ORL,PHI,0.57,Toss-up,0.31,0.28,0,Jase Richardson(4.5); Jalen Suggs(12.2); Franz Wagner(17.9); Moritz Wagner(5.0),Joel Embiid(17.3)
+2026-01-09,WAS,NOP,0.55,Toss-up,-2.18,-0.32,8,Cam Whitmore(6.2); Trae Young(16.0),Jose Alvarado(6.5); Saddiq Bey(12.4); Herbert Jones(7.0); Trey Murphy III(17.3); Dejounte Murray(5.0)
+2026-01-09,BRK,LAC,0.41,Toss-up,-2.9,-0.15,0,Haywood Highsmith(5.0); Michael Porter Jr.(19.3); Ben Saraf(3.5),Bradley Beal(3.2); Bogdan Bogdanović(5.1); Derrick Jones Jr.(8.7); Kawhi Leonard(22.4)
+2026-01-09,MEM,OKC,0.32,🔴 High (Away),-13.93,-0.27,-2,Brandon Clarke(3.1); Cedric Coward(11.3); Zach Edey(13.3); Ty Jerome(5.0); John Konchar(4.1); Ja Morant(13.2); Scotty Pippen Jr.(5.0); Vince Williams Jr.(6.7),Alex Caruso(6.1); Shai Gilgeous-Alexander(27.1); Isaiah Hartenstein(12.5); Chet Holmgren(15.4); Thomas Sorber(5.0); Nikola Topić(5.0); Cason Wallace(7.1); Jaylin Williams(5.2)
+2026-01-09,DEN,ATL,0.61,Toss-up,7.3,1.08,1,Tamar Bates(5.0); Christian Braun(8.6); Bruce Brown(6.3); Aaron Gordon(14.3); Cameron Johnson(9.0); Nikola Jokić(31.0); Spencer Jones(5.5); Jamal Murray(20.7); Jonas Valančiūnas(7.1),N'Faly Dante(1.1); Corey Kispert(7.2); CJ McCollum(13.0)
+2026-01-09,PHO,NYK,0.58,Toss-up,-2.62,-0.02,0,Jamaree Bouyea(7.2); Jalen Green(11.2),Josh Hart(12.6); Landry Shamet(7.1)
+2026-01-09,GSW,SAC,0.87,🟢 High (Home),12.94,-0.18,7,Seth Curry(7.3); Gary Payton II(4.6),Keegan Murray(11.1); Domantas Sabonis(14.9)
+2026-01-09,POR,HOU,0.43,Toss-up,-11.0,0.4,5,Jerami Grant(13.7); Scoot Henderson(5.0); Jrue Holiday(15.2); Damian Lillard(5.0); Kris Murray(5.8); Matisse Thybulle(6.2); Blake Wesley(5.4),Alperen Şengün(19.0); Fred VanVleet(5.0)
+2026-01-09,LAL,MIL,0.51,Toss-up,2.41,0.57,0,Rui Hachimura(9.1); LeBron James(18.2); Austin Reaves(21.3); Adou Thiero(1.1),Taurean Prince(4.1)
