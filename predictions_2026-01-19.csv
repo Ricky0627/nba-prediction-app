@@ -1,0 +1,10 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-01-19,ATL,MIL,0.45,Toss-up,2.15,0.39,0,Dyson Daniels(12.6); N'Faly Dante(1.1); Kristaps Porziņģis(13.6); Zaccharie Risacher(8.0),Taurean Prince(4.1)
+2026-01-19,CLE,OKC,0.45,Toss-up,-10.52,-0.03,3,Darius Garland(13.4); Sam Merrill(10.2); Max Strus(5.0); Dean Wade(5.7),Isaiah Hartenstein(12.5); Thomas Sorber(5.0); Nikola Topić(5.0); Jalen Williams(13.8)
+2026-01-19,WAS,LAC,0.2,🔴 High (Away),-10.01,-0.06,-11,Bilal Coulibaly(8.1); Tristan Vukcevic(4.9); Cam Whitmore(6.2); Trae Young(16.0),Bradley Beal(3.2); Bogdan Bogdanović(5.1); Derrick Jones Jr.(8.7); Kawhi Leonard(22.9)
+2026-01-19,NYK,DAL,0.63,Toss-up,7.11,-0.52,-5,Jalen Brunson(20.1); Josh Hart(12.3),Anthony Davis(17.5); Dante Exum(5.0); Cooper Flagg(14.8); Daniel Gafford(8.1); Kyrie Irving(5.0); Dereck Lively II(5.7); D'Angelo Russell(6.9); P.J. Washington(10.9)
+2026-01-19,SAS,UTA,0.85,🟢 High (Home),12.4,-0.49,5,Devin Vassell(10.7),Isaiah Collier(8.3); Walker Kessler(15.7); Lauri Markkanen(21.1); Georges Niang(5.0)
+2026-01-19,PHI,IND,0.87,🟢 High (Home),8.41,0.05,-1,Joel Embiid(17.5); Paul George(12.3),Tyrese Haliburton(5.0); Bennedict Mathurin(11.3); Obi Toppin(9.2)
+2026-01-19,BRK,PHO,0.55,Toss-up,-7.52,-0.02,-2,Haywood Highsmith(5.0); Michael Porter Jr.(18.9); Drake Powell(4.5); Ziaire Williams(6.3),Devin Booker(18.2); Jamaree Bouyea(7.2); Jalen Green(11.2)
+2026-01-19,DET,BOS,0.66,🟢 High (Home),-0.22,-0.21,0,Tobias Harris(10.5),Chris Boucher(2.0); Josh Minott(6.3); Payton Pritchard(14.0); Jayson Tatum(5.0)
+2026-01-19,GSW,MIA,0.56,Toss-up,1.44,-0.11,2,Jimmy Butler(19.2); Seth Curry(7.3); Gui Santos(3.3),Tyler Herro(16.0); Jaime Jaquez Jr.(12.8); Davion Mitchell(9.5)
