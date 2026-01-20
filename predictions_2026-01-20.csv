@@ -1,0 +1,8 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-01-20,PHI,PHO,0.6,Toss-up,-1.49,0.01,-1,Paul George(12.3),Jalen Green(11.2)
+2026-01-20,CHI,LAC,0.62,Toss-up,-2.57,-0.11,-5,Zach Collins(8.6); Josh Giddey(17.7); Patrick Williams(4.6),Bradley Beal(3.2); Bogdan Bogdanović(5.1); Derrick Jones Jr.(8.7); Kawhi Leonard(22.9)
+2026-01-20,HOU,SAS,0.36,Toss-up,1.78,0.15,-1,Steven Adams(8.0); Tari Eason(9.7); Fred VanVleet(5.0),Devin Vassell(10.7)
+2026-01-20,UTA,MIN,0.27,🔴 High (Away),-13.07,0.45,-2,Walker Kessler(15.7); Lauri Markkanen(21.1); Georges Niang(5.0); Brice Sensabaugh(8.1),Naz Reid(11.5); Terrence Shannon Jr.(2.5)
+2026-01-20,DEN,LAL,0.46,Toss-up,6.22,1.04,-2,Tamar Bates(5.0); Christian Braun(7.7); Aaron Gordon(14.6); Tim Hardaway Jr.(10.1); Cameron Johnson(9.0); Nikola Jokić(31.0); Jamal Murray(21.1); Jonas Valančiūnas(7.1),Austin Reaves(21.3); Adou Thiero(1.1)
+2026-01-20,GSW,TOR,0.53,Toss-up,1.63,-0.13,6,Seth Curry(7.3); Draymond Green(7.7); De'Anthony Melton(7.9); Gui Santos(3.3),RJ Barrett(14.5); Collin Murray-Boyles(7.8); Jakob Poeltl(10.0); Ja'Kobe Walter(4.7)
+2026-01-20,SAC,MIA,0.31,🔴 High (Away),-10.92,-0.06,0,Keegan Murray(11.1),Tyler Herro(16.0)
