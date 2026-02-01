@@ -1,0 +1,11 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-02-01,BOS,MIL,0.66,🟢 High (Home),10.25,-0.52,5,Jayson Tatum(5.0),Giannis Antetokounmpo(24.5); Gary Harris(2.8); Kevin Porter Jr.(15.0); Taurean Prince(4.1)
+2026-02-01,DET,BRK,0.85,🟢 High (Home),13.61,0.09,0,Cade Cunningham(20.7); Caris LeVert(6.2),Noah Clowney(8.6); Haywood Highsmith(5.0); Ziaire Williams(6.5)
+2026-02-01,MIA,CHI,0.71,🟢 High (Home),3.26,-0.43,-2,Tyler Herro(16.0); Davion Mitchell(9.5); Norman Powell(15.8),Zach Collins(8.6); Josh Giddey(17.1); Tre Jones(13.1); Jalen Smith(8.9); Nikola Vučević(15.1); Coby White(12.5)
+2026-02-01,TOR,UTA,0.81,🟢 High (Home),9.9,-0.59,3,Jakob Poeltl(10.0),Keyonte George(18.4); Walker Kessler(15.7); Kevin Love(6.5); Georges Niang(5.0); Jusuf Nurkić(11.8)
+2026-02-01,WAS,SAC,0.37,Toss-up,0.09,0.24,7,Tre Johnson(8.6); Alex Sarr(15.1); Tristan Vukcevic(4.9); Cam Whitmore(6.2); Trae Young(16.0),Malik Monk(8.5); Keegan Murray(11.1); Russell Westbrook(12.3)
+2026-02-01,NYK,LAL,0.73,🟢 High (Home),5.78,-0.18,4,Miles McBride(9.8),Bronny James(1.5); Austin Reaves(21.3); Adou Thiero(1.1)
+2026-02-01,SAS,ORL,0.71,🟢 High (Home),5.07,-0.24,-3,Jeremy Sochan(3.3),Colin Castleton(5.0); Franz Wagner(17.3)
+2026-02-01,PHO,LAC,0.55,Toss-up,2.84,0.17,4,Devin Booker(18.1); Jalen Green(7.6),Bradley Beal(3.2); Derrick Jones Jr.(8.7)
+2026-02-01,POR,CLE,0.19,🔴 High (Away),-4.72,0.36,-3,Deni Avdija(19.7); Scoot Henderson(5.0); Jrue Holiday(12.4); Damian Lillard(5.0); Kris Murray(5.8); Duop Reath(2.2); Matisse Thybulle(6.2); Blake Wesley(5.4); Robert Williams(8.3),Darius Garland(13.4); Evan Mobley(16.1); Craig Porter Jr.(6.3); Max Strus(5.0)
+2026-02-01,DEN,OKC,0.2,🔴 High (Away),-8.13,0.58,3,Tamar Bates(5.0); Christian Braun(7.7); Aaron Gordon(14.6); Cameron Johnson(9.0); Nikola Jokić(31.0); Jamal Murray(21.1),Alex Caruso(6.2); Ajay Mitchell(11.6); Thomas Sorber(5.0); Nikola Topić(5.0); Jalen Williams(13.8)
