@@ -1,0 +1,11 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-02-03,DET,DEN,0.61,Toss-up,1.95,-0.38,3,Caris LeVert(6.2),Tamar Bates(5.0); Christian Braun(7.7); Aaron Gordon(14.6); Cameron Johnson(9.0)
+2026-02-03,IND,UTA,0.71,🟢 High (Home),1.21,-0.46,5,Tyrese Haliburton(5.0); Obi Toppin(9.2),Keyonte George(18.4); Walker Kessler(15.7); Georges Niang(5.0); Jusuf Nurkić(11.6)
+2026-02-03,WAS,NYK,0.13,🔴 High (Away),-15.74,0.24,-5,Anthony Gill(1.6); Tre Johnson(8.6); Tristan Vukcevic(4.9); Cam Whitmore(6.2); Trae Young(16.0),Miles McBride(9.8); Mitchell Robinson(8.5)
+2026-02-03,BRK,LAL,0.34,🔴 High (Away),-6.76,-0.05,0,Noah Clowney(8.6); Haywood Highsmith(5.0); Ziaire Williams(6.5),Bronny James(1.5); Austin Reaves(21.3); Adou Thiero(1.1)
+2026-02-03,MIA,ATL,0.44,Toss-up,2.04,0.09,3,Tyler Herro(16.0); Nikola Jović(5.6); Norman Powell(15.8),N'Faly Dante(1.1); Onyeka Okongwu(13.6); Kristaps Porziņģis(13.6); Duop Reath(2.2)
+2026-02-03,DAL,BOS,0.38,Toss-up,-9.03,0.6,-6,Anthony Davis(17.5); Dante Exum(5.0); Kyrie Irving(5.0); Dereck Lively II(5.7); P.J. Washington(10.4); Brandon Williams(9.5),Jayson Tatum(5.0)
+2026-02-03,MIL,CHI,0.48,Toss-up,-2.16,-0.15,-4,Giannis Antetokounmpo(24.5); Gary Harris(2.8); Kevin Porter Jr.(15.0); Taurean Prince(4.1),Zach Collins(8.6); Josh Giddey(17.1); Kevin Huerter(8.5); Tre Jones(13.1); Julian Phillips(2.3); Dario Šarić(0.3); Jalen Smith(8.9)
+2026-02-03,OKC,ORL,0.57,Toss-up,12.01,0.99,2,Alex Caruso(6.2); Shai Gilgeous-Alexander(27.2); Isaiah Hartenstein(11.9); Chet Holmgren(15.6); Ajay Mitchell(11.6); Thomas Sorber(5.0); Nikola Topić(5.0); Jalen Williams(13.8); Jaylin Williams(5.4),Colin Castleton(5.0); Franz Wagner(17.3)
+2026-02-03,GSW,PHI,0.48,Toss-up,2.0,0.8,-5,Jimmy Butler(19.1); LJ Cryer(1.1); Seth Curry(7.3); Stephen Curry(19.7); Jonathan Kuminga(8.5); Moses Moody(8.5),
+2026-02-03,POR,PHO,0.19,🔴 High (Away),-5.35,0.44,-4,Deni Avdija(19.7); Scoot Henderson(5.0); Jrue Holiday(12.4); Vit Krejci(6.7); Damian Lillard(5.0); Kris Murray(5.8); Matisse Thybulle(6.2),Devin Booker(18.1); Jalen Green(7.6)
