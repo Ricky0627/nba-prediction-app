@@ -1,0 +1,12 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-02-22,OKC,CLE,0.51,Toss-up,6.96,0.74,-6,Alex Caruso(6.0); Shai Gilgeous-Alexander(26.9); Ajay Mitchell(11.6); Thomas Sorber(5.0); Jalen Williams(14.3),Max Strus(5.0)
+2026-02-22,ATL,BRK,0.73,🟢 High (Home),6.75,0.02,2,Jonathan Kuminga(8.5),Ziaire Williams(6.6)
+2026-02-22,GSW,DEN,0.38,Toss-up,-1.96,0.03,-3,Jimmy Butler(19.1); Seth Curry(7.3); Stephen Curry(19.7); Kristaps Porziņģis(13.2),Tamar Bates(5.0); Aaron Gordon(14.6); Jamal Murray(21.1); Jalen Pickett(4.8); Peyton Watson(11.4)
+2026-02-22,MIL,TOR,0.42,Toss-up,-4.79,0.27,2,Giannis Antetokounmpo(24.5); Taurean Prince(4.1); Myles Turner(10.4),Scottie Barnes(17.4)
+2026-02-22,IND,DAL,0.48,Toss-up,-3.8,0.53,8,Johnny Furphy(4.4); Tyrese Haliburton(5.0); Kam Jones(2.4); T.J. McConnell(9.2); Andrew Nembhard(13.5); Aaron Nesmith(8.8); Micah Potter(7.1); Pascal Siakam(17.2); Obi Toppin(9.2); Ivica Zubac(13.8),Max Christie(10.0); Cooper Flagg(15.8); Daniel Gafford(8.4); Kyrie Irving(5.0); Dereck Lively II(5.7); Caleb Martin(3.4)
+2026-02-22,WAS,CHO,0.21,🔴 High (Away),-12.15,0.88,4,Justin Champagnie(7.8); Anthony Davis(17.5); Kyshawn George(11.1); D'Angelo Russell(6.9); Alex Sarr(14.7); Tristan Vukcevic(5.8); Cam Whitmore(6.2); Trae Young(16.0),Liam McNeeley(3.0); Coby White(12.3)
+2026-02-22,LAL,BOS,0.37,Toss-up,-7.17,-0.06,0,,Jayson Tatum(5.0)
+2026-02-22,MIN,PHI,0.7,🟢 High (Home),4.28,-0.25,7,,Joel Embiid(20.4)
+2026-02-22,CHI,NYK,0.33,🔴 High (Away),-9.69,0.18,-9,Zach Collins(8.6); Jaden Ivey(6.3); Anfernee Simons(9.4),Miles McBride(9.8)
+2026-02-22,PHO,POR,0.54,Toss-up,3.1,0.12,2,Cole Anthony(4.5); Devin Booker(17.5); Dillon Brooks(12.2); Jordan Goodwin(8.0); Haywood Highsmith(5.0),Deni Avdija(19.3); Damian Lillard(5.0); Shaedon Sharpe(13.1)
+2026-02-22,LAC,ORL,0.43,Toss-up,-0.7,0.2,0,Bradley Beal(3.2); John Collins(10.8); Darius Garland(13.4); Kawhi Leonard(22.3),Colin Castleton(5.0); Jalen Suggs(12.1); Franz Wagner(16.6)
