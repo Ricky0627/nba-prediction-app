@@ -2504,6 +2504,7 @@ agbajoc01,Ochai Agbaji,2026,2026-03-03,BRK,163.0
 agbajoc01,Ochai Agbaji,2026,2026-03-05,BRK,161.3
 agbajoc01,Ochai Agbaji,2026,2026-03-07,BRK,163.5
 agbajoc01,Ochai Agbaji,2026,2026-03-09,BRK,168.8
+agbajoc01,Ochai Agbaji,2026,2026-03-16,BRK,186.0
 ajincal01,Alexis Ajinça,2016,2015-10-27,NOP,0.0
 ajincal01,Alexis Ajinça,2016,2015-10-28,NOP,2.5
 ajincal01,Alexis Ajinça,2016,2015-10-31,NOP,2.6
@@ -3913,6 +3914,7 @@ alexani01,Nickeil Alexander-Walker,2026,2026-03-07,ATL,845.6999999999999
 alexani01,Nickeil Alexander-Walker,2026,2026-03-10,ATL,863.4
 alexani01,Nickeil Alexander-Walker,2026,2026-03-12,ATL,884.1
 alexani01,Nickeil Alexander-Walker,2026,2026-03-14,ATL,897.6
+alexani01,Nickeil Alexander-Walker,2026,2026-03-16,ATL,912.3
 alexatr01,Trey Alexander,2025,2024-10-24,DEN,0.0
 alexatr01,Trey Alexander,2025,2024-11-02,DEN,0.3
 alexatr01,Trey Alexander,2025,2024-11-17,DEN,0.6
@@ -4413,6 +4415,7 @@ allengr01,Grayson Allen,2026,2026-03-05,PHO,502.3
 allengr01,Grayson Allen,2026,2026-03-06,PHO,516.8
 allengr01,Grayson Allen,2026,2026-03-10,PHO,532.2
 allengr01,Grayson Allen,2026,2026-03-13,PHO,541.4
+allengr01,Grayson Allen,2026,2026-03-16,PHO,554.7
 allenja01,Jarrett Allen,2018,2017-10-20,BRK,0.0
 allenja01,Jarrett Allen,2018,2017-10-22,BRK,8.8
 allenja01,Jarrett Allen,2018,2017-10-24,BRK,13.3
@@ -11588,6 +11591,7 @@ avdijde01,Deni Avdija,2026,2026-03-08,POR,907.3
 avdijde01,Deni Avdija,2026,2026-03-10,POR,924.7
 avdijde01,Deni Avdija,2026,2026-03-13,POR,940.6
 avdijde01,Deni Avdija,2026,2026-03-15,POR,958.8
+avdijde01,Deni Avdija,2026,2026-03-16,POR,975.3
 ayayijo01,Joel Ayayi,2022,2021-10-25,WAS,0.0
 ayayijo01,Joel Ayayi,2022,2021-11-17,WAS,0.0
 ayayijo01,Joel Ayayi,2022,2021-11-18,WAS,0.7
@@ -12051,6 +12055,7 @@ aytonde01,Deandre Ayton,2026,2026-03-08,LAL,631.9
 aytonde01,Deandre Ayton,2026,2026-03-10,LAL,640.1
 aytonde01,Deandre Ayton,2026,2026-03-12,LAL,654.8
 aytonde01,Deandre Ayton,2026,2026-03-14,LAL,676.8
+aytonde01,Deandre Ayton,2026,2026-03-16,LAL,685.2
 azubuud01,Udoka Azubuike,2021,2020-12-23,UTA,0.0
 azubuud01,Udoka Azubuike,2021,2021-01-03,UTA,2.4
 azubuud01,Udoka Azubuike,2021,2021-01-05,UTA,3.7
@@ -12868,6 +12873,7 @@ baglema01,Marvin Bagley III,2026,2026-03-10,DAL,461.1
 baglema01,Marvin Bagley III,2026,2026-03-12,DAL,470.4
 baglema01,Marvin Bagley III,2026,2026-03-13,DAL,478.2
 baglema01,Marvin Bagley III,2026,2026-03-15,DAL,479.4
+baglema01,Marvin Bagley III,2026,2026-03-16,DAL,481.6
 baglema02,Marcus Bagley,2025,2025-03-24,PHI,0.0
 baglema02,Marcus Bagley,2025,2025-03-26,PHI,1.5
 baglema02,Marcus Bagley,2025,2025-03-29,PHI,4.9
@@ -14450,6 +14456,7 @@ banchpa01,Paolo Banchero,2026,2026-03-08,ORL,880.7
 banchpa01,Paolo Banchero,2026,2026-03-11,ORL,909.0
 banchpa01,Paolo Banchero,2026,2026-03-12,ORL,928.7
 banchpa01,Paolo Banchero,2026,2026-03-14,ORL,940.7
+banchpa01,Paolo Banchero,2026,2026-03-16,ORL,964.0
 banede01,Desmond Bane,2021,2020-12-23,MEM,0.0
 banede01,Desmond Bane,2021,2020-12-26,MEM,3.5
 banede01,Desmond Bane,2021,2020-12-28,MEM,7.6
@@ -14829,6 +14836,7 @@ banede01,Desmond Bane,2026,2026-03-08,ORL,947.6
 banede01,Desmond Bane,2026,2026-03-11,ORL,969.2
 banede01,Desmond Bane,2026,2026-03-12,ORL,1000.7
 banede01,Desmond Bane,2026,2026-03-14,ORL,1020.2
+banede01,Desmond Bane,2026,2026-03-16,ORL,1032.2
 bantoda01,Dalano Banton,2022,2021-10-20,TOR,0.0
 bantoda01,Dalano Banton,2022,2021-10-22,TOR,7.9
 bantoda01,Dalano Banton,2022,2021-10-23,TOR,10.3
@@ -16447,6 +16455,7 @@ barneha02,Harrison Barnes,2026,2026-02-26,SAS,492.2
 barneha02,Harrison Barnes,2026,2026-03-01,SAS,493.8
 barneha02,Harrison Barnes,2026,2026-03-12,SAS,496.2
 barneha02,Harrison Barnes,2026,2026-03-14,SAS,514.4
+barneha02,Harrison Barnes,2026,2026-03-16,SAS,514.6
 barnema02,Matt Barnes,2016,2015-10-28,MEM,0.0
 barnema02,Matt Barnes,2016,2015-10-29,MEM,-4.3
 barnema02,Matt Barnes,2016,2015-10-31,MEM,5.3999999999999995
@@ -19273,6 +19282,7 @@ batumni01,Nicolas Batum,2026,2026-03-07,LAC,214.3
 batumni01,Nicolas Batum,2026,2026-03-09,LAC,214.3
 batumni01,Nicolas Batum,2026,2026-03-11,LAC,215.1
 batumni01,Nicolas Batum,2026,2026-03-13,LAC,219.7
+batumni01,Nicolas Batum,2026,2026-03-16,LAC,225.0
 baughda01,Damion Baugh,2025,2025-02-12,CHO,0.0
 baughda01,Damion Baugh,2025,2025-02-20,CHO,13.8
 baughda01,Damion Baugh,2025,2025-02-24,CHO,28.3
@@ -24486,6 +24496,7 @@ beysa01,Saddiq Bey,2026,2026-03-06,NOP,800.5
 beysa01,Saddiq Bey,2026,2026-03-08,NOP,816.2
 beysa01,Saddiq Bey,2026,2026-03-11,NOP,836.9
 beysa01,Saddiq Bey,2026,2026-03-13,NOP,841.1
+beysa01,Saddiq Bey,2026,2026-03-16,NOP,842.4
 beyty01,Tyler Bey,2021,2021-01-13,DAL,0.0
 beyty01,Tyler Bey,2021,2021-01-17,DAL,-0.7
 beyty01,Tyler Bey,2021,2021-01-18,DAL,-0.49999999999999994
@@ -25166,6 +25177,7 @@ bitadgo01,Goga Bitadze,2026,2026-03-05,ORL,328.6
 bitadgo01,Goga Bitadze,2026,2026-03-07,ORL,336.8
 bitadgo01,Goga Bitadze,2026,2026-03-08,ORL,343.3
 bitadgo01,Goga Bitadze,2026,2026-03-12,ORL,350.2
+bitadgo01,Goga Bitadze,2026,2026-03-16,ORL,349.4
 bitimon01,Onuralp Bitim,2024,2023-11-04,CHI,0.0
 bitimon01,Onuralp Bitim,2024,2024-02-22,CHI,0.0
 bitimon01,Onuralp Bitim,2024,2024-02-28,CHI,-1.4
@@ -30006,6 +30018,7 @@ bookede01,Devin Booker,2026,2026-03-08,PHO,818.6
 bookede01,Devin Booker,2026,2026-03-10,PHO,844.3
 bookede01,Devin Booker,2026,2026-03-12,PHO,865.8
 bookede01,Devin Booker,2026,2026-03-13,PHO,897.6
+bookede01,Devin Booker,2026,2026-03-16,PHO,912.8
 booketr01,Trevor Booker,2016,2015-10-30,UTA,0.0
 booketr01,Trevor Booker,2016,2015-10-31,UTA,-1.0
 booketr01,Trevor Booker,2016,2015-11-04,UTA,-0.4
@@ -36694,6 +36707,7 @@ brownja02,Jaylen Brown,2026,2026-03-08,BOS,1105.9
 brownja02,Jaylen Brown,2026,2026-03-10,BOS,1122.9
 brownja02,Jaylen Brown,2026,2026-03-12,BOS,1130.6
 brownja02,Jaylen Brown,2026,2026-03-14,BOS,1152.5
+brownja02,Jaylen Brown,2026,2026-03-16,BOS,1163.5
 brownke03,Kendall Brown,2023,2022-11-23,IND,0.0
 brownke03,Kendall Brown,2023,2022-11-27,IND,2.7
 brownke03,Kendall Brown,2023,2022-12-02,IND,3.6
@@ -38415,6 +38429,7 @@ bryanca01,Carter Bryant,2026,2026-03-08,SAS,120.9
 bryanca01,Carter Bryant,2026,2026-03-10,SAS,124.9
 bryanca01,Carter Bryant,2026,2026-03-12,SAS,128.1
 bryanca01,Carter Bryant,2026,2026-03-14,SAS,136.7
+bryanca01,Carter Bryant,2026,2026-03-16,SAS,141.0
 bryanel01,Elijah Bryant,2021,2021-05-16,MIL,0.0
 bryanko01,Kobe Bryant,2016,2015-10-28,LAL,0.0
 bryanko01,Kobe Bryant,2016,2015-10-30,LAL,13.9
@@ -40438,6 +40453,7 @@ burtode02,Deonte Burton,2023,2023-02-05,SAC,0.0
 burtode02,Deonte Burton,2023,2023-02-06,SAC,-0.7
 burtoty01,Tyler Burton,2026,2026-03-12,MEM,0.0
 burtoty01,Tyler Burton,2026,2026-03-13,MEM,-4.1
+burtoty01,Tyler Burton,2026,2026-03-16,MEM,-5.199999999999999
 butleca01,Caron Butler,2016,2015-10-28,SAC,0.0
 butleca01,Caron Butler,2016,2015-10-31,SAC,6.3
 butleca01,Caron Butler,2016,2015-11-03,SAC,7.5
@@ -41494,6 +41510,7 @@ buzelma01,Matas Buzelis,2026,2026-03-08,CHI,701.0
 buzelma01,Matas Buzelis,2026,2026-03-10,CHI,717.7
 buzelma01,Matas Buzelis,2026,2026-03-12,CHI,750.7
 buzelma01,Matas Buzelis,2026,2026-03-13,CHI,765.3
+buzelma01,Matas Buzelis,2026,2026-03-16,CHI,776.6
 cabocbr01,Bruno Caboclo,2016,2015-11-11,TOR,0.0
 cabocbr01,Bruno Caboclo,2016,2016-01-06,TOR,-0.7
 cabocbr01,Bruno Caboclo,2016,2016-02-08,TOR,-0.39999999999999997
@@ -41732,6 +41749,7 @@ cainja01,Jamal Cain,2026,2026-03-03,ORL,29.5
 cainja01,Jamal Cain,2026,2026-03-07,ORL,28.4
 cainja01,Jamal Cain,2026,2026-03-08,ORL,30.0
 cainja01,Jamal Cain,2026,2026-03-14,ORL,36.4
+cainja01,Jamal Cain,2026,2026-03-16,ORL,45.599999999999994
 caldejo01,José Calderón,2016,2015-10-28,NYK,0.0
 caldejo01,José Calderón,2016,2015-10-29,NYK,-1.1
 caldejo01,José Calderón,2016,2015-10-31,NYK,-1.4000000000000001
@@ -42968,6 +42986,7 @@ camarto01,Toumani Camara,2026,2026-03-08,POR,602.6
 camarto01,Toumani Camara,2026,2026-03-10,POR,607.5
 camarto01,Toumani Camara,2026,2026-03-13,POR,611.2
 camarto01,Toumani Camara,2026,2026-03-15,POR,613.3
+camarto01,Toumani Camara,2026,2026-03-16,POR,614.9
 campafa01,Facundo Campazzo,2021,2020-12-23,DEN,0.0
 campafa01,Facundo Campazzo,2021,2020-12-25,DEN,2.6
 campafa01,Facundo Campazzo,2021,2020-12-28,DEN,1.6
@@ -44140,6 +44159,7 @@ capelca01,Clint Capela,2026,2026-03-08,HOU,267.2
 capelca01,Clint Capela,2026,2026-03-10,HOU,270.1
 capelca01,Clint Capela,2026,2026-03-11,HOU,277.0
 capelca01,Clint Capela,2026,2026-03-13,HOU,285.7
+capelca01,Clint Capela,2026,2026-03-16,HOU,297.0
 cardwdy01,Dylan Cardwell,2026,2025-10-22,SAC,0.0
 cardwdy01,Dylan Cardwell,2026,2025-10-26,SAC,1.3
 cardwdy01,Dylan Cardwell,2026,2025-11-01,SAC,0.0
@@ -44423,6 +44443,7 @@ carrica01,Bub Carrington,2026,2026-03-08,WAS,440.5
 carrica01,Bub Carrington,2026,2026-03-10,WAS,447.0
 carrica01,Bub Carrington,2026,2026-03-12,WAS,454.3
 carrica01,Bub Carrington,2026,2026-03-14,WAS,467.6
+carrica01,Bub Carrington,2026,2026-03-16,WAS,474.8
 carrode01,DeMarre Carroll,2016,2015-10-28,TOR,0.0
 carrode01,DeMarre Carroll,2016,2015-10-30,TOR,10.2
 carrode01,DeMarre Carroll,2016,2015-11-01,TOR,22.9
@@ -45197,6 +45218,7 @@ carteje01,Jevon Carter,2026,2026-03-08,ORL,142.4
 carteje01,Jevon Carter,2026,2026-03-11,ORL,142.8
 carteje01,Jevon Carter,2026,2026-03-12,ORL,150.8
 carteje01,Jevon Carter,2026,2026-03-14,ORL,155.3
+carteje01,Jevon Carter,2026,2026-03-16,ORL,161.3
 cartemi01,Michael Carter-Williams,2016,2015-10-28,MIL,0.0
 cartemi01,Michael Carter-Williams,2016,2015-10-30,MIL,8.6
 cartemi01,Michael Carter-Williams,2016,2015-11-01,MIL,23.299999999999997
@@ -46229,6 +46251,7 @@ cartewe01,Wendell Carter Jr.,2026,2026-03-08,ORL,610.5
 cartewe01,Wendell Carter Jr.,2026,2026-03-11,ORL,620.7
 cartewe01,Wendell Carter Jr.,2026,2026-03-12,ORL,633.2
 cartewe01,Wendell Carter Jr.,2026,2026-03-14,ORL,652.3000000000001
+cartewe01,Wendell Carter Jr.,2026,2026-03-16,ORL,665.3000000000001
 cartodj01,D.J. Carton,2024,2024-02-22,TOR,0.0
 cartodj01,D.J. Carton,2024,2024-03-01,TOR,2.2
 cartodj01,D.J. Carton,2024,2024-03-03,TOR,7.6000000000000005
@@ -47074,6 +47097,7 @@ castlst01,Stephon Castle,2026,2026-03-08,SAS,718.6
 castlst01,Stephon Castle,2026,2026-03-10,SAS,735.7
 castlst01,Stephon Castle,2026,2026-03-12,SAS,751.8
 castlst01,Stephon Castle,2026,2026-03-14,SAS,782.0
+castlst01,Stephon Castle,2026,2026-03-16,SAS,793.8
 caulewi01,Willie Cauley-Stein,2016,2015-10-28,SAC,0.0
 caulewi01,Willie Cauley-Stein,2016,2015-10-30,SAC,2.0
 caulewi01,Willie Cauley-Stein,2016,2015-10-31,SAC,19.1
@@ -48097,6 +48121,7 @@ champju02,Julian Champagnie,2026,2026-03-08,SAS,605.7
 champju02,Julian Champagnie,2026,2026-03-10,SAS,621.2
 champju02,Julian Champagnie,2026,2026-03-12,SAS,617.7
 champju02,Julian Champagnie,2026,2026-03-14,SAS,623.0
+champju02,Julian Champagnie,2026,2026-03-16,SAS,630.8
 chandke01,Kennedy Chandler,2023,2022-10-22,MEM,0.0
 chandke01,Kennedy Chandler,2023,2022-10-27,MEM,-1.0
 chandke01,Kennedy Chandler,2023,2022-10-29,MEM,-1.0
@@ -48769,6 +48794,7 @@ chrisca02,Cam Christie,2026,2026-03-02,LAC,96.4
 chrisca02,Cam Christie,2026,2026-03-04,LAC,95.7
 chrisca02,Cam Christie,2026,2026-03-07,LAC,95.5
 chrisca02,Cam Christie,2026,2026-03-11,LAC,95.8
+chrisca02,Cam Christie,2026,2026-03-16,LAC,98.9
 chrisjo01,Josh Christopher,2022,2021-10-20,HOU,0.0
 chrisjo01,Josh Christopher,2022,2021-10-22,HOU,5.7
 chrisjo01,Josh Christopher,2022,2021-10-24,HOU,6.2
@@ -49462,6 +49488,7 @@ chrisma02,Max Christie,2026,2026-03-10,DAL,544.7
 chrisma02,Max Christie,2026,2026-03-12,DAL,548.5
 chrisma02,Max Christie,2026,2026-03-13,DAL,552.4
 chrisma02,Max Christie,2026,2026-03-15,DAL,558.6
+chrisma02,Max Christie,2026,2026-03-16,DAL,571.8
 chrisra01,Rakeem Christmas,2016,2016-04-13,IND,0.0
 chrisra01,Rakeem Christmas,2017,2016-10-29,IND,0.0
 chrisra01,Rakeem Christmas,2017,2016-11-21,IND,-0.1
@@ -49685,6 +49712,7 @@ cissosi01,Sidy Cissoko,2026,2026-03-06,POR,240.1
 cissosi01,Sidy Cissoko,2026,2026-03-08,POR,238.2
 cissosi01,Sidy Cissoko,2026,2026-03-13,POR,237.5
 cissosi01,Sidy Cissoko,2026,2026-03-15,POR,250.2
+cissosi01,Sidy Cissoko,2026,2026-03-16,POR,252.6
 clarkbr01,Brandon Clarke,2020,2019-10-23,MEM,0.0
 clarkbr01,Brandon Clarke,2020,2019-10-25,MEM,8.9
 clarkbr01,Brandon Clarke,2020,2019-10-27,MEM,23.9
@@ -51675,6 +51703,7 @@ claxtni01,Nic Claxton,2026,2026-03-07,BRK,724.9
 claxtni01,Nic Claxton,2026,2026-03-09,BRK,729.9
 claxtni01,Nic Claxton,2026,2026-03-10,BRK,742.3
 claxtni01,Nic Claxton,2026,2026-03-12,BRK,745.9
+claxtni01,Nic Claxton,2026,2026-03-16,BRK,753.1
 claytwa01,Walter Clayton,2026,2025-10-22,UTA,0.0
 claytwa01,Walter Clayton,2026,2025-10-24,UTA,11.7
 claytwa01,Walter Clayton,2026,2025-10-27,UTA,21.0
@@ -51731,6 +51760,7 @@ claytwa01,Walter Clayton,2026,2026-03-03,MEM,293.9
 claytwa01,Walter Clayton,2026,2026-03-04,MEM,306.1
 claytwa01,Walter Clayton,2026,2026-03-07,MEM,317.6
 claytwa01,Walter Clayton,2026,2026-03-09,MEM,316.9
+claytwa01,Walter Clayton,2026,2026-03-16,MEM,322.5
 clemoch01,Chris Clemons,2020,2019-11-03,HOU,0.0
 clemoch01,Chris Clemons,2020,2019-11-04,HOU,10.9
 clemoch01,Chris Clemons,2020,2019-11-06,HOU,10.1
@@ -51987,6 +52017,7 @@ clingdo01,Donovan Clingan,2026,2026-03-08,POR,796.9
 clingdo01,Donovan Clingan,2026,2026-03-10,POR,806.5
 clingdo01,Donovan Clingan,2026,2026-03-13,POR,819.1
 clingdo01,Donovan Clingan,2026,2026-03-15,POR,848.2
+clingdo01,Donovan Clingan,2026,2026-03-16,POR,865.5
 clownno01,Noah Clowney,2024,2023-11-25,BRK,0.0
 clownno01,Noah Clowney,2024,2023-12-27,BRK,0.3
 clownno01,Noah Clowney,2024,2024-01-29,BRK,12.0
@@ -52481,6 +52512,7 @@ coffeam01,Amir Coffey,2026,2026-03-05,PHO,93.0
 coffeam01,Amir Coffey,2026,2026-03-06,PHO,103.8
 coffeam01,Amir Coffey,2026,2026-03-08,PHO,103.4
 coffeam01,Amir Coffey,2026,2026-03-12,PHO,105.0
+coffeam01,Amir Coffey,2026,2026-03-16,PHO,107.6
 coleno01,Norris Cole,2016,2015-12-01,NOP,0.0
 coleno01,Norris Cole,2016,2015-12-02,NOP,3.0
 coleno01,Norris Cole,2016,2015-12-04,NOP,0.20000000000000018
@@ -53485,6 +53517,7 @@ collijo01,John Collins,2026,2026-02-19,LAC,550.8
 collijo01,John Collins,2026,2026-02-20,LAC,562.7
 collijo01,John Collins,2026,2026-03-01,LAC,570.4
 collijo01,John Collins,2026,2026-03-14,LAC,580.8
+collijo01,John Collins,2026,2026-03-16,LAC,590.7
 colliky01,Kyle Collinsworth,2018,2017-12-20,DAL,0.0
 colliky01,Kyle Collinsworth,2018,2017-12-22,DAL,2.3
 colliky01,Kyle Collinsworth,2018,2017-12-23,DAL,4.6
@@ -55614,6 +55647,7 @@ coopesh01,Sharife Cooper,2026,2026-03-08,WAS,113.5
 coopesh01,Sharife Cooper,2026,2026-03-10,WAS,118.1
 coopesh01,Sharife Cooper,2026,2026-03-12,WAS,118.3
 coopesh01,Sharife Cooper,2026,2026-03-14,WAS,119.5
+coopesh01,Sharife Cooper,2026,2026-03-16,WAS,119.5
 copelch01,Chris Copeland,2016,2015-10-28,MIL,0.0
 copelch01,Chris Copeland,2016,2015-10-30,MIL,4.1
 copelch01,Chris Copeland,2016,2015-11-01,MIL,7.3999999999999995
@@ -55831,6 +55865,7 @@ coulibi01,Bilal Coulibaly,2026,2026-03-08,WAS,360.7
 coulibi01,Bilal Coulibaly,2026,2026-03-10,WAS,358.4
 coulibi01,Bilal Coulibaly,2026,2026-03-12,WAS,369.0
 coulibi01,Bilal Coulibaly,2026,2026-03-14,WAS,389.4
+coulibi01,Bilal Coulibaly,2026,2026-03-16,WAS,399.3
 councri01,Ricky Council IV,2024,2024-01-02,PHI,0.0
 councri01,Ricky Council IV,2024,2024-01-19,PHI,-0.7
 councri01,Ricky Council IV,2024,2024-01-20,PHI,-0.49999999999999994
@@ -56829,6 +56864,7 @@ cowarce01,Cedric Coward,2026,2026-03-03,MEM,508.4
 cowarce01,Cedric Coward,2026,2026-03-07,MEM,520.0
 cowarce01,Cedric Coward,2026,2026-03-10,MEM,526.5
 cowarce01,Cedric Coward,2026,2026-03-13,MEM,541.7
+cowarce01,Cedric Coward,2026,2026-03-16,MEM,546.2
 crabbal01,Allen Crabbe,2016,2015-10-28,POR,0.0
 crabbal01,Allen Crabbe,2016,2015-10-30,POR,1.0
 crabbal01,Allen Crabbe,2016,2015-10-31,POR,1.3
@@ -60793,6 +60829,7 @@ daniedy01,Dyson Daniels,2026,2026-03-04,ATL,743.9
 daniedy01,Dyson Daniels,2026,2026-03-07,ATL,761.7
 daniedy01,Dyson Daniels,2026,2026-03-10,ATL,779.2
 daniedy01,Dyson Daniels,2026,2026-03-14,ATL,800.4
+daniedy01,Dyson Daniels,2026,2026-03-16,ATL,811.7
 danietr01,Troy Daniels,2016,2015-11-03,CHO,0.0
 danietr01,Troy Daniels,2016,2015-11-05,CHO,0.2
 danietr01,Troy Daniels,2016,2015-11-07,CHO,-0.6000000000000001
@@ -61222,6 +61259,7 @@ dasiltr01,Tristan Da Silva,2026,2026-03-08,ORL,407.5
 dasiltr01,Tristan Da Silva,2026,2026-03-11,ORL,414.3
 dasiltr01,Tristan Da Silva,2026,2026-03-12,ORL,434.2
 dasiltr01,Tristan Da Silva,2026,2026-03-14,ORL,457.7
+dasiltr01,Tristan Da Silva,2026,2026-03-16,ORL,466.5
 davisan02,Anthony Davis,2016,2015-10-27,NOP,0.0
 davisan02,Anthony Davis,2016,2015-10-28,NOP,2.7
 davisan02,Anthony Davis,2016,2015-10-31,NOP,23.8
@@ -66700,6 +66738,7 @@ dilliro01,Rob Dillingham,2026,2026-03-08,CHI,115.3
 dilliro01,Rob Dillingham,2026,2026-03-10,CHI,115.3
 dilliro01,Rob Dillingham,2026,2026-03-12,CHI,114.5
 dilliro01,Rob Dillingham,2026,2026-03-13,CHI,125.89999999999999
+dilliro01,Rob Dillingham,2026,2026-03-16,CHI,134.8
 dinwisp01,Spencer Dinwiddie,2016,2015-11-03,DET,0.0
 dinwisp01,Spencer Dinwiddie,2016,2015-11-15,DET,-2.0
 dinwisp01,Spencer Dinwiddie,2016,2015-11-17,DET,11.5
@@ -68276,6 +68315,7 @@ doncilu01,Luka Dončić,2026,2026-03-08,LAL,1316.1
 doncilu01,Luka Dončić,2026,2026-03-10,LAL,1337.2
 doncilu01,Luka Dončić,2026,2026-03-12,LAL,1365.1
 doncilu01,Luka Dončić,2026,2026-03-14,LAL,1411.6
+doncilu01,Luka Dončić,2026,2026-03-16,LAL,1434.5
 dorsety01,Tyler Dorsey,2018,2017-10-20,ATL,0.0
 dorsety01,Tyler Dorsey,2018,2017-10-22,ATL,-1.1
 dorsety01,Tyler Dorsey,2018,2017-10-23,ATL,-1.1
@@ -72161,6 +72201,7 @@ dunnkr01,Kris Dunn,2026,2026-03-09,LAC,486.5
 dunnkr01,Kris Dunn,2026,2026-03-11,LAC,495.5
 dunnkr01,Kris Dunn,2026,2026-03-13,LAC,506.4
 dunnkr01,Kris Dunn,2026,2026-03-14,LAC,516.1
+dunnkr01,Kris Dunn,2026,2026-03-16,LAC,523.0
 dunnry01,Ryan Dunn,2025,2024-10-23,PHO,0.0
 dunnry01,Ryan Dunn,2025,2024-10-25,PHO,-0.3
 dunnry01,Ryan Dunn,2025,2024-10-26,PHO,7.2
@@ -72911,6 +72952,7 @@ duranke01,Kevin Durant,2026,2026-03-08,HOU,1142.6
 duranke01,Kevin Durant,2026,2026-03-10,HOU,1164.3
 duranke01,Kevin Durant,2026,2026-03-11,HOU,1191.3
 duranke01,Kevin Durant,2026,2026-03-13,HOU,1199.6
+duranke01,Kevin Durant,2026,2026-03-16,HOU,1226.0
 durenja01,Jalen Duren,2023,2022-10-19,DET,0.0
 durenja01,Jalen Duren,2023,2022-10-21,DET,10.9
 durenja01,Jalen Duren,2023,2022-10-22,DET,17.1
@@ -73399,6 +73441,7 @@ easonta01,Tari Eason,2026,2026-03-08,HOU,359.6
 easonta01,Tari Eason,2026,2026-03-10,HOU,360.2
 easonta01,Tari Eason,2026,2026-03-11,HOU,366.4
 easonta01,Tari Eason,2026,2026-03-13,HOU,374.3
+easonta01,Tari Eason,2026,2026-03-16,HOU,371.8
 echenja01,Jaime Echenique,2022,2021-12-30,WAS,0.0
 eddieja01,Jarell Eddie,2016,2015-12-26,WAS,0.0
 eddieja01,Jarell Eddie,2016,2015-12-28,WAS,11.0
@@ -76291,6 +76334,7 @@ etienty01,Tyson Etienne,2026,2026-03-09,BRK,0.8
 etienty01,Tyson Etienne,2026,2026-03-10,BRK,0.30000000000000004
 etienty01,Tyson Etienne,2026,2026-03-12,BRK,5.8999999999999995
 etienty01,Tyson Etienne,2026,2026-03-14,BRK,8.5
+etienty01,Tyson Etienne,2026,2026-03-16,BRK,16.2
 eubandr01,Drew Eubanks,2019,2018-10-20,SAS,0.0
 eubandr01,Drew Eubanks,2019,2018-10-24,SAS,1.0
 eubandr01,Drew Eubanks,2019,2018-11-19,SAS,3.0
@@ -78122,6 +78166,7 @@ fearsje01,Jeremiah Fears,2026,2026-03-06,NOP,569.2
 fearsje01,Jeremiah Fears,2026,2026-03-08,NOP,573.4
 fearsje01,Jeremiah Fears,2026,2026-03-11,NOP,587.9
 fearsje01,Jeremiah Fears,2026,2026-03-13,NOP,593.0
+fearsje01,Jeremiah Fears,2026,2026-03-16,NOP,596.2
 feldeka01,Kay Felder,2017,2016-10-29,CLE,0.0
 feldeka01,Kay Felder,2017,2016-11-11,CLE,1.7
 feldeka01,Kay Felder,2017,2016-11-13,CLE,2.9
@@ -80149,6 +80194,7 @@ finnedo01,Dorian Finney-Smith,2026,2026-03-06,HOU,43.8
 finnedo01,Dorian Finney-Smith,2026,2026-03-08,HOU,50.7
 finnedo01,Dorian Finney-Smith,2026,2026-03-10,HOU,59.0
 finnedo01,Dorian Finney-Smith,2026,2026-03-13,HOU,61.2
+finnedo01,Dorian Finney-Smith,2026,2026-03-16,HOU,64.4
 fittsma01,Malik Fitts,2021,2021-04-09,LAC,0.0
 fittsma01,Malik Fitts,2021,2021-04-13,LAC,-0.5
 fittsma01,Malik Fitts,2021,2021-04-18,LAC,-0.9
@@ -80223,6 +80269,7 @@ flaggco01,Cooper Flagg,2026,2026-03-10,DAL,808.6
 flaggco01,Cooper Flagg,2026,2026-03-12,DAL,818.9
 flaggco01,Cooper Flagg,2026,2026-03-13,DAL,829.9
 flaggco01,Cooper Flagg,2026,2026-03-15,DAL,848.6
+flaggco01,Cooper Flagg,2026,2026-03-16,DAL,872.5
 flaglad01,Adam Flagler,2024,2024-02-23,OKC,0.0
 flaglad01,Adam Flagler,2024,2024-04-10,OKC,-1.4
 flaglad01,Adam Flagler,2025,2024-10-24,OKC,0.0
@@ -80303,6 +80350,7 @@ flemira01,Rasheer Fleming,2026,2026-03-08,PHO,76.7
 flemira01,Rasheer Fleming,2026,2026-03-10,PHO,90.5
 flemira01,Rasheer Fleming,2026,2026-03-12,PHO,95.7
 flemira01,Rasheer Fleming,2026,2026-03-13,PHO,98.3
+flemira01,Rasheer Fleming,2026,2026-03-16,PHO,109.80000000000001
 flowetr01,Trentyn Flowers,2025,2024-12-04,LAC,0.0
 flowetr01,Trentyn Flowers,2025,2025-01-20,LAC,3.7
 flowetr01,Trentyn Flowers,2025,2025-04-02,LAC,3.7
@@ -82497,6 +82545,7 @@ foxde01,De'Aaron Fox,2026,2026-03-08,SAS,817.7
 foxde01,De'Aaron Fox,2026,2026-03-10,SAS,834.8
 foxde01,De'Aaron Fox,2026,2026-03-12,SAS,860.4
 foxde01,De'Aaron Fox,2026,2026-03-14,SAS,879.5
+foxde01,De'Aaron Fox,2026,2026-03-16,SAS,893.2
 foyera01,Randy Foye,2016,2015-10-28,DEN,0.0
 foyera01,Randy Foye,2016,2015-10-30,DEN,2.4
 foyera01,Randy Foye,2016,2015-11-01,DEN,0.0
@@ -85492,6 +85541,7 @@ garlada01,Darius Garland,2026,2026-03-07,LAC,363.2
 garlada01,Darius Garland,2026,2026-03-09,LAC,374.6
 garlada01,Darius Garland,2026,2026-03-11,LAC,393.6
 garlada01,Darius Garland,2026,2026-03-14,LAC,411.8
+garlada01,Darius Garland,2026,2026-03-16,LAC,432.2
 garneke01,Kevin Garnett,2016,2015-10-28,MIN,0.0
 garneke01,Kevin Garnett,2016,2015-10-30,MIN,5.4
 garneke01,Kevin Garnett,2016,2015-11-02,MIN,11.100000000000001
@@ -85836,6 +85886,7 @@ garzalu01,Luka Garza,2026,2026-03-08,BOS,367.9
 garzalu01,Luka Garza,2026,2026-03-10,BOS,371.1
 garzalu01,Luka Garza,2026,2026-03-12,BOS,371.1
 garzalu01,Luka Garza,2026,2026-03-14,BOS,374.1
+garzalu01,Luka Garza,2026,2026-03-16,BOS,385.7
 gasolma01,Marc Gasol,2016,2015-10-28,MEM,0.0
 gasolma01,Marc Gasol,2016,2015-10-29,MEM,5.3
 gasolma01,Marc Gasol,2016,2015-10-31,MEM,23.8
@@ -88608,6 +88659,7 @@ gibsota01,Taj Gibson,2025,2025-04-09,CHO,94.4
 gibsota01,Taj Gibson,2025,2025-04-11,CHO,95.8
 gibsota01,Taj Gibson,2025,2025-04-13,CHO,95.7
 gibsota01,Taj Gibson,2026,2026-03-13,MEM,0.0
+gibsota01,Taj Gibson,2026,2026-03-16,MEM,0.8
 giddejo01,Josh Giddey,2022,2021-10-20,OKC,0.0
 giddejo01,Josh Giddey,2022,2021-10-22,OKC,4.0
 giddejo01,Josh Giddey,2022,2021-10-24,OKC,10.3
@@ -88933,6 +88985,7 @@ giddejo01,Josh Giddey,2026,2026-03-08,CHI,663.8
 giddejo01,Josh Giddey,2026,2026-03-10,CHI,681.1
 giddejo01,Josh Giddey,2026,2026-03-12,CHI,703.3
 giddejo01,Josh Giddey,2026,2026-03-13,CHI,731.3
+giddejo01,Josh Giddey,2026,2026-03-16,CHI,751.1
 gilbeke01,Keshon Gilbert,2026,2026-02-07,WAS,0.0
 gilbeke01,Keshon Gilbert,2026,2026-02-08,WAS,2.2
 gilbeke01,Keshon Gilbert,2026,2026-02-11,WAS,3.2
@@ -89888,6 +89941,7 @@ gillan01,Anthony Gill,2026,2026-03-08,WAS,133.5
 gillan01,Anthony Gill,2026,2026-03-10,WAS,140.0
 gillan01,Anthony Gill,2026,2026-03-12,WAS,145.4
 gillan01,Anthony Gill,2026,2026-03-14,WAS,149.0
+gillan01,Anthony Gill,2026,2026-03-16,WAS,149.0
 gilleco01,Collin Gillespie,2024,2023-10-24,DEN,0.0
 gilleco01,Collin Gillespie,2024,2023-10-29,DEN,0.0
 gilleco01,Collin Gillespie,2024,2023-11-04,DEN,-0.1
@@ -90011,6 +90065,7 @@ gilleco01,Collin Gillespie,2026,2026-03-08,PHO,730.7
 gilleco01,Collin Gillespie,2026,2026-03-10,PHO,749.9
 gilleco01,Collin Gillespie,2026,2026-03-12,PHO,766.6
 gilleco01,Collin Gillespie,2026,2026-03-13,PHO,772.2
+gilleco01,Collin Gillespie,2026,2026-03-16,PHO,772.7
 gillefr01,Freddie Gillespie,2021,2021-04-10,TOR,0.0
 gillefr01,Freddie Gillespie,2021,2021-04-11,TOR,9.8
 gillefr01,Freddie Gillespie,2021,2021-04-13,TOR,9.0
@@ -91107,6 +91162,7 @@ gonzahu01,Hugo González,2026,2026-03-08,BOS,216.3
 gonzahu01,Hugo González,2026,2026-03-10,BOS,215.8
 gonzahu01,Hugo González,2026,2026-03-12,BOS,217.9
 gonzahu01,Hugo González,2026,2026-03-14,BOS,229.5
+gonzahu01,Hugo González,2026,2026-03-16,BOS,228.3
 goodedr01,Drew Gooden,2016,2015-10-28,WAS,0.0
 goodedr01,Drew Gooden,2016,2015-10-30,WAS,3.5
 goodedr01,Drew Gooden,2016,2015-10-31,WAS,7.5
@@ -91549,6 +91605,7 @@ goodwjo01,Jordan Goodwin,2026,2026-02-21,PHO,416.5
 goodwjo01,Jordan Goodwin,2026,2026-03-10,PHO,433.0
 goodwjo01,Jordan Goodwin,2026,2026-03-12,PHO,439.0
 goodwjo01,Jordan Goodwin,2026,2026-03-13,PHO,444.2
+goodwjo01,Jordan Goodwin,2026,2026-03-16,PHO,452.6
 gordoaa01,Aaron Gordon,2016,2015-10-28,ORL,0.0
 gordoaa01,Aaron Gordon,2016,2015-10-30,ORL,12.3
 gordoaa01,Aaron Gordon,2016,2015-11-01,ORL,25.3
@@ -94343,6 +94400,7 @@ grantje01,Jerami Grant,2026,2026-03-08,POR,608.9
 grantje01,Jerami Grant,2026,2026-03-10,POR,625.4
 grantje01,Jerami Grant,2026,2026-03-13,POR,645.0
 grantje01,Jerami Grant,2026,2026-03-15,POR,648.2
+grantje01,Jerami Grant,2026,2026-03-16,POR,659.8
 grantje02,Jerian Grant,2016,2015-10-28,NYK,0.0
 grantje02,Jerian Grant,2016,2015-10-29,NYK,12.7
 grantje02,Jerian Grant,2016,2015-10-31,NYK,18.5
@@ -96072,6 +96130,7 @@ greendr01,Draymond Green,2026,2026-03-05,GSW,359.4
 greendr01,Draymond Green,2026,2026-03-07,GSW,372.1
 greendr01,Draymond Green,2026,2026-03-09,GSW,386.2
 greendr01,Draymond Green,2026,2026-03-10,GSW,394.8
+greendr01,Draymond Green,2026,2026-03-16,GSW,410.4
 greener01,Erick Green,2016,2015-10-28,DEN,0.0
 greener01,Erick Green,2016,2015-10-30,DEN,0.7
 greener01,Erick Green,2016,2015-11-01,DEN,0.7
@@ -97487,6 +97546,7 @@ greenja05,Jalen Green,2026,2026-03-08,PHO,110.8
 greenja05,Jalen Green,2026,2026-03-10,PHO,124.1
 greenja05,Jalen Green,2026,2026-03-12,PHO,140.4
 greenja05,Jalen Green,2026,2026-03-13,PHO,167.0
+greenja05,Jalen Green,2026,2026-03-16,PHO,190.6
 greenje02,Jeff Green,2016,2015-10-28,MEM,0.0
 greenje02,Jeff Green,2016,2015-10-29,MEM,2.2
 greenje02,Jeff Green,2016,2015-10-31,MEM,11.7
@@ -99453,6 +99513,7 @@ gueyemo02,Mouhamed Gueye,2026,2026-03-07,ATL,279.7
 gueyemo02,Mouhamed Gueye,2026,2026-03-10,ATL,282.0
 gueyemo02,Mouhamed Gueye,2026,2026-03-12,ATL,292.1
 gueyemo02,Mouhamed Gueye,2026,2026-03-14,ATL,298.1
+gueyemo02,Mouhamed Gueye,2026,2026-03-16,ATL,299.3
 gutiejo01,Jorge Gutiérrez,2016,2016-02-24,CHO,0.0
 gutiejo01,Jorge Gutiérrez,2016,2016-03-01,CHO,6.1
 gutiejo01,Jorge Gutiérrez,2016,2016-03-02,CHO,9.5
@@ -99910,6 +99971,7 @@ hachiru01,Rui Hachimura,2026,2026-03-08,LAL,424.6
 hachiru01,Rui Hachimura,2026,2026-03-10,LAL,435.9
 hachiru01,Rui Hachimura,2026,2026-03-12,LAL,439.9
 hachiru01,Rui Hachimura,2026,2026-03-14,LAL,452.3
+hachiru01,Rui Hachimura,2026,2026-03-16,LAL,456.1
 haganas01,Ashton Hagans,2021,2021-01-25,MIN,0.0
 haganas01,Ashton Hagans,2021,2021-01-27,MIN,-1.0
 haganas01,Ashton Hagans,2024,2024-02-08,POR,0.0
@@ -102481,6 +102543,7 @@ hardyja02,Jaden Hardy,2026,2026-03-05,WAS,178.8
 hardyja02,Jaden Hardy,2026,2026-03-08,WAS,178.9
 hardyja02,Jaden Hardy,2026,2026-03-10,WAS,184.3
 hardyja02,Jaden Hardy,2026,2026-03-14,WAS,190.9
+hardyja02,Jaden Hardy,2026,2026-03-16,WAS,203.0
 harklej01,Elijah Harkless,2025,2025-01-11,UTA,0.0
 harklej01,Elijah Harkless,2025,2025-01-12,UTA,0.1
 harklej01,Elijah Harkless,2025,2025-01-15,UTA,-0.8
@@ -107519,6 +107582,7 @@ hausesa01,Sam Hauser,2026,2026-03-08,BOS,430.2
 hausesa01,Sam Hauser,2026,2026-03-10,BOS,440.8
 hausesa01,Sam Hauser,2026,2026-03-12,BOS,452.6
 hausesa01,Sam Hauser,2026,2026-03-14,BOS,458.7
+hausesa01,Sam Hauser,2026,2026-03-16,BOS,466.0
 hawessp01,Spencer Hawes,2016,2015-10-28,CHO,0.0
 hawessp01,Spencer Hawes,2016,2015-10-30,CHO,4.4
 hawessp01,Spencer Hawes,2016,2015-11-01,CHO,11.0
@@ -107795,6 +107859,7 @@ hawkijo01,Jordan Hawkins,2026,2026-02-28,NOP,79.2
 hawkijo01,Jordan Hawkins,2026,2026-03-01,NOP,77.8
 hawkijo01,Jordan Hawkins,2026,2026-03-08,NOP,77.1
 hawkijo01,Jordan Hawkins,2026,2026-03-11,NOP,77.4
+hawkijo01,Jordan Hawkins,2026,2026-03-16,NOP,77.7
 hayesch01,Chuck Hayes,2016,2015-11-01,HOU,0.0
 hayesch01,Chuck Hayes,2016,2015-11-06,HOU,-0.5
 hayesja02,Jaxson Hayes,2020,2019-10-28,NOP,0.0
@@ -108219,6 +108284,7 @@ hayesja02,Jaxson Hayes,2026,2026-03-05,LAL,360.7
 hayesja02,Jaxson Hayes,2026,2026-03-06,LAL,378.4
 hayesja02,Jaxson Hayes,2026,2026-03-08,LAL,388.0
 hayesja02,Jaxson Hayes,2026,2026-03-14,LAL,392.1
+hayesja02,Jaxson Hayes,2026,2026-03-16,LAL,396.3
 hayeski01,Killian Hayes,2021,2020-12-23,DET,0.0
 hayeski01,Killian Hayes,2021,2020-12-26,DET,1.6
 hayeski01,Killian Hayes,2021,2020-12-28,DET,-0.7999999999999998
@@ -109245,6 +109311,7 @@ hendesc01,Scoot Henderson,2026,2026-03-08,POR,75.4
 hendesc01,Scoot Henderson,2026,2026-03-10,POR,102.5
 hendesc01,Scoot Henderson,2026,2026-03-13,POR,110.3
 hendesc01,Scoot Henderson,2026,2026-03-15,POR,127.6
+hendesc01,Scoot Henderson,2026,2026-03-16,POR,132.8
 hendrta01,Taylor Hendricks,2024,2023-10-25,UTA,0.0
 hendrta01,Taylor Hendricks,2024,2023-12-02,UTA,0.9
 hendrta01,Taylor Hendricks,2024,2023-12-06,UTA,3.8
@@ -109336,6 +109403,7 @@ hendrta01,Taylor Hendricks,2026,2026-03-07,MEM,217.3
 hendrta01,Taylor Hendricks,2026,2026-03-10,MEM,237.5
 hendrta01,Taylor Hendricks,2026,2026-03-12,MEM,244.3
 hendrta01,Taylor Hendricks,2026,2026-03-13,MEM,263.5
+hendrta01,Taylor Hendricks,2026,2026-03-16,MEM,266.4
 henryaa01,Aaron Henry,2022,2021-10-20,PHI,0.0
 henryaa01,Aaron Henry,2022,2021-12-20,PHI,-0.7
 henryaa01,Aaron Henry,2022,2021-12-26,PHI,-1.5
@@ -112186,6 +112254,7 @@ highsha01,Haywood Highsmith,2026,2026-03-06,PHO,0.0
 highsha01,Haywood Highsmith,2026,2026-03-08,PHO,0.0
 highsha01,Haywood Highsmith,2026,2026-03-10,PHO,3.8
 highsha01,Haywood Highsmith,2026,2026-03-13,PHO,11.399999999999999
+highsha01,Haywood Highsmith,2026,2026-03-16,PHO,16.0
 hilarne01,Nenê,2016,2015-10-28,WAS,0.0
 hilarne01,Nenê,2016,2015-10-30,WAS,-2.7
 hilarne01,Nenê,2016,2015-10-31,WAS,7.999999999999999
@@ -114710,6 +114779,7 @@ holidjr01,Jrue Holiday,2026,2026-03-08,POR,483.3
 holidjr01,Jrue Holiday,2026,2026-03-10,POR,501.0
 holidjr01,Jrue Holiday,2026,2026-03-13,POR,502.2
 holidjr01,Jrue Holiday,2026,2026-03-15,POR,525.4
+holidjr01,Jrue Holiday,2026,2026-03-16,POR,526.6
 holidju01,Justin Holiday,2016,2015-10-29,ATL,0.0
 holidju01,Justin Holiday,2016,2015-11-03,ATL,0.6
 holidju01,Justin Holiday,2016,2015-11-04,ATL,4.8
@@ -118969,6 +119039,7 @@ howarje01,Jett Howard,2026,2026-03-07,ORL,136.8
 howarje01,Jett Howard,2026,2026-03-08,ORL,142.3
 howarje01,Jett Howard,2026,2026-03-11,ORL,152.3
 howarje01,Jett Howard,2026,2026-03-12,ORL,158.4
+howarje01,Jett Howard,2026,2026-03-16,ORL,166.6
 howarma02,Markus Howard,2021,2020-12-25,DEN,0.0
 howarma02,Markus Howard,2021,2020-12-29,DEN,-0.7
 howarma02,Markus Howard,2021,2021-01-03,DEN,-0.7
@@ -121519,6 +121590,7 @@ ighodos01,Oso Ighodaro,2026,2026-03-08,PHO,407.7
 ighodos01,Oso Ighodaro,2026,2026-03-10,PHO,411.8
 ighodos01,Oso Ighodaro,2026,2026-03-12,PHO,419.0
 ighodos01,Oso Ighodaro,2026,2026-03-13,PHO,427.4
+ighodos01,Oso Ighodaro,2026,2026-03-16,PHO,428.3
 iguodan01,Andre Iguodala,2016,2015-10-27,GSW,0.0
 iguodan01,Andre Iguodala,2016,2015-10-30,GSW,3.5
 iguodan01,Andre Iguodala,2016,2015-10-31,GSW,19.0
@@ -125675,6 +125747,7 @@ jacksis01,Isaiah Jackson,2026,2026-03-09,LAC,271.4
 jacksis01,Isaiah Jackson,2026,2026-03-11,LAC,273.9
 jacksis01,Isaiah Jackson,2026,2026-03-13,LAC,285.3
 jacksis01,Isaiah Jackson,2026,2026-03-14,LAC,296.3
+jacksis01,Isaiah Jackson,2026,2026-03-16,LAC,307.2
 jacksja02,Jaren Jackson Jr.,2019,2018-10-17,MEM,0.0
 jacksja02,Jaren Jackson Jr.,2019,2018-10-19,MEM,12.5
 jacksja02,Jaren Jackson Jr.,2019,2018-10-22,MEM,32.4
@@ -128440,6 +128513,7 @@ jamesle01,LeBron James,2026,2026-03-03,LAL,745.1
 jamesle01,LeBron James,2026,2026-03-05,LAL,762.3
 jamesle01,LeBron James,2026,2026-03-12,LAL,782.4
 jamesle01,LeBron James,2026,2026-03-14,LAL,799.4
+jamesle01,LeBron James,2026,2026-03-16,LAL,811.2
 jamesmi02,Mike James,2018,2017-10-18,PHO,0.0
 jamesmi02,Mike James,2018,2017-10-20,PHO,8.3
 jamesmi02,Mike James,2018,2017-10-21,PHO,17.6
@@ -128772,6 +128846,7 @@ jarrede01,DeJon Jarreau,2024,2024-03-22,MEM,30.7
 jarrede01,DeJon Jarreau,2024,2024-03-25,MEM,28.599999999999998
 jarrede01,DeJon Jarreau,2024,2024-03-27,MEM,31.7
 jarrede01,DeJon Jarreau,2026,2026-03-13,MEM,0.0
+jarrede01,DeJon Jarreau,2026,2026-03-16,MEM,4.8
 jeffeal01,Al Jefferson,2016,2015-10-28,CHO,0.0
 jeffeal01,Al Jefferson,2016,2015-10-30,CHO,12.2
 jeffeal01,Al Jefferson,2016,2015-11-01,CHO,20.6
@@ -130588,6 +130663,7 @@ johnsaj01,AJ Johnson,2026,2026-03-06,DAL,51.4
 johnsaj01,AJ Johnson,2026,2026-03-08,DAL,51.4
 johnsaj01,AJ Johnson,2026,2026-03-12,DAL,49.3
 johnsaj01,AJ Johnson,2026,2026-03-13,DAL,49.3
+johnsaj01,AJ Johnson,2026,2026-03-16,DAL,51.6
 johnsal02,Alize Johnson,2019,2018-10-19,IND,0.0
 johnsal02,Alize Johnson,2019,2018-10-20,IND,1.5
 johnsal02,Alize Johnson,2019,2018-10-27,IND,1.4
@@ -131446,6 +131522,7 @@ johnsch06,Chaney Johnson,2026,2026-03-09,BRK,0.0
 johnsch06,Chaney Johnson,2026,2026-03-10,BRK,5.0
 johnsch06,Chaney Johnson,2026,2026-03-12,BRK,7.5
 johnsch06,Chaney Johnson,2026,2026-03-14,BRK,9.6
+johnsch06,Chaney Johnson,2026,2026-03-16,BRK,18.4
 johnsda04,Dakari Johnson,2018,2017-10-19,OKC,0.0
 johnsda04,Dakari Johnson,2018,2017-10-28,OKC,6.1
 johnsda04,Dakari Johnson,2018,2017-10-31,OKC,11.6
@@ -132168,6 +132245,7 @@ johnsja05,Jalen Johnson,2026,2026-03-07,ATL,1137.3
 johnsja05,Jalen Johnson,2026,2026-03-10,ATL,1168.7
 johnsja05,Jalen Johnson,2026,2026-03-12,ATL,1194.2
 johnsja05,Jalen Johnson,2026,2026-03-14,ATL,1216.1
+johnsja05,Jalen Johnson,2026,2026-03-16,ATL,1238.3
 johnsjo02,Joe Johnson,2016,2015-10-28,BRK,0.0
 johnsjo02,Joe Johnson,2016,2015-10-30,BRK,7.2
 johnsjo02,Joe Johnson,2016,2015-10-31,BRK,4.0
@@ -132821,6 +132899,7 @@ johnske04,Keldon Johnson,2026,2026-03-08,SAS,662.5
 johnske04,Keldon Johnson,2026,2026-03-10,SAS,677.1
 johnske04,Keldon Johnson,2026,2026-03-12,SAS,682.4
 johnske04,Keldon Johnson,2026,2026-03-14,SAS,684.3
+johnske04,Keldon Johnson,2026,2026-03-16,SAS,694.5
 johnske07,Keon Johnson,2022,2021-11-07,LAC,0.0
 johnske07,Keon Johnson,2022,2021-11-29,LAC,0.0
 johnske07,Keon Johnson,2022,2021-12-01,LAC,0.6
@@ -133544,6 +133623,7 @@ johnstr03,Tre Johnson,2026,2026-03-08,WAS,387.0
 johnstr03,Tre Johnson,2026,2026-03-10,WAS,401.2
 johnstr03,Tre Johnson,2026,2026-03-12,WAS,411.6
 johnstr03,Tre Johnson,2026,2026-03-14,WAS,406.4
+johnstr03,Tre Johnson,2026,2026-03-16,WAS,404.6
 johnsty01,Tyler Johnson,2016,2015-10-30,MIA,0.0
 johnsty01,Tyler Johnson,2016,2015-11-01,MIA,0.0
 johnsty01,Tyler Johnson,2016,2015-11-03,MIA,15.1
@@ -135835,6 +135915,7 @@ jonesde02,Derrick Jones Jr.,2026,2026-03-09,LAC,279.4
 jonesde02,Derrick Jones Jr.,2026,2026-03-11,LAC,294.9
 jonesde02,Derrick Jones Jr.,2026,2026-03-13,LAC,309.1
 jonesde02,Derrick Jones Jr.,2026,2026-03-14,LAC,325.2
+jonesde02,Derrick Jones Jr.,2026,2026-03-16,LAC,326.5
 jonesdi01,Dillon Jones,2025,2024-10-24,OKC,0.0
 jonesdi01,Dillon Jones,2025,2024-10-26,OKC,-0.4
 jonesdi01,Dillon Jones,2025,2024-10-27,OKC,-0.4
@@ -136179,6 +136260,7 @@ joneshe01,Herbert Jones,2026,2026-03-06,NOP,278.9
 joneshe01,Herbert Jones,2026,2026-03-08,NOP,291.5
 joneshe01,Herbert Jones,2026,2026-03-11,NOP,292.5
 joneshe01,Herbert Jones,2026,2026-03-13,NOP,305.5
+joneshe01,Herbert Jones,2026,2026-03-16,NOP,310.9
 jonesis01,Isaac Jones,2025,2024-10-28,SAC,0.0
 jonesis01,Isaac Jones,2025,2024-10-29,SAC,-0.4
 jonesis01,Isaac Jones,2025,2024-11-06,SAC,-1.5
@@ -137075,6 +137157,7 @@ jonestr01,Tre Jones,2026,2026-03-08,CHI,577.1
 jonestr01,Tre Jones,2026,2026-03-10,CHI,588.5
 jonestr01,Tre Jones,2026,2026-03-12,CHI,605.6
 jonestr01,Tre Jones,2026,2026-03-13,CHI,622.4
+jonestr01,Tre Jones,2026,2026-03-16,CHI,638.2
 jonesty01,Tyus Jones,2016,2015-11-10,MIN,0.0
 jonesty01,Tyus Jones,2016,2015-11-12,MIN,-0.6
 jonesty01,Tyus Jones,2016,2015-12-23,MIN,-1.2999999999999998
@@ -140465,6 +140548,7 @@ kawamyu01,Yuki Kawamura,2026,2026-03-05,CHI,31.9
 kawamyu01,Yuki Kawamura,2026,2026-03-08,CHI,33.6
 kawamyu01,Yuki Kawamura,2026,2026-03-12,CHI,33.2
 kawamyu01,Yuki Kawamura,2026,2026-03-13,CHI,36.3
+kawamyu01,Yuki Kawamura,2026,2026-03-16,CHI,36.3
 keelstr01,Trevor Keels,2023,2022-10-21,NYK,0.0
 keelstr01,Trevor Keels,2023,2023-03-01,NYK,-0.4
 keelstr01,Trevor Keels,2023,2023-03-27,NYK,1.9
@@ -141072,6 +141156,8 @@ kennalu01,Luke Kennard,2026,2026-03-08,LAL,446.8
 kennalu01,Luke Kennard,2026,2026-03-10,LAL,454.3
 kennalu01,Luke Kennard,2026,2026-03-12,LAL,461.8
 kennalu01,Luke Kennard,2026,2026-03-14,LAL,463.9
+kennalu01,Luke Kennard,2026,2026-03-16,LAL,467.6
+kentja01,Jayson Kent,2026,2026-03-16,POR,0.0
 kesslwa01,Walker Kessler,2023,2022-10-19,UTA,0.0
 kesslwa01,Walker Kessler,2023,2022-10-21,UTA,12.6
 kesslwa01,Walker Kessler,2023,2022-10-23,UTA,22.4
@@ -142088,6 +142174,7 @@ kispeco01,Corey Kispert,2026,2026-03-07,ATL,312.3
 kispeco01,Corey Kispert,2026,2026-03-10,ATL,314.6
 kispeco01,Corey Kispert,2026,2026-03-12,ATL,314.9
 kispeco01,Corey Kispert,2026,2026-03-14,ATL,319.8
+kispeco01,Corey Kispert,2026,2026-03-16,ATL,331.4
 klebima01,Maxi Kleber,2018,2017-10-21,DAL,0.0
 klebima01,Maxi Kleber,2018,2017-10-23,DAL,4.9
 klebima01,Maxi Kleber,2018,2017-10-26,DAL,8.2
@@ -145819,6 +145906,7 @@ kuminjo01,Jonathan Kuminga,2026,2026-02-24,ATL,169.29999999999998
 kuminjo01,Jonathan Kuminga,2026,2026-02-26,ATL,196.8
 kuminjo01,Jonathan Kuminga,2026,2026-03-01,ATL,211.8
 kuminjo01,Jonathan Kuminga,2026,2026-03-12,ATL,230.8
+kuminjo01,Jonathan Kuminga,2026,2026-03-16,ATL,232.1
 kurucro01,Rodions Kurucs,2019,2018-10-17,BRK,0.0
 kurucro01,Rodions Kurucs,2019,2018-10-19,BRK,1.2
 kurucro01,Rodions Kurucs,2019,2018-10-20,BRK,8.1
@@ -147571,6 +147659,7 @@ landajo01,Jock Landale,2026,2026-03-07,ATL,562.7
 landajo01,Jock Landale,2026,2026-03-10,ATL,567.2
 landajo01,Jock Landale,2026,2026-03-12,ATL,565.2
 landajo01,Jock Landale,2026,2026-03-14,ATL,564.5
+landajo01,Jock Landale,2026,2026-03-16,ATL,574.9
 landrca01,Carl Landry,2016,2015-12-23,PHI,0.0
 landrca01,Carl Landry,2016,2015-12-26,PHI,9.1
 landrca01,Carl Landry,2016,2015-12-28,PHI,21.9
@@ -147993,6 +148082,7 @@ laravja01,Jake LaRavia,2026,2026-03-08,LAL,488.7
 laravja01,Jake LaRavia,2026,2026-03-10,LAL,496.4
 laravja01,Jake LaRavia,2026,2026-03-12,LAL,507.59999999999997
 laravja01,Jake LaRavia,2026,2026-03-14,LAL,508.2
+laravja01,Jake LaRavia,2026,2026-03-16,LAL,512.2
 larkish01,Shane Larkin,2016,2015-10-28,BRK,0.0
 larkish01,Shane Larkin,2016,2015-10-30,BRK,7.7
 larkish01,Shane Larkin,2016,2015-10-31,BRK,14.5
@@ -151984,6 +152074,7 @@ leonsma01,Malevy Leons,2026,2026-03-09,GSW,28.5
 leonsma01,Malevy Leons,2026,2026-03-10,GSW,28.3
 leonsma01,Malevy Leons,2026,2026-03-13,GSW,29.0
 leonsma01,Malevy Leons,2026,2026-03-15,GSW,32.5
+leonsma01,Malevy Leons,2026,2026-03-16,GSW,35.1
 leuerjo01,Jon Leuer,2016,2015-10-28,PHO,0.0
 leuerjo01,Jon Leuer,2016,2015-10-30,PHO,13.8
 leuerjo01,Jon Leuer,2016,2015-10-31,PHO,15.3
@@ -152975,6 +153066,7 @@ liddeej01,E.J. Liddell,2026,2026-03-09,BRK,16.8
 liddeej01,E.J. Liddell,2026,2026-03-10,BRK,17.1
 liddeej01,E.J. Liddell,2026,2026-03-12,BRK,17.4
 liddeej01,E.J. Liddell,2026,2026-03-14,BRK,20.5
+liddeej01,E.J. Liddell,2026,2026-03-16,BRK,31.2
 liggide01,DeAndre Liggins,2017,2016-10-25,CLE,0.0
 liggide01,DeAndre Liggins,2017,2016-10-28,CLE,5.0
 liggide01,DeAndre Liggins,2017,2016-11-01,CLE,5.0
@@ -156166,6 +156258,7 @@ lopezbr01,Brook Lopez,2026,2026-03-09,LAC,315.8
 lopezbr01,Brook Lopez,2026,2026-03-11,LAC,332.2
 lopezbr01,Brook Lopez,2026,2026-03-13,LAC,333.6
 lopezbr01,Brook Lopez,2026,2026-03-14,LAC,345.4
+lopezbr01,Brook Lopez,2026,2026-03-16,LAC,347.4
 lopezro01,Robin Lopez,2016,2015-10-28,NYK,0.0
 lopezro01,Robin Lopez,2016,2015-10-29,NYK,5.3
 lopezro01,Robin Lopez,2016,2015-10-31,NYK,17.2
@@ -159945,6 +160038,7 @@ maluakh01,Khaman Maluach,2026,2026-03-08,PHO,40.2
 maluakh01,Khaman Maluach,2026,2026-03-10,PHO,47.1
 maluakh01,Khaman Maluach,2026,2026-03-12,PHO,51.8
 maluakh01,Khaman Maluach,2026,2026-03-13,PHO,55.5
+maluakh01,Khaman Maluach,2026,2026-03-16,PHO,58.5
 mamuksa01,Sandro Mamukelashvili,2022,2021-10-19,MIL,0.0
 mamuksa01,Sandro Mamukelashvili,2022,2021-10-21,MIL,0.3
 mamuksa01,Sandro Mamukelashvili,2022,2021-10-23,MIL,9.5
@@ -162185,6 +162279,7 @@ marshna01,Naji Marshall,2026,2026-03-10,DAL,748.0
 marshna01,Naji Marshall,2026,2026-03-12,DAL,758.3
 marshna01,Naji Marshall,2026,2026-03-13,DAL,757.3
 marshna01,Naji Marshall,2026,2026-03-15,DAL,771.9
+marshna01,Naji Marshall,2026,2026-03-16,DAL,796.5
 martial01,Alijah Martin,2026,2025-12-07,TOR,0.0
 martial01,Alijah Martin,2026,2025-12-09,TOR,0.3
 martial01,Alijah Martin,2026,2026-01-03,TOR,0.3
@@ -163654,6 +163749,7 @@ mashaja01,Jahmai Mashack,2026,2026-03-09,MEM,60.699999999999996
 mashaja01,Jahmai Mashack,2026,2026-03-10,MEM,71.0
 mashaja01,Jahmai Mashack,2026,2026-03-12,MEM,74.2
 mashaja01,Jahmai Mashack,2026,2026-03-13,MEM,80.9
+mashaja01,Jahmai Mashack,2026,2026-03-16,MEM,85.1
 masonfr01,Frank Mason III,2018,2017-10-21,SAC,0.0
 masonfr01,Frank Mason III,2018,2017-10-29,SAC,1.8
 masonfr01,Frank Mason III,2018,2017-10-31,SAC,7.1
@@ -164358,6 +164454,7 @@ mathube01,Bennedict Mathurin,2026,2026-03-09,LAC,466.8
 mathube01,Bennedict Mathurin,2026,2026-03-11,LAC,485.8
 mathube01,Bennedict Mathurin,2026,2026-03-13,LAC,502.1
 mathube01,Bennedict Mathurin,2026,2026-03-14,LAC,520.6
+mathube01,Bennedict Mathurin,2026,2026-03-16,LAC,536.3
 matkoka01,Karlo Matković,2025,2024-10-23,NOP,0.0
 matkoka01,Karlo Matković,2025,2024-10-27,NOP,1.4
 matkoka01,Karlo Matković,2025,2024-11-19,NOP,2.4
@@ -164454,6 +164551,7 @@ matkoka01,Karlo Matković,2026,2026-03-06,NOP,279.9
 matkoka01,Karlo Matković,2026,2026-03-08,NOP,288.0
 matkoka01,Karlo Matković,2026,2026-03-11,NOP,292.8
 matkoka01,Karlo Matković,2026,2026-03-13,NOP,298.4
+matkoka01,Karlo Matković,2026,2026-03-16,NOP,309.1
 matthwe02,Wesley Matthews,2016,2015-10-28,DAL,0.0
 matthwe02,Wesley Matthews,2016,2015-11-01,DAL,6.7
 matthwe02,Wesley Matthews,2016,2015-11-03,DAL,11.8
@@ -167164,6 +167262,7 @@ mccolcj01,CJ McCollum,2026,2026-03-07,ATL,758.8
 mccolcj01,CJ McCollum,2026,2026-03-10,ATL,769.5
 mccolcj01,CJ McCollum,2026,2026-03-12,ATL,777.1
 mccolcj01,CJ McCollum,2026,2026-03-14,ATL,782.2
+mccolcj01,CJ McCollum,2026,2026-03-16,ATL,802.9
 mccontj01,T.J. McConnell,2016,2015-10-28,PHI,0.0
 mccontj01,T.J. McConnell,2016,2015-10-30,PHI,3.9
 mccontj01,T.J. McConnell,2016,2015-11-02,PHI,5.9
@@ -171006,6 +171105,7 @@ mclaujo01,Jordan McLaughlin,2026,2026-03-03,SAS,50.6
 mclaujo01,Jordan McLaughlin,2026,2026-03-05,SAS,49.5
 mclaujo01,Jordan McLaughlin,2026,2026-03-08,SAS,49.5
 mclaujo01,Jordan McLaughlin,2026,2026-03-10,SAS,53.199999999999996
+mclaujo01,Jordan McLaughlin,2026,2026-03-16,SAS,53.199999999999996
 mclembe01,Ben McLemore,2016,2015-10-28,SAC,0.0
 mclembe01,Ben McLemore,2016,2015-10-30,SAC,1.7
 mclembe01,Ben McLemore,2016,2015-10-31,SAC,3.3
@@ -172449,6 +172549,7 @@ meltode01,De'Anthony Melton,2026,2026-03-02,GSW,278.4
 meltode01,De'Anthony Melton,2026,2026-03-05,GSW,277.6
 meltode01,De'Anthony Melton,2026,2026-03-09,GSW,294.8
 meltode01,De'Anthony Melton,2026,2026-03-13,GSW,313.0
+meltode01,De'Anthony Melton,2026,2026-03-16,GSW,321.59999999999997
 mensana01,Nathan Mensah,2024,2023-12-15,CHO,0.0
 mensana01,Nathan Mensah,2024,2023-12-16,CHO,-0.2
 mensana01,Nathan Mensah,2024,2023-12-20,CHO,2.1999999999999997
@@ -173752,6 +173853,7 @@ middlkh01,Khris Middleton,2026,2026-03-10,DAL,354.3
 middlkh01,Khris Middleton,2026,2026-03-12,DAL,365.4
 middlkh01,Khris Middleton,2026,2026-03-13,DAL,396.6
 middlkh01,Khris Middleton,2026,2026-03-15,DAL,396.1
+middlkh01,Khris Middleton,2026,2026-03-16,DAL,396.3
 mikaer01,Eric Mika,2020,2020-02-01,SAC,0.0
 milescj01,C.J. Miles,2016,2015-10-28,IND,0.0
 milescj01,C.J. Miles,2016,2015-10-29,IND,10.8
@@ -174489,6 +174591,7 @@ millejo02,Jordan Miller,2026,2026-03-09,LAC,344.1
 millejo02,Jordan Miller,2026,2026-03-11,LAC,341.9
 millejo02,Jordan Miller,2026,2026-03-13,LAC,354.6
 millejo02,Jordan Miller,2026,2026-03-14,LAC,366.0
+millejo02,Jordan Miller,2026,2026-03-16,LAC,370.0
 millele01,Leonard Miller,2024,2023-10-28,MIN,0.0
 millele01,Leonard Miller,2024,2023-11-22,MIN,-0.4
 millele01,Leonard Miller,2024,2023-11-26,MIN,0.09999999999999998
@@ -174550,6 +174653,7 @@ millele01,Leonard Miller,2026,2026-03-08,CHI,77.2
 millele01,Leonard Miller,2026,2026-03-10,CHI,76.5
 millele01,Leonard Miller,2026,2026-03-12,CHI,93.2
 millele01,Leonard Miller,2026,2026-03-13,CHI,107.3
+millele01,Leonard Miller,2026,2026-03-16,CHI,119.6
 millema01,Malcolm Miller,2018,2017-12-20,TOR,0.0
 millema01,Malcolm Miller,2018,2017-12-23,TOR,-1.4
 millema01,Malcolm Miller,2018,2018-01-11,TOR,-1.4
@@ -176652,6 +176756,7 @@ missiyv01,Yves Missi,2026,2026-03-06,NOP,341.4
 missiyv01,Yves Missi,2026,2026-03-08,NOP,345.1
 missiyv01,Yves Missi,2026,2026-03-11,NOP,348.8
 missiyv01,Yves Missi,2026,2026-03-13,NOP,358.2
+missiyv01,Yves Missi,2026,2026-03-16,NOP,364.9
 mitchaj01,Ajay Mitchell,2025,2024-10-24,OKC,0.0
 mitchaj01,Ajay Mitchell,2025,2024-10-26,OKC,-2.1
 mitchaj01,Ajay Mitchell,2025,2024-10-27,OKC,1.7999999999999998
@@ -183111,6 +183216,7 @@ murphtr02,Trey Murphy III,2026,2026-03-06,NOP,954.1
 murphtr02,Trey Murphy III,2026,2026-03-08,NOP,972.3
 murphtr02,Trey Murphy III,2026,2026-03-11,NOP,995.0
 murphtr02,Trey Murphy III,2026,2026-03-13,NOP,1020.8
+murphtr02,Trey Murphy III,2026,2026-03-16,NOP,1028.2
 murraco01,Collin Murray-Boyles,2026,2025-10-26,TOR,0.0
 murraco01,Collin Murray-Boyles,2026,2025-10-27,TOR,-2.8
 murraco01,Collin Murray-Boyles,2026,2025-10-29,TOR,12.0
@@ -184698,6 +184804,7 @@ murrakr01,Kris Murray,2026,2026-03-01,POR,229.1
 murrakr01,Kris Murray,2026,2026-03-08,POR,228.70000000000002
 murrakr01,Kris Murray,2026,2026-03-10,POR,231.3
 murrakr01,Kris Murray,2026,2026-03-13,POR,231.20000000000002
+murrakr01,Kris Murray,2026,2026-03-16,POR,233.20000000000002
 musadz01,Džanan Musa,2019,2018-10-20,BRK,0.0
 musadz01,Džanan Musa,2019,2018-10-24,BRK,2.2
 musadz01,Džanan Musa,2019,2018-10-29,BRK,3.2
@@ -187303,6 +187410,7 @@ nembhry01,Ryan Nembhard,2026,2026-03-10,DAL,233.3
 nembhry01,Ryan Nembhard,2026,2026-03-12,DAL,233.0
 nembhry01,Ryan Nembhard,2026,2026-03-13,DAL,236.4
 nembhry01,Ryan Nembhard,2026,2026-03-15,DAL,246.0
+nembhry01,Ryan Nembhard,2026,2026-03-16,DAL,255.8
 nesmiaa01,Aaron Nesmith,2021,2020-12-25,BOS,0.0
 nesmiaa01,Aaron Nesmith,2021,2020-12-30,BOS,1.0
 nesmiaa01,Aaron Nesmith,2021,2021-01-04,BOS,2.4
@@ -193316,6 +193424,7 @@ okogijo01,Josh Okogie,2026,2026-03-08,HOU,262.0
 okogijo01,Josh Okogie,2026,2026-03-10,HOU,260.6
 okogijo01,Josh Okogie,2026,2026-03-11,HOU,260.5
 okogijo01,Josh Okogie,2026,2026-03-13,HOU,271.4
+okogijo01,Josh Okogie,2026,2026-03-16,HOU,276.0
 okongon01,Onyeka Okongwu,2021,2021-01-15,ATL,0.0
 okongon01,Onyeka Okongwu,2021,2021-01-20,ATL,3.3
 okongon01,Onyeka Okongwu,2021,2021-01-22,ATL,7.8999999999999995
@@ -193684,6 +193793,7 @@ okongon01,Onyeka Okongwu,2026,2026-03-07,ATL,781.2
 okongon01,Onyeka Okongwu,2026,2026-03-10,ATL,792.6
 okongon01,Onyeka Okongwu,2026,2026-03-12,ATL,811.9
 okongon01,Onyeka Okongwu,2026,2026-03-14,ATL,825.4
+okongon01,Onyeka Okongwu,2026,2026-03-16,ATL,828.0
 okorois01,Isaac Okoro,2021,2020-12-23,CLE,0.0
 okorois01,Isaac Okoro,2021,2020-12-26,CLE,11.1
 okorois01,Isaac Okoro,2021,2021-01-06,CLE,6.6
@@ -194547,6 +194657,7 @@ olbrila01,Lachlan Olbrich,2026,2026-03-05,CHI,26.3
 olbrila01,Lachlan Olbrich,2026,2026-03-08,CHI,31.5
 olbrila01,Lachlan Olbrich,2026,2026-03-12,CHI,31.5
 olbrila01,Lachlan Olbrich,2026,2026-03-13,CHI,34.3
+olbrila01,Lachlan Olbrich,2026,2026-03-16,CHI,34.3
 olivaqu01,Quincy Olivari,2025,2024-12-08,LAL,0.0
 olivaqu01,Quincy Olivari,2025,2025-01-13,LAL,0.3
 oliveca01,Cameron Oliver,2021,2021-05-10,HOU,0.0
@@ -196014,6 +196125,7 @@ onealro01,Royce O'Neale,2026,2026-03-08,PHO,511.9
 onealro01,Royce O'Neale,2026,2026-03-10,PHO,518.7
 onealro01,Royce O'Neale,2026,2026-03-12,PHO,537.9
 onealro01,Royce O'Neale,2026,2026-03-13,PHO,550.1
+onealro01,Royce O'Neale,2026,2026-03-16,PHO,556.1
 onimi01,Miye Oni,2020,2019-11-11,UTA,0.0
 onimi01,Miye Oni,2020,2019-11-27,UTA,0.0
 onimi01,Miye Oni,2020,2019-12-07,UTA,-1.0
@@ -201392,6 +201504,7 @@ paytoga02,Gary Payton II,2026,2026-03-09,GSW,306.2
 paytoga02,Gary Payton II,2026,2026-03-10,GSW,314.4
 paytoga02,Gary Payton II,2026,2026-03-13,GSW,329.2
 paytoga02,Gary Payton II,2026,2026-03-15,GSW,341.9
+paytoga02,Gary Payton II,2026,2026-03-16,GSW,361.9
 peavymi01,Micah Peavy,2026,2025-10-27,NOP,0.0
 peavymi01,Micah Peavy,2026,2025-10-29,NOP,2.4
 peavymi01,Micah Peavy,2026,2025-11-02,NOP,5.699999999999999
@@ -201443,6 +201556,7 @@ peavymi01,Micah Peavy,2026,2026-03-01,NOP,146.4
 peavymi01,Micah Peavy,2026,2026-03-05,NOP,145.0
 peavymi01,Micah Peavy,2026,2026-03-08,NOP,146.29999999999998
 peavymi01,Micah Peavy,2026,2026-03-11,NOP,146.9
+peavymi01,Micah Peavy,2026,2026-03-16,NOP,146.9
 pedulse01,Sean Pedulla,2026,2026-03-11,LAC,0.0
 pekovni01,Nikola Peković,2016,2016-01-06,MIN,0.0
 pekovni01,Nikola Peković,2016,2016-01-08,MIN,7.8
@@ -201543,6 +201657,7 @@ pendano01,Noah Penda,2026,2026-03-08,ORL,182.3
 pendano01,Noah Penda,2026,2026-03-11,ORL,193.7
 pendano01,Noah Penda,2026,2026-03-12,ORL,196.6
 pendano01,Noah Penda,2026,2026-03-14,ORL,198.5
+pendano01,Noah Penda,2026,2026-03-16,ORL,206.6
 pendeje02,Jeff Ayres,2016,2016-01-24,LAC,0.0
 pendeje02,Jeff Ayres,2016,2016-01-29,LAC,3.0
 pendeje02,Jeff Ayres,2016,2016-01-31,LAC,4.4
@@ -203133,6 +203248,7 @@ plumlma01,Mason Plumlee,2026,2025-12-20,CHO,35.9
 plumlma01,Mason Plumlee,2026,2025-12-22,CHO,38.3
 plumlma01,Mason Plumlee,2026,2026-03-10,SAS,39.8
 plumlma01,Mason Plumlee,2026,2026-03-12,SAS,40.1
+plumlma01,Mason Plumlee,2026,2026-03-16,SAS,43.4
 plumlma02,Marshall Plumlee,2017,2016-11-20,NYK,0.0
 plumlma02,Marshall Plumlee,2017,2016-11-30,NYK,-0.1
 plumlma02,Marshall Plumlee,2017,2016-12-15,NYK,6.0
@@ -203546,6 +203662,7 @@ podzibr01,Brandin Podziemski,2026,2026-03-09,GSW,671.2
 podzibr01,Brandin Podziemski,2026,2026-03-10,GSW,682.0
 podzibr01,Brandin Podziemski,2026,2026-03-13,GSW,692.8
 podzibr01,Brandin Podziemski,2026,2026-03-15,GSW,713.5
+podzibr01,Brandin Podziemski,2026,2026-03-16,GSW,733.7
 poeltja01,Jakob Poeltl,2017,2016-10-26,TOR,0.0
 poeltja01,Jakob Poeltl,2017,2016-10-28,TOR,-1.0
 poeltja01,Jakob Poeltl,2017,2016-10-31,TOR,7.0
@@ -204910,6 +205027,7 @@ poolejo01,Jordan Poole,2026,2026-02-21,NOP,239.7
 poolejo01,Jordan Poole,2026,2026-02-24,NOP,259.6
 poolejo01,Jordan Poole,2026,2026-02-26,NOP,267.4
 poolejo01,Jordan Poole,2026,2026-02-28,NOP,271.0
+poolejo01,Jordan Poole,2026,2026-03-16,NOP,276.2
 portecr01,Craig Porter Jr.,2024,2023-10-28,CLE,0.0
 portecr01,Craig Porter Jr.,2024,2023-10-31,CLE,0.7
 portecr01,Craig Porter Jr.,2024,2023-11-01,CLE,5.8
@@ -207468,6 +207586,7 @@ porzikr01,Kristaps Porziņģis,2026,2026-02-19,GSW,230.7
 porzikr01,Kristaps Porziņģis,2026,2026-03-07,GSW,238.1
 porzikr01,Kristaps Porziņģis,2026,2026-03-10,GSW,243.6
 porzikr01,Kristaps Porziņģis,2026,2026-03-13,GSW,257.5
+porzikr01,Kristaps Porziņģis,2026,2026-03-16,GSW,273.0
 postqu01,Quinten Post,2025,2024-12-27,GSW,0.0
 postqu01,Quinten Post,2025,2024-12-30,GSW,0.0
 postqu01,Quinten Post,2025,2025-01-10,GSW,1.7
@@ -207675,6 +207794,7 @@ pottemi01,Micah Potter,2026,2026-03-13,IND,270.2
 pottemi01,Micah Potter,2026,2026-03-15,IND,271.5
 poulajo01,John Poulakidas,2026,2026-03-03,DAL,0.0
 poulajo01,John Poulakidas,2026,2026-03-15,DAL,0.1
+poulajo01,John Poulakidas,2026,2026-03-16,DAL,7.199999999999999
 poweldr01,Drake Powell,2026,2025-10-22,BRK,0.0
 poweldr01,Drake Powell,2026,2025-11-02,BRK,-0.3
 poweldr01,Drake Powell,2026,2025-11-07,BRK,3.1
@@ -207725,6 +207845,7 @@ poweldr01,Drake Powell,2026,2026-02-26,BRK,188.3
 poweldr01,Drake Powell,2026,2026-03-09,BRK,190.7
 poweldr01,Drake Powell,2026,2026-03-10,BRK,197.3
 poweldr01,Drake Powell,2026,2026-03-12,BRK,204.2
+poweldr01,Drake Powell,2026,2026-03-16,BRK,208.6
 poweldw01,Dwight Powell,2016,2015-10-28,DAL,0.0
 poweldw01,Dwight Powell,2016,2015-10-29,DAL,7.0
 poweldw01,Dwight Powell,2016,2015-11-01,DAL,12.6
@@ -208452,6 +208573,7 @@ poweldw01,Dwight Powell,2026,2026-03-08,DAL,191.70000000000002
 poweldw01,Dwight Powell,2026,2026-03-12,DAL,189.9
 poweldw01,Dwight Powell,2026,2026-03-13,DAL,190.20000000000002
 poweldw01,Dwight Powell,2026,2026-03-15,DAL,205.8
+poweldw01,Dwight Powell,2026,2026-03-16,DAL,207.2
 powelmy01,Myles Powell,2022,2021-12-20,PHI,0.0
 powelmy01,Myles Powell,2022,2021-12-26,PHI,-1.4
 powelmy01,Myles Powell,2022,2022-01-05,PHI,0.5
@@ -210500,6 +210622,7 @@ pritcpa01,Payton Pritchard,2026,2026-03-06,BOS,846.1
 pritcpa01,Payton Pritchard,2026,2026-03-08,BOS,862.9
 pritcpa01,Payton Pritchard,2026,2026-03-12,BOS,879.7
 pritcpa01,Payton Pritchard,2026,2026-03-14,BOS,886.6
+pritcpa01,Payton Pritchard,2026,2026-03-16,BOS,890.0
 proctty01,Tyrese Proctor,2026,2025-10-22,CLE,0.0
 proctty01,Tyrese Proctor,2026,2025-10-24,CLE,3.2
 proctty01,Tyrese Proctor,2026,2025-10-27,CLE,-1.0999999999999996
@@ -210676,6 +210799,7 @@ prospol01,Olivier-Maxence Prosper,2026,2026-03-09,MEM,253.6
 prospol01,Olivier-Maxence Prosper,2026,2026-03-10,MEM,263.4
 prospol01,Olivier-Maxence Prosper,2026,2026-03-12,MEM,273.9
 prospol01,Olivier-Maxence Prosper,2026,2026-03-13,MEM,280.4
+prospol01,Olivier-Maxence Prosper,2026,2026-03-16,MEM,291.3
 pulleja01,Jacob Pullen,2018,2017-11-20,PHI,0.0
 pulleja01,Jacob Pullen,2018,2017-11-25,PHI,-0.7
 pulleja01,Jacob Pullen,2018,2017-12-23,PHI,-0.7
@@ -210803,6 +210927,7 @@ queende01,Derik Queen,2026,2026-03-06,NOP,674.8
 queende01,Derik Queen,2026,2026-03-08,NOP,674.4
 queende01,Derik Queen,2026,2026-03-11,NOP,687.1
 queende01,Derik Queen,2026,2026-03-13,NOP,690.6
+queende01,Derik Queen,2026,2026-03-16,NOP,690.5
 queentr01,Trevelin Queen,2022,2021-12-18,HOU,0.0
 queentr01,Trevelin Queen,2022,2021-12-20,HOU,-1.4
 queentr01,Trevelin Queen,2022,2021-12-22,HOU,1.3000000000000003
@@ -211038,6 +211163,7 @@ quetane01,Neemias Queta,2026,2026-03-08,BOS,659.9
 quetane01,Neemias Queta,2026,2026-03-10,BOS,662.2
 quetane01,Neemias Queta,2026,2026-03-12,BOS,666.9
 quetane01,Neemias Queta,2026,2026-03-14,BOS,672.1
+quetane01,Neemias Queta,2026,2026-03-16,BOS,698.1
 quickim01,Immanuel Quickley,2021,2020-12-23,NYK,0.0
 quickim01,Immanuel Quickley,2021,2021-01-02,NYK,5.3
 quickim01,Immanuel Quickley,2021,2021-01-04,NYK,10.2
@@ -213233,6 +213359,7 @@ reaveau01,Austin Reaves,2026,2026-03-08,LAL,683.0
 reaveau01,Austin Reaves,2026,2026-03-10,LAL,706.2
 reaveau01,Austin Reaves,2026,2026-03-12,LAL,733.1
 reaveau01,Austin Reaves,2026,2026-03-14,LAL,758.3
+reaveau01,Austin Reaves,2026,2026-03-16,LAL,784.2
 reavejo02,Josh Reaves,2020,2020-01-02,DAL,0.0
 reavejo02,Josh Reaves,2020,2020-01-04,DAL,-0.7
 reavejo02,Josh Reaves,2020,2020-08-10,DAL,-0.7
@@ -214497,6 +214624,7 @@ reeseju01,Julian Reese,2026,2026-03-02,WAS,0.0
 reeseju01,Julian Reese,2026,2026-03-03,WAS,-1.9
 reeseju01,Julian Reese,2026,2026-03-05,WAS,6.799999999999999
 reeseju01,Julian Reese,2026,2026-03-08,WAS,30.699999999999996
+reeseju01,Julian Reese,2026,2026-03-16,WAS,38.49999999999999
 reevean01,Antonio Reeves,2025,2024-10-23,NOP,0.0
 reevean01,Antonio Reeves,2025,2024-10-27,NOP,-3.1
 reevean01,Antonio Reeves,2025,2024-11-03,NOP,-4.9
@@ -215136,6 +215264,7 @@ richaja02,Jase Richardson,2026,2026-02-22,ORL,143.9
 richaja02,Jase Richardson,2026,2026-02-24,ORL,147.5
 richaja02,Jase Richardson,2026,2026-03-01,ORL,147.5
 richaja02,Jase Richardson,2026,2026-03-03,ORL,145.8
+richaja02,Jase Richardson,2026,2026-03-16,ORL,144.3
 richajo01,Josh Richardson,2016,2015-11-05,MIA,0.0
 richajo01,Josh Richardson,2016,2015-11-10,MIA,-2.5
 richajo01,Josh Richardson,2016,2015-11-12,MIA,-0.6000000000000001
@@ -216060,6 +216189,7 @@ richani01,Nick Richards,2026,2026-03-08,CHI,153.9
 richani01,Nick Richards,2026,2026-03-10,CHI,161.2
 richani01,Nick Richards,2026,2026-03-12,CHI,171.6
 richani01,Nick Richards,2026,2026-03-13,CHI,181.8
+richani01,Nick Richards,2026,2026-03-16,CHI,190.2
 richawi02,Will Richard,2026,2025-10-21,GSW,0.0
 richawi02,Will Richard,2026,2025-10-23,GSW,6.0
 richawi02,Will Richard,2026,2025-10-24,GSW,13.5
@@ -216117,6 +216247,7 @@ richawi02,Will Richard,2026,2026-02-28,GSW,328.7
 richawi02,Will Richard,2026,2026-03-10,GSW,331.4
 richawi02,Will Richard,2026,2026-03-13,GSW,337.8
 richawi02,Will Richard,2026,2026-03-15,GSW,336.4
+richawi02,Will Richard,2026,2026-03-16,GSW,341.2
 richmka01,Kadary Richmond,2026,2026-02-11,WAS,0.0
 richmka01,Kadary Richmond,2026,2026-02-19,WAS,7.8
 richmka01,Kadary Richmond,2026,2026-02-20,WAS,22.1
@@ -216178,6 +216309,7 @@ rileywi01,Will Riley,2026,2026-03-08,WAS,314.3
 rileywi01,Will Riley,2026,2026-03-10,WAS,324.6
 rileywi01,Will Riley,2026,2026-03-12,WAS,341.5
 rileywi01,Will Riley,2026,2026-03-14,WAS,344.1
+rileywi01,Will Riley,2026,2026-03-16,WAS,347.7
 rillegr01,Grant Riller,2021,2021-04-04,CHO,0.0
 rillegr01,Grant Riller,2021,2021-04-09,CHO,-1.4
 rillegr01,Grant Riller,2021,2021-04-16,CHO,-0.7
@@ -216313,6 +216445,7 @@ risacza01,Zaccharie Risacher,2026,2026-03-07,ATL,349.2
 risacza01,Zaccharie Risacher,2026,2026-03-10,ATL,360.6
 risacza01,Zaccharie Risacher,2026,2026-03-12,ATL,362.7
 risacza01,Zaccharie Risacher,2026,2026-03-14,ATL,382.7
+risacza01,Zaccharie Risacher,2026,2026-03-16,ATL,386.2
 riverau01,Austin Rivers,2016,2015-10-28,LAC,0.0
 riverau01,Austin Rivers,2016,2015-10-29,LAC,3.1
 riverau01,Austin Rivers,2016,2015-10-31,LAC,13.2
@@ -222097,6 +222230,7 @@ ruperra01,Rayan Rupert,2026,2026-03-04,MEM,133.2
 ruperra01,Rayan Rupert,2026,2026-03-09,MEM,135.3
 ruperra01,Rayan Rupert,2026,2026-03-10,MEM,150.9
 ruperra01,Rayan Rupert,2026,2026-03-12,MEM,161.0
+ruperra01,Rayan Rupert,2026,2026-03-16,MEM,171.4
 rushbr01,Brandon Rush,2016,2015-10-27,GSW,0.0
 rushbr01,Brandon Rush,2016,2015-10-30,GSW,0.0
 rushbr01,Brandon Rush,2016,2015-10-31,GSW,0.6
@@ -224077,6 +224211,7 @@ sandeko01,Kobe Sanders,2026,2026-03-06,LAC,232.1
 sandeko01,Kobe Sanders,2026,2026-03-07,LAC,240.7
 sandeko01,Kobe Sanders,2026,2026-03-11,LAC,245.5
 sandeko01,Kobe Sanders,2026,2026-03-13,LAC,247.2
+sandeko01,Kobe Sanders,2026,2026-03-16,LAC,256.9
 sandela01,Larry Sanders,2017,2017-03-14,CLE,0.0
 sandela01,Larry Sanders,2017,2017-03-25,CLE,-1.5
 sandela01,Larry Sanders,2017,2017-04-05,CLE,-1.5
@@ -224230,6 +224365,7 @@ santogu01,Gui Santos,2026,2026-03-09,GSW,331.4
 santogu01,Gui Santos,2026,2026-03-10,GSW,347.6
 santogu01,Gui Santos,2026,2026-03-13,GSW,352.8
 santogu01,Gui Santos,2026,2026-03-15,GSW,367.4
+santogu01,Gui Santos,2026,2026-03-16,GSW,385.4
 sarafbe01,Ben Saraf,2026,2025-10-22,BRK,0.0
 sarafbe01,Ben Saraf,2026,2025-10-24,BRK,7.6
 sarafbe01,Ben Saraf,2026,2025-10-26,BRK,5.5
@@ -224261,6 +224397,7 @@ sarafbe01,Ben Saraf,2026,2026-03-09,BRK,80.60000000000001
 sarafbe01,Ben Saraf,2026,2026-03-10,BRK,83.60000000000001
 sarafbe01,Ben Saraf,2026,2026-03-12,BRK,95.2
 sarafbe01,Ben Saraf,2026,2026-03-14,BRK,98.0
+sarafbe01,Ben Saraf,2026,2026-03-16,BRK,107.4
 saricda01,Dario Šarić,2017,2016-10-26,PHI,0.0
 saricda01,Dario Šarić,2017,2016-10-29,PHI,-2.3
 saricda01,Dario Šarić,2017,2016-11-01,PHI,-1.5999999999999999
@@ -225558,6 +225695,7 @@ scheiba01,Baylor Scheierman,2026,2026-03-08,BOS,243.7
 scheiba01,Baylor Scheierman,2026,2026-03-10,BOS,260.9
 scheiba01,Baylor Scheierman,2026,2026-03-12,BOS,265.8
 scheiba01,Baylor Scheierman,2026,2026-03-14,BOS,277.2
+scheiba01,Baylor Scheierman,2026,2026-03-16,BOS,279.9
 schofad01,Admiral Schofield,2020,2019-10-23,WAS,0.0
 schofad01,Admiral Schofield,2020,2019-10-25,WAS,-1.8
 schofad01,Admiral Schofield,2020,2019-10-26,WAS,6.8999999999999995
@@ -230037,6 +230175,7 @@ sheppre01,Reed Sheppard,2026,2026-03-08,HOU,636.0
 sheppre01,Reed Sheppard,2026,2026-03-10,HOU,644.0
 sheppre01,Reed Sheppard,2026,2026-03-11,HOU,643.8
 sheppre01,Reed Sheppard,2026,2026-03-13,HOU,646.9
+sheppre01,Reed Sheppard,2026,2026-03-16,HOU,659.6
 shulgma01,Max Shulga,2026,2026-02-04,BOS,0.0
 shulgma01,Max Shulga,2026,2026-03-02,BOS,-0.7
 shulgma01,Max Shulga,2026,2026-03-10,BOS,-1.1
@@ -233405,6 +233544,7 @@ smartma01,Marcus Smart,2026,2026-03-06,LAL,379.1
 smartma01,Marcus Smart,2026,2026-03-08,LAL,387.3
 smartma01,Marcus Smart,2026,2026-03-10,LAL,389.6
 smartma01,Marcus Smart,2026,2026-03-14,LAL,396.8
+smartma01,Marcus Smart,2026,2026-03-16,LAL,418.1
 smithde03,Dennis Smith Jr.,2018,2017-10-18,DAL,0.0
 smithde03,Dennis Smith Jr.,2018,2017-10-23,DAL,14.5
 smithde03,Dennis Smith Jr.,2018,2017-10-25,DAL,18.7
@@ -234933,6 +235073,7 @@ smithja04,Jalen Smith,2026,2026-02-22,CHI,419.0
 smithja04,Jalen Smith,2026,2026-03-08,CHI,425.7
 smithja04,Jalen Smith,2026,2026-03-10,CHI,425.1
 smithja04,Jalen Smith,2026,2026-03-12,CHI,435.8
+smithja04,Jalen Smith,2026,2026-03-16,CHI,445.3
 smithja05,Jabari Smith Jr.,2023,2022-10-19,HOU,0.0
 smithja05,Jabari Smith Jr.,2023,2022-10-21,HOU,9.1
 smithja05,Jabari Smith Jr.,2023,2022-10-22,HOU,11.3
@@ -235207,6 +235348,7 @@ smithja05,Jabari Smith Jr.,2026,2026-03-08,HOU,681.3
 smithja05,Jabari Smith Jr.,2026,2026-03-10,HOU,697.1
 smithja05,Jabari Smith Jr.,2026,2026-03-11,HOU,717.1
 smithja05,Jabari Smith Jr.,2026,2026-03-13,HOU,725.4
+smithja05,Jabari Smith Jr.,2026,2026-03-16,HOU,735.7
 smithjo03,Josh Smith,2016,2015-10-28,LAC,0.0
 smithjo03,Josh Smith,2016,2015-10-29,LAC,-2.8
 smithjo03,Josh Smith,2016,2015-10-31,LAC,0.40000000000000036
@@ -235481,6 +235623,7 @@ smithjr01,J.R. Smith,2020,2020-08-05,LAL,0.0
 smithjr01,J.R. Smith,2020,2020-08-06,LAL,-2.8
 smithjr01,J.R. Smith,2020,2020-08-13,LAL,-2.9
 smithma02,Malachi Smith,2026,2026-03-14,BRK,0.0
+smithma02,Malachi Smith,2026,2026-03-16,BRK,0.7
 smithni01,Nick Smith Jr.,2024,2023-10-25,CHO,0.0
 smithni01,Nick Smith Jr.,2024,2023-11-08,CHO,0.0
 smithni01,Nick Smith Jr.,2024,2023-11-12,CHO,4.7
@@ -235680,6 +235823,7 @@ smithty02,Tyler Smith,2025,2025-03-30,MIL,31.0
 smithty02,Tyler Smith,2025,2025-04-03,MIL,30.6
 smithty02,Tyler Smith,2025,2025-04-13,MIL,29.900000000000002
 smithty02,Tyler Smith,2026,2026-03-13,DAL,0.0
+smithty02,Tyler Smith,2026,2026-03-16,DAL,-2.8
 smithzh01,Zhaire Smith,2019,2019-03-25,PHI,0.0
 smithzh01,Zhaire Smith,2019,2019-04-01,PHI,4.0
 smithzh01,Zhaire Smith,2019,2019-04-04,PHI,4.3
@@ -236785,6 +236929,7 @@ spencca01,Cam Spencer,2026,2026-03-07,MEM,650.1
 spencca01,Cam Spencer,2026,2026-03-09,MEM,664.0
 spencca01,Cam Spencer,2026,2026-03-10,MEM,674.6
 spencca01,Cam Spencer,2026,2026-03-13,MEM,683.2
+spencca01,Cam Spencer,2026,2026-03-16,MEM,699.8
 spencpa01,Pat Spencer,2024,2024-02-25,GSW,0.0
 spencpa01,Pat Spencer,2024,2024-03-09,GSW,0.0
 spencpa01,Pat Spencer,2024,2024-03-20,GSW,0.7
@@ -236881,6 +237026,7 @@ spencpa01,Pat Spencer,2026,2026-03-09,GSW,268.9
 spencpa01,Pat Spencer,2026,2026-03-10,GSW,268.7
 spencpa01,Pat Spencer,2026,2026-03-13,GSW,282.4
 spencpa01,Pat Spencer,2026,2026-03-15,GSW,287.3
+spencpa01,Pat Spencer,2026,2026-03-16,GSW,294.9
 splitti01,Tiago Splitter,2016,2015-10-27,ATL,0.0
 splitti01,Tiago Splitter,2016,2015-10-29,ATL,2.8
 splitti01,Tiago Splitter,2016,2015-10-30,ATL,9.3
@@ -239132,6 +239278,7 @@ suggsja01,Jalen Suggs,2026,2026-03-08,ORL,452.8
 suggsja01,Jalen Suggs,2026,2026-03-11,ORL,466.6
 suggsja01,Jalen Suggs,2026,2026-03-12,ORL,477.1
 suggsja01,Jalen Suggs,2026,2026-03-14,ORL,502.2
+suggsja01,Jalen Suggs,2026,2026-03-16,ORL,510.0
 sullija01,Jared Sullinger,2016,2015-10-28,BOS,0.0
 sullija01,Jared Sullinger,2016,2015-10-30,BOS,11.8
 sullija01,Jared Sullinger,2016,2015-11-01,BOS,16.4
@@ -240383,6 +240530,7 @@ tatumja01,Jayson Tatum,2026,2026-03-06,BOS,0.0
 tatumja01,Jayson Tatum,2026,2026-03-08,BOS,13.3
 tatumja01,Jayson Tatum,2026,2026-03-10,BOS,25.4
 tatumja01,Jayson Tatum,2026,2026-03-14,BOS,40.1
+tatumja01,Jayson Tatum,2026,2026-03-16,BOS,59.7
 tavarwa01,Edy Tavares,2016,2015-10-29,ATL,0.0
 tavarwa01,Edy Tavares,2016,2015-11-07,ATL,1.3
 tavarwa01,Edy Tavares,2016,2015-11-24,ATL,0.9
@@ -243719,6 +243867,7 @@ thompam01,Amen Thompson,2026,2026-03-08,HOU,982.4
 thompam01,Amen Thompson,2026,2026-03-10,HOU,1004.2
 thompam01,Amen Thompson,2026,2026-03-11,HOU,1024.6
 thompam01,Amen Thompson,2026,2026-03-13,HOU,1036.5
+thompam01,Amen Thompson,2026,2026-03-16,HOU,1058.4
 thompau01,Ausar Thompson,2024,2023-10-25,DET,0.0
 thompau01,Ausar Thompson,2024,2023-10-27,DET,5.2
 thompau01,Ausar Thompson,2024,2023-10-28,DET,11.100000000000001
@@ -246020,6 +246169,7 @@ thybuma01,Matisse Thybulle,2026,2026-03-08,POR,69.1
 thybuma01,Matisse Thybulle,2026,2026-03-10,POR,69.8
 thybuma01,Matisse Thybulle,2026,2026-03-13,POR,71.2
 thybuma01,Matisse Thybulle,2026,2026-03-15,POR,75.9
+thybuma01,Matisse Thybulle,2026,2026-03-16,POR,81.2
 tilliki02,Killian Tillie,2021,2021-02-28,MEM,0.0
 tilliki02,Killian Tillie,2021,2021-03-02,MEM,1.1
 tilliki02,Killian Tillie,2021,2021-03-15,MEM,-0.3999999999999999
@@ -248212,6 +248362,7 @@ traorno01,Nolan Traoré,2026,2026-03-07,BRK,211.2
 traorno01,Nolan Traoré,2026,2026-03-09,BRK,207.9
 traorno01,Nolan Traoré,2026,2026-03-10,BRK,223.0
 traorno01,Nolan Traoré,2026,2026-03-14,BRK,220.8
+traorno01,Nolan Traoré,2026,2026-03-16,BRK,216.8
 travelu01,Luke Travers,2025,2024-11-01,CLE,0.0
 travelu01,Luke Travers,2025,2024-11-04,CLE,6.8
 travelu01,Luke Travers,2025,2024-11-17,CLE,5.8999999999999995
@@ -253512,6 +253663,7 @@ vassede01,Devin Vassell,2026,2026-03-08,SAS,542.7
 vassede01,Devin Vassell,2026,2026-03-10,SAS,546.0
 vassede01,Devin Vassell,2026,2026-03-12,SAS,557.9
 vassede01,Devin Vassell,2026,2026-03-14,SAS,570.3
+vassede01,Devin Vassell,2026,2026-03-16,SAS,578.5
 vaughra01,Rashad Vaughn,2016,2015-10-28,MIL,0.0
 vaughra01,Rashad Vaughn,2016,2015-11-01,MIL,5.4
 vaughra01,Rashad Vaughn,2016,2015-11-04,MIL,4.0
@@ -254072,6 +254224,7 @@ vincega01,Gabe Vincent,2026,2026-03-07,ATL,104.2
 vincega01,Gabe Vincent,2026,2026-03-10,ATL,101.39999999999999
 vincega01,Gabe Vincent,2026,2026-03-12,ATL,107.7
 vincega01,Gabe Vincent,2026,2026-03-14,ATL,115.39999999999999
+vincega01,Gabe Vincent,2026,2026-03-16,ATL,117.39999999999999
 vonleno01,Noah Vonleh,2016,2015-10-28,POR,0.0
 vonleno01,Noah Vonleh,2016,2015-10-30,POR,-2.2
 vonleno01,Noah Vonleh,2016,2015-10-31,POR,2.0
@@ -255371,6 +255524,7 @@ vukcetr01,Tristan Vukcevic,2026,2026-02-28,WAS,212.0
 vukcetr01,Tristan Vukcevic,2026,2026-03-10,WAS,224.3
 vukcetr01,Tristan Vukcevic,2026,2026-03-12,WAS,222.9
 vukcetr01,Tristan Vukcevic,2026,2026-03-14,WAS,230.6
+vukcetr01,Tristan Vukcevic,2026,2026-03-16,WAS,248.9
 wadede01,Dean Wade,2020,2019-11-18,CLE,0.0
 wadede01,Dean Wade,2020,2019-11-20,CLE,-0.9
 wadede01,Dean Wade,2020,2019-11-22,CLE,-0.9
@@ -256688,6 +256842,7 @@ wagnemo01,Moritz Wagner,2026,2026-03-08,ORL,144.6
 wagnemo01,Moritz Wagner,2026,2026-03-11,ORL,147.4
 wagnemo01,Moritz Wagner,2026,2026-03-12,ORL,148.5
 wagnemo01,Moritz Wagner,2026,2026-03-14,ORL,152.2
+wagnemo01,Moritz Wagner,2026,2026-03-16,ORL,156.0
 wainris01,Ish Wainright,2022,2021-11-19,PHO,0.0
 wainris01,Ish Wainright,2022,2021-11-21,PHO,0.0
 wainris01,Ish Wainright,2022,2021-11-26,PHO,0.6
@@ -260423,6 +260578,7 @@ washipj01,P.J. Washington,2026,2026-03-08,DAL,473.0
 washipj01,P.J. Washington,2026,2026-03-10,DAL,480.0
 washipj01,P.J. Washington,2026,2026-03-12,DAL,482.3
 washipj01,P.J. Washington,2026,2026-03-15,DAL,491.3
+washipj01,P.J. Washington,2026,2026-03-16,DAL,514.5
 washity02,TyTy Washington Jr.,2023,2022-11-14,HOU,0.0
 washity02,TyTy Washington Jr.,2023,2022-12-08,HOU,0.6
 washity02,TyTy Washington Jr.,2023,2022-12-15,HOU,1.2
@@ -261229,6 +261385,7 @@ watkija01,Jamir Watkins,2026,2026-02-28,WAS,137.4
 watkija01,Jamir Watkins,2026,2026-03-02,WAS,146.0
 watkija01,Jamir Watkins,2026,2026-03-12,WAS,154.9
 watkija01,Jamir Watkins,2026,2026-03-14,WAS,159.4
+watkija01,Jamir Watkins,2026,2026-03-16,WAS,172.1
 watsoan02,Anton Watson,2025,2025-03-10,NYK,0.0
 watsoan02,Anton Watson,2025,2025-03-17,NYK,-2.4
 watsoan02,Anton Watson,2025,2025-03-19,NYK,0.0
@@ -261899,6 +262056,7 @@ wellsja01,Jaylen Wells,2026,2026-03-07,MEM,512.8
 wellsja01,Jaylen Wells,2026,2026-03-09,MEM,514.4
 wellsja01,Jaylen Wells,2026,2026-03-10,MEM,529.7
 wellsja01,Jaylen Wells,2026,2026-03-12,MEM,534.7
+wellsja01,Jaylen Wells,2026,2026-03-16,MEM,553.9
 welshth01,Thomas Welsh,2019,2018-10-17,DEN,0.0
 welshth01,Thomas Welsh,2019,2018-10-20,DEN,0.0
 welshth01,Thomas Welsh,2019,2018-10-23,DEN,-0.4
@@ -262080,6 +262238,7 @@ wembavi01,Victor Wembanyama,2026,2026-03-06,SAS,1008.9
 wembavi01,Victor Wembanyama,2026,2026-03-08,SAS,1032.1
 wembavi01,Victor Wembanyama,2026,2026-03-10,SAS,1063.1
 wembavi01,Victor Wembanyama,2026,2026-03-14,SAS,1093.1
+wembavi01,Victor Wembanyama,2026,2026-03-16,SAS,1124.7
 weslebl01,Blake Wesley,2023,2022-10-28,SAS,0.0
 weslebl01,Blake Wesley,2023,2022-10-30,SAS,8.0
 weslebl01,Blake Wesley,2023,2023-01-13,SAS,11.9
@@ -262258,6 +262417,7 @@ weslebl01,Blake Wesley,2026,2026-03-04,POR,82.8
 weslebl01,Blake Wesley,2026,2026-03-06,POR,87.1
 weslebl01,Blake Wesley,2026,2026-03-08,POR,89.5
 weslebl01,Blake Wesley,2026,2026-03-13,POR,89.1
+weslebl01,Blake Wesley,2026,2026-03-16,POR,88.7
 westbru01,Russell Westbrook,2016,2015-10-28,OKC,0.0
 westbru01,Russell Westbrook,2016,2015-10-30,OKC,25.1
 westbru01,Russell Westbrook,2016,2015-11-01,OKC,58.9
@@ -264328,6 +264488,7 @@ whitede01,Derrick White,2026,2026-03-06,BOS,870.5
 whitede01,Derrick White,2026,2026-03-08,BOS,889.9
 whitede01,Derrick White,2026,2026-03-10,BOS,895.6
 whitede01,Derrick White,2026,2026-03-14,BOS,923.5
+whitede01,Derrick White,2026,2026-03-16,BOS,937.8
 whiteha01,Hassan Whiteside,2016,2015-10-28,MIA,0.0
 whiteha01,Hassan Whiteside,2016,2015-10-30,MIA,2.0
 whiteha01,Hassan Whiteside,2016,2015-11-01,MIA,15.2
@@ -266492,6 +266653,7 @@ willibr03,Brandon Williams,2026,2026-03-10,DAL,551.2
 willibr03,Brandon Williams,2026,2026-03-12,DAL,565.3
 willibr03,Brandon Williams,2026,2026-03-13,DAL,580.2
 willibr03,Brandon Williams,2026,2026-03-15,DAL,587.3
+willibr03,Brandon Williams,2026,2026-03-16,DAL,601.7
 willicj01,C.J. Williams,2018,2017-11-10,LAC,0.0
 willicj01,C.J. Williams,2018,2017-11-13,LAC,0.0
 willicj01,C.J. Williams,2018,2017-11-18,LAC,0.0
@@ -267834,6 +267996,7 @@ willije02,Nate Williams,2026,2026-03-07,GSW,20.099999999999998
 willije02,Nate Williams,2026,2026-03-09,GSW,20.2
 willije02,Nate Williams,2026,2026-03-10,GSW,31.7
 willije02,Nate Williams,2026,2026-03-15,GSW,31.2
+willije02,Nate Williams,2026,2026-03-16,GSW,30.8
 willijo04,Johnathan Williams,2019,2018-10-22,LAL,0.0
 willijo04,Johnathan Williams,2019,2018-10-24,LAL,8.9
 willijo04,Johnathan Williams,2019,2018-10-25,LAL,15.3
@@ -269722,6 +269885,7 @@ willipa01,Patrick Williams,2026,2026-02-22,CHI,255.3
 willipa01,Patrick Williams,2026,2026-02-24,CHI,266.5
 willipa01,Patrick Williams,2026,2026-03-08,CHI,272.6
 willipa01,Patrick Williams,2026,2026-03-13,CHI,271.0
+willipa01,Patrick Williams,2026,2026-03-16,CHI,269.8
 willire02,Reggie Williams,2017,2016-12-10,NOP,0.0
 willire02,Reggie Williams,2017,2016-12-11,NOP,0.2
 willire02,Reggie Williams,2017,2016-12-13,NOP,15.6
@@ -270481,6 +270645,7 @@ willizi01,Zion Williamson,2026,2026-03-06,NOP,832.6
 willizi01,Zion Williamson,2026,2026-03-08,NOP,847.4
 willizi01,Zion Williamson,2026,2026-03-11,NOP,865.1
 willizi01,Zion Williamson,2026,2026-03-13,NOP,880.5
+willizi01,Zion Williamson,2026,2026-03-16,NOP,898.1
 willizi02,Ziaire Williams,2022,2021-10-20,MEM,0.0
 willizi02,Ziaire Williams,2022,2021-10-23,MEM,2.9
 willizi02,Ziaire Williams,2022,2021-10-24,MEM,5.5
@@ -270741,6 +270906,7 @@ willizi02,Ziaire Williams,2026,2026-03-05,BRK,279.6
 willizi02,Ziaire Williams,2026,2026-03-07,BRK,293.3
 willizi02,Ziaire Williams,2026,2026-03-09,BRK,311.3
 willizi02,Ziaire Williams,2026,2026-03-14,BRK,323.2
+willizi02,Ziaire Williams,2026,2026-03-16,BRK,330.8
 wilsodj01,D.J. Wilson,2018,2017-10-20,MIL,0.0
 wilsodj01,D.J. Wilson,2018,2017-10-29,MIL,0.0
 wilsodj01,D.J. Wilson,2018,2017-10-31,MIL,0.3
@@ -271875,6 +272041,7 @@ wolfda01,Danny Wolf,2026,2026-03-09,BRK,330.3
 wolfda01,Danny Wolf,2026,2026-03-10,BRK,341.90000000000003
 wolfda01,Danny Wolf,2026,2026-03-12,BRK,354.1
 wolfda01,Danny Wolf,2026,2026-03-14,BRK,357.2
+wolfda01,Danny Wolf,2026,2026-03-16,BRK,370.9
 woltena01,Nate Wolters,2018,2017-11-17,UTA,0.0
 woltena01,Nate Wolters,2018,2017-11-18,UTA,-0.4
 woltena01,Nate Wolters,2018,2017-11-28,UTA,-0.10000000000000003
@@ -273129,6 +273296,7 @@ yabusgu01,Guerschon Yabusele,2026,2026-03-05,CHI,187.0
 yabusgu01,Guerschon Yabusele,2026,2026-03-08,CHI,195.8
 yabusgu01,Guerschon Yabusele,2026,2026-03-10,CHI,199.0
 yabusgu01,Guerschon Yabusele,2026,2026-03-13,CHI,202.1
+yabusgu01,Guerschon Yabusele,2026,2026-03-16,CHI,209.3
 yangha01,Yang Hansen,2026,2025-10-22,POR,0.0
 yangha01,Yang Hansen,2026,2025-10-24,POR,1.6
 yangha01,Yang Hansen,2026,2025-10-26,POR,2.6
@@ -274687,6 +274855,7 @@ youngtr01,Trae Young,2026,2026-03-05,WAS,160.4
 youngtr01,Trae Young,2026,2026-03-08,WAS,170.7
 youngtr01,Trae Young,2026,2026-03-12,WAS,186.3
 youngtr01,Trae Young,2026,2026-03-14,WAS,199.9
+youngtr01,Trae Young,2026,2026-03-16,WAS,209.5
 yurtsom01,Omer Yurtseven,2022,2021-10-21,MIA,0.0
 yurtsom01,Omer Yurtseven,2022,2021-10-25,MIA,5.9
 yurtsom01,Omer Yurtseven,2022,2021-10-27,MIA,5.9
@@ -274801,6 +274970,7 @@ yurtsom01,Omer Yurtseven,2024,2024-04-11,UTA,179.2
 yurtsom01,Omer Yurtseven,2024,2024-04-12,UTA,187.2
 yurtsom01,Omer Yurtseven,2024,2024-04-14,UTA,192.9
 yurtsom01,Omer Yurtseven,2026,2026-03-15,GSW,0.0
+yurtsom01,Omer Yurtseven,2026,2026-03-16,GSW,-2.3
 zelleco01,Cody Zeller,2016,2015-10-28,CHO,0.0
 zelleco01,Cody Zeller,2016,2015-10-30,CHO,9.0
 zelleco01,Cody Zeller,2016,2015-11-01,CHO,12.1
