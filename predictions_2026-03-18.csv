@@ -1,0 +1,10 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-03-18,BOS,GSW,0.78,🟢 High (Home),6.67,-0.83,1,Nikola Vučević(13.8),Jimmy Butler(19.1); LJ Cryer(4.7); Seth Curry(6.9); Stephen Curry(19.7); Al Horford(8.3); Moses Moody(9.1); Gary Payton II(6.1); Quinten Post(6.0)
+2026-03-18,BRK,OKC,0.28,🔴 High (Away),-19.49,0.32,-13,Egor Dёmin(7.7); Terance Mann(6.6); Michael Porter Jr.(17.3); Ben Saraf(3.7); Day'Ron Sharpe(9.2); Nolan Traoré(4.8),Branden Carlson(4.2); Thomas Sorber(5.0); Jalen Williams(14.3)
+2026-03-18,IND,POR,0.26,🔴 High (Away),-6.06,0.18,-15,Johnny Furphy(4.4); Tyrese Haliburton(5.0); Andrew Nembhard(13.5); Micah Potter(7.9); Pascal Siakam(17.4),Vít Krejčí(6.4); Damian Lillard(5.0); Shaedon Sharpe(13.1); Robert Williams(9.1)
+2026-03-18,CHI,TOR,0.37,Toss-up,-5.75,0.42,-1,Zach Collins(8.6); Jaden Ivey(6.3); Isaac Okoro(6.7); Collin Sexton(10.6); Anfernee Simons(9.4),Collin Murray-Boyles(8.1)
+2026-03-18,MIN,UTA,0.63,Toss-up,10.31,-1.13,4,Anthony Edwards(21.3),Ace Bailey(8.3); Isaiah Collier(10.7); Kyle Filipowski(9.4); Keyonte George(17.7); Jaren Jackson Jr.(13.2); Walker Kessler(15.7); John Konchar(4.8); Lauri Markkanen(20.2); Jusuf Nurkić(11.4)
+2026-03-18,NOP,LAC,0.61,Toss-up,-5.25,-0.42,3,Bryce McGowens(6.4); Dejounte Murray(15.9),Bradley Beal(3.2); Darius Garland(13.5); Yanic Konan Niederhäuser(3.9); Kawhi Leonard(22.8); Bennedict Mathurin(12.4)
+2026-03-18,DAL,ATL,0.27,🔴 High (Away),-5.83,0.3,-11,Daniel Gafford(9.3); Kyrie Irving(5.0); Dereck Lively II(5.7); Caleb Martin(3.6); Brandon Williams(10.0),Jonathan Kuminga(9.4)
+2026-03-18,MEM,DEN,0.3,🔴 High (Away),-6.56,0.63,-9,Santi Aldama(12.1); Kentavious Caldwell-Pope(6.6); Brandon Clarke(3.1); Zach Edey(13.3); Jahmai Mashack(3.6); Ja Morant(14.2); Scotty Pippen Jr.(8.7),Peyton Watson(11.4)
+2026-03-18,HOU,LAL,0.39,Toss-up,3.15,0.38,-7,Steven Adams(8.0); Alperen Şengün(17.1); Jae'Sean Tate(2.2); Fred VanVleet(5.0),Maxi Kleber(2.2)
