@@ -1,0 +1,6 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-03-22,DEN,POR,0.55,Toss-up,6.0,0.01,-2,Aaron Gordon(13.9); Peyton Watson(11.4),Vít Krejčí(6.4); Damian Lillard(5.0); Shaedon Sharpe(13.1)
+2026-03-22,SAC,BRK,0.56,Toss-up,-0.35,0.26,4,Devin Carter(5.3); Nique Clifford(5.6); Drew Eubanks(4.4); De'Andre Hunter(8.6); Zach LaVine(12.6); Malik Monk(8.3); Keegan Murray(10.5); Domantas Sabonis(14.4),Noah Clowney(8.3); Egor Dёmin(7.7); Terance Mann(6.4); Michael Porter Jr.(17.3); Day'Ron Sharpe(9.2)
+2026-03-22,NYK,WAS,0.68,🟢 High (Home),17.39,-0.54,20,Josh Hart(12.2); Miles McBride(9.8); Landry Shamet(6.8),Leaky Black(8.1); Anthony Davis(17.5); Kyshawn George(10.9); Tre Johnson(7.5); D'Angelo Russell(6.9); Cam Whitmore(6.2); Trae Young(15.2)
+2026-03-22,BOS,MIN,0.6,Toss-up,4.13,0.26,5,Jaylen Brown(19.8); Jaylen Brown(19.8); Nikola Vučević(13.8),Anthony Edwards(21.3); Naz Reid(10.9)
+2026-03-22,PHO,TOR,0.41,Toss-up,-0.95,0.57,-4,Grayson Allen(12.8); Dillon Brooks(12.2); Amir Coffey(2.5); Haywood Highsmith(5.8); Royce O'Neale(8.3); Mark Williams(12.0),Collin Murray-Boyles(8.1)
