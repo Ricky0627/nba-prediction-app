@@ -1,0 +1,11 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-03-23,DET,LAL,0.53,Toss-up,6.15,0.2,-6,Cade Cunningham(20.4); Marcus Sasser(4.3); Isaiah Stewart(8.6),Rui Hachimura(8.0); Maxi Kleber(2.2); Marcus Smart(7.3)
+2026-03-23,MIA,SAS,0.49,Toss-up,-3.9,0.16,-9,Jaime Jaquez Jr.(12.2); Norman Powell(15.4); Andrew Wiggins(12.8),Stephon Castle(13.7); David Jones García(3.3); Devin Vassell(10.6)
+2026-03-23,ORL,IND,0.74,🟢 High (Home),9.54,-0.48,12,Anthony Black(11.4); Jonathan Isaac(2.8); Franz Wagner(16.6),Johnny Furphy(4.4); Tyrese Haliburton(5.0); Andrew Nembhard(13.7); Aaron Nesmith(8.8); Pascal Siakam(17.2); Obi Toppin(6.8); Ivica Zubac(13.4)
+2026-03-23,PHI,OKC,0.33,🔴 High (Away),-11.03,0.71,-9,Dominick Barlow(7.8); Johni Broome(0.2); Joel Embiid(20.4); Tyrese Maxey(22.7); Kelly Oubre Jr.(10.9),Thomas Sorber(5.0)
+2026-03-23,ATL,MEM,0.71,🟢 High (Home),3.94,-0.89,3,Jalen Johnson(20.4),Santi Aldama(12.1); Kentavious Caldwell-Pope(6.6); Brandon Clarke(3.1); Cedric Coward(10.5); Zach Edey(13.3); Taj Gibson(3.2); Ty Jerome(16.2); Jahmai Mashack(3.6); Ja Morant(14.2); Scotty Pippen Jr.(8.7)
+2026-03-23,CHI,HOU,0.46,Toss-up,-8.41,0.39,-4,Zach Collins(8.6); Jaden Ivey(6.3); Isaac Okoro(6.7); Anfernee Simons(9.4); Jalen Smith(9.0); Guerschon Yabusele(4.1),Steven Adams(8.0); Fred VanVleet(5.0)
+2026-03-23,UTA,TOR,0.25,🔴 High (Away),-8.9,1.01,1,Isaiah Collier(10.7); Keyonte George(17.7); Jaren Jackson Jr.(13.2); Walker Kessler(15.7); Lauri Markkanen(20.2); Jusuf Nurkić(11.4),Collin Murray-Boyles(8.1)
+2026-03-23,DAL,GSW,0.51,Toss-up,-5.39,-0.76,0,Kyrie Irving(5.0); Dereck Lively II(5.7); Caleb Martin(3.6); Brandon Williams(10.0),Jimmy Butler(19.1); Seth Curry(6.9); Stephen Curry(19.7); Al Horford(8.3); De'Anthony Melton(9.2); Moses Moody(9.1); Kristaps Porziņģis(13.1)
+2026-03-23,POR,BRK,0.76,🟢 High (Home),7.53,-0.3,6,Jerami Grant(12.6); Vít Krejčí(6.4); Damian Lillard(5.0); Shaedon Sharpe(13.1),Nic Claxton(12.3); Noah Clowney(8.3); Egor Dёmin(7.7); Michael Porter Jr.(17.3); Day'Ron Sharpe(9.2); Danny Wolf(6.8)
+2026-03-23,LAC,MIL,0.77,🟢 High (Home),5.9,-0.12,0,Bradley Beal(3.2); John Collins(10.7); Yanic Konan Niederhäuser(3.9); Kawhi Leonard(22.9); Bennedict Mathurin(12.4),Giannis Antetokounmpo(23.8); Gary Harris(2.6); Kyle Kuzma(9.7); Kevin Porter Jr.(16.0); Bobby Portis(10.6)
