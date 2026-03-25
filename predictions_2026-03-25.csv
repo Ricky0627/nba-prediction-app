@@ -1,0 +1,13 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-03-25,DET,ATL,0.57,Toss-up,6.34,0.24,2,Cade Cunningham(20.4); Javonte Green(6.0); Marcus Sasser(4.3); Isaiah Stewart(8.6),Jalen Johnson(20.4)
+2026-03-25,IND,LAL,0.34,🔴 High (Away),-10.13,0.58,2,Johnny Furphy(4.4); Tyrese Haliburton(5.0); Andrew Nembhard(13.8); Aaron Nesmith(8.9); Pascal Siakam(17.4); Ivica Zubac(13.4),Rui Hachimura(8.0); Marcus Smart(7.3); Adou Thiero(1.2)
+2026-03-25,PHI,CHI,0.57,Toss-up,4.02,0.37,-2,Johni Broome(0.2); Joel Embiid(20.4); Quentin Grimes(10.5); Tyrese Maxey(22.7); Kelly Oubre Jr.(10.9),Zach Collins(8.6); Jaden Ivey(6.3); Isaac Okoro(6.7); Anfernee Simons(9.4); Guerschon Yabusele(4.1)
+2026-03-25,BOS,OKC,0.53,Toss-up,-3.16,0.11,-13,Nikola Vučević(13.8),Thomas Sorber(5.0)
+2026-03-25,CLE,MIA,0.41,Toss-up,1.35,0.39,9,Jarrett Allen(15.0); Craig Porter Jr.(6.0); Jaylon Tyson(10.3),
+2026-03-25,MEM,SAS,0.15,🔴 High (Away),-9.98,0.98,-9,Santi Aldama(12.1); Kentavious Caldwell-Pope(6.6); Brandon Clarke(3.1); Zach Edey(13.3); Ty Jerome(15.9); Jahmai Mashack(3.6); Ja Morant(14.2); Scotty Pippen Jr.(8.7); Javon Small(8.5); Cam Spencer(10.9),De'Aaron Fox(15.0); David Jones García(3.3)
+2026-03-25,UTA,WAS,0.69,🟢 High (Home),3.81,0.13,14,Isaiah Collier(10.7); Keyonte George(17.7); Jaren Jackson Jr.(13.2); Walker Kessler(15.7); Lauri Markkanen(20.2); Jusuf Nurkić(11.4); Cody Williams(5.7),Anthony Davis(17.5); Kyshawn George(10.9); Tre Johnson(7.5); D'Angelo Russell(6.9); Alex Sarr(13.8); Tristan Vukcevic(6.1); Cam Whitmore(6.2); Trae Young(15.2)
+2026-03-25,MIN,HOU,0.63,Toss-up,-0.68,0.25,2,Ayo Dosunmu(11.8); Anthony Edwards(21.3),Steven Adams(8.0); Fred VanVleet(5.0)
+2026-03-25,DEN,DAL,0.84,🟢 High (Home),9.36,-0.29,7,Peyton Watson(11.4),Daniel Gafford(9.9); Kyrie Irving(5.0); Dereck Lively II(5.7); Caleb Martin(3.6); Brandon Williams(10.0)
+2026-03-25,GSW,BRK,0.64,Toss-up,9.39,0.13,9,Jimmy Butler(19.1); Seth Curry(6.9); Stephen Curry(19.7); Al Horford(8.3); Moses Moody(9.2),Noah Clowney(8.3); Egor Dёmin(7.7); Michael Porter Jr.(17.3); Drake Powell(4.0); Day'Ron Sharpe(9.2); Danny Wolf(6.8)
+2026-03-25,POR,MIL,0.61,Toss-up,3.36,-0.07,2,Jerami Grant(12.6); Vít Krejčí(6.4); Damian Lillard(5.0); Shaedon Sharpe(13.1); Robert Williams(9.1),Giannis Antetokounmpo(23.8); Gary Harris(2.6); Kyle Kuzma(9.7); Kevin Porter Jr.(16.0)
+2026-03-25,LAC,TOR,0.65,🟢 High (Home),-0.94,-0.13,1,Bradley Beal(3.2); Yanic Konan Niederhäuser(3.9); Kawhi Leonard(22.9),Brandon Ingram(15.1); Jakob Poeltl(10.9); Immanuel Quickley(14.4)
