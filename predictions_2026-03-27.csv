@@ -1,0 +1,11 @@
+﻿Date,Home,Away,Home_Win_Prob,Confidence,Diff_NetRtg,Diff_Injury,Diff_Streak,Home_Injuries,Away_Injuries
+2026-03-27,IND,LAC,0.4,Toss-up,-9.55,0.29,-4,Johnny Furphy(4.4); Tyrese Haliburton(5.0); Aaron Nesmith(8.8); Obi Toppin(7.3); Ivica Zubac(13.4),Bradley Beal(3.2); Yanic Konan Niederhäuser(3.9); Jordan Miller(8.5)
+2026-03-27,BOS,ATL,0.5,Toss-up,5.58,0.74,-2,Jaylen Brown(19.8); Neemias Queta(11.0); Nikola Vučević(13.8); Derrick White(14.4),
+2026-03-27,CLE,MIA,0.47,Toss-up,1.71,0.32,-2,Jarrett Allen(15.0); Craig Porter Jr.(6.0); Jaylon Tyson(10.3); Dean Wade(6.0),Jaime Jaquez Jr.(12.1)
+2026-03-27,MEM,HOU,0.33,🔴 High (Away),-7.53,0.91,-2,Santi Aldama(12.1); Kentavious Caldwell-Pope(6.6); Brandon Clarke(3.1); Zach Edey(13.3); Ty Jerome(15.9); Jahmai Mashack(3.6); Ja Morant(14.2); Scotty Pippen Jr.(8.7); Jaylen Wells(8.5),Steven Adams(8.0); Fred VanVleet(5.0)
+2026-03-27,OKC,CHI,0.86,🟢 High (Home),15.01,-0.59,0,Thomas Sorber(5.0),Zach Collins(8.6); Rob Dillingham(3.2); Jaden Ivey(6.3); Isaac Okoro(6.8); Nick Richards(4.5); Anfernee Simons(9.4); Jalen Smith(8.9); Guerschon Yabusele(4.1)
+2026-03-27,TOR,NOP,0.85,🟢 High (Home),5.38,-0.11,2,Immanuel Quickley(14.4),Bryce McGowens(6.4); Trey Murphy III(17.2)
+2026-03-27,DEN,UTA,0.78,🟢 High (Home),11.51,-1.34,7,,Isaiah Collier(10.7); Kyle Filipowski(9.3); Keyonte George(17.7); Jaren Jackson Jr.(13.2); Walker Kessler(15.7); Lauri Markkanen(20.2); Jusuf Nurkić(11.4); Brice Sensabaugh(9.2)
+2026-03-27,GSW,WAS,0.78,🟢 High (Home),11.43,-0.27,1,Jimmy Butler(19.1); Seth Curry(6.9); Stephen Curry(19.7); Al Horford(8.3); Malevy Leons(2.7); Moses Moody(9.2); Quinten Post(6.0),Bilal Coulibaly(9.1); Anthony Davis(17.5); Kyshawn George(10.9); Tre Johnson(7.5); D'Angelo Russell(6.9); Alex Sarr(13.8); Tristan Vukcevic(6.1); Cam Whitmore(6.2); Trae Young(15.2)
+2026-03-27,POR,DAL,0.67,🟢 High (Home),3.52,0.12,7,Vít Krejčí(6.4); Damian Lillard(5.0); Shaedon Sharpe(13.1); Robert Williams(9.0),Daniel Gafford(9.9); Kyrie Irving(5.0); Dereck Lively II(5.7); Caleb Martin(3.6)
+2026-03-27,LAL,BRK,0.93,🟢 High (Home),10.89,-0.08,10,Luka Dončić(26.5); Rui Hachimura(8.0); Marcus Smart(7.3); Adou Thiero(1.2),Noah Clowney(8.3); Egor Dёmin(7.7); Michael Porter Jr.(17.3); Day'Ron Sharpe(9.2); Danny Wolf(6.8)
